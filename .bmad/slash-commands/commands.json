@@ -1,0 +1,135 @@
+{
+  "commands": [
+    {
+      "name": "eval-engine",
+      "description": "Generate evaluation engine components with TypeScript interfaces",
+      "template": "Create the evaluation engine component: {component}. Follow these requirements:\n\n1. Use TypeScript with strict typing\n2. Include comprehensive JSDoc comments\n3. Follow the patterns in evaluator/shared/types.ts\n4. Include error handling and validation\n5. Write unit test coverage outline\n6. Consider performance for 10 stack comparison\n\nComponent to create: {component}\n\nRefer to CLAUDE.md for architecture context and BMAD_IMPLEMENTATION_PLAN.md for detailed requirements.",
+      "parameters": [
+        {
+          "name": "component",
+          "description": "Which evaluation component to create (e.g., 'recommendation-algorithm', 'stack-scorer', 'question-processor')",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "web-component",
+      "description": "Generate Next.js web interface components",
+      "template": "Create a Next.js component for the web interface: {component}. Requirements:\n\n1. Use React 18 with TypeScript\n2. Follow Next.js 14 app router patterns\n3. Use Tailwind CSS for styling\n4. Include accessibility features (ARIA, keyboard nav)\n5. Mobile-responsive design\n6. Include loading states and error handling\n7. Follow the GitIngest-style design patterns\n\nComponent: {component}\nPage context: {context}\n\nRefer to the web interface wireframes in BMAD_IMPLEMENTATION_PLAN.md and maintain consistency with the evaluation flow.",
+      "parameters": [
+        {
+          "name": "component",
+          "description": "Component name (e.g., 'QuestionFlow', 'RecommendationCard', 'ProgressBar')",
+          "required": true
+        },
+        {
+          "name": "context",
+          "description": "Where this component is used (e.g., 'evaluation page', 'results page', 'comparison page')",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "cli-command",
+      "description": "Generate CLI tool commands and utilities",
+      "template": "Create a CLI command for the stack evaluator: {command}. Requirements:\n\n1. Use Commander.js framework\n2. Include interactive prompts with Inquirer.js\n3. Proper error handling and validation\n4. Colored output for better UX\n5. Help text and examples\n6. Progress indicators for long operations\n7. Integration with shared evaluation engine\n\nCommand: {command}\nFunctionality: {functionality}\n\nEnsure compatibility with the shared evaluation engine and follow CLI best practices for developer workflows.",
+      "parameters": [
+        {
+          "name": "command",
+          "description": "CLI command name (e.g., 'evaluate', 'generate', 'compare', 'update')",
+          "required": true
+        },
+        {
+          "name": "functionality",
+          "description": "What this command should do (e.g., 'interactive evaluation', 'project generation', 'stack comparison')",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "github-integration",
+      "description": "Generate GitHub API integration components",
+      "template": "Create GitHub integration functionality: {feature}. Requirements:\n\n1. Use GitHub REST API v4\n2. Include authentication handling\n3. Error handling for API limits and failures\n4. Progress feedback for long operations\n5. Support for both web and CLI interfaces\n6. Template customization logic\n7. Environment variable configuration\n\nFeature: {feature}\nContext: {context}\n\nIntegrate with the organized-codebase repository structure and support the template cloning workflow defined in the BMAD plan.",
+      "parameters": [
+        {
+          "name": "feature",
+          "description": "GitHub feature to implement (e.g., 'template-cloner', 'project-generator', 'repo-customizer')",
+          "required": true
+        },
+        {
+          "name": "context",
+          "description": "Usage context (e.g., 'web interface', 'CLI tool', 'shared library')",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "stack-data",
+      "description": "Generate or update stack database entries",
+      "template": "Create or update stack database entry: {stack}. Requirements:\n\n1. Follow the AIToolStack interface from shared/types.ts\n2. Include accurate time estimates based on template READMEs\n3. Detailed pros/cons analysis\n4. Cost estimates for different usage levels\n5. Best-for scenarios and use cases\n6. Technology stack details\n7. Integration with existing template data\n\nStack: {stack}\nAction: {action}\n\nRefer to the existing stack templates in directories 01-10 for accurate information and maintain consistency with the evaluation criteria.",
+      "parameters": [
+        {
+          "name": "stack",
+          "description": "Stack name (e.g., 'nextjs-vercel', 'fastapi-streamlit', 'zapier-bubble')",
+          "required": true
+        },
+        {
+          "name": "action",
+          "description": "What to do (e.g., 'create new entry', 'update metadata', 'add cost analysis')",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "test-suite",
+      "description": "Generate comprehensive test suites",
+      "template": "Create test suite for: {target}. Requirements:\n\n1. Use Jest with TypeScript\n2. Include unit tests, integration tests, and e2e tests\n3. Mock external dependencies (GitHub API, etc.)\n4. Test edge cases and error scenarios\n5. Include performance benchmarks\n6. 90%+ code coverage target\n7. Clear test descriptions and documentation\n\nTarget: {target}\nTest type: {type}\n\nFollow testing best practices and include realistic test data based on the 10 stack options.",
+      "parameters": [
+        {
+          "name": "target",
+          "description": "What to test (e.g., 'evaluation-engine', 'recommendation-algorithm', 'web-interface')",
+          "required": true
+        },
+        {
+          "name": "type",
+          "description": "Test type focus (e.g., 'unit', 'integration', 'e2e', 'performance')",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "deploy-config",
+      "description": "Generate deployment and infrastructure configuration",
+      "template": "Create deployment configuration for: {target}. Requirements:\n\n1. Follow Vercel deployment patterns for web interface\n2. npm registry setup for CLI tool\n3. Environment variable configuration\n4. CI/CD pipeline setup\n5. Performance monitoring integration\n6. Error tracking configuration\n7. Analytics setup\n\nTarget: {target}\nEnvironment: {environment}\n\nEnsure configuration supports the dual-interface architecture and integrates with the organized-codebase workflow.",
+      "parameters": [
+        {
+          "name": "target",
+          "description": "Deployment target (e.g., 'web-interface', 'cli-tool', 'shared-library')",
+          "required": true
+        },
+        {
+          "name": "environment",
+          "description": "Environment type (e.g., 'development', 'staging', 'production')",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "docs-gen",
+      "description": "Generate documentation following BMAD methodology",
+      "template": "Generate documentation: {doc_type}. Requirements:\n\n1. Follow BMAD methodology structure\n2. Include clear examples and use cases\n3. API documentation with TypeScript interfaces\n4. User guides for both web and CLI interfaces\n5. Developer contribution guidelines\n6. Architecture diagrams and flowcharts\n7. Integration guides for organized-codebase\n\nDocument type: {doc_type}\nAudience: {audience}\n\nMaintain consistency with existing BMAD documentation and support the agile development workflow.",
+      "parameters": [
+        {
+          "name": "doc_type",
+          "description": "Documentation type (e.g., 'API-reference', 'user-guide', 'contributing-guide', 'architecture-docs')",
+          "required": true
+        },
+        {
+          "name": "audience",
+          "description": "Target audience (e.g., 'developers', 'end-users', 'contributors', 'stakeholders')",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
