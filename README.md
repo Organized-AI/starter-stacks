@@ -1,4 +1,4 @@
-# AI Tool Starter Stacks
+# Organized AI - Starter Stacks
 
 🚀 **10 Production-Ready Tech Stacks for Building AI Tools**
 
