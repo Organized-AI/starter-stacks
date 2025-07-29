@@ -144,3 +144,28 @@ MIT License - build amazing AI tools! 🎉
 **The Speed Revolution**: You can now validate any AI tool idea in under 2 hours. The best tech stack is the one that gets your idea in front of users fastest.
 
 **Start building today!** 🚀
+
+## 🛠️ Development Plan
+
+We're building an AI Tool Stack Evaluator to help users choose the perfect stack from these 10 options. The system will include:
+
+- **Web Interface**: GitIngest-style evaluator at `stack.organized-ai.com`
+- **CLI Tool**: Terminal-based evaluation and project generation
+- **Integration Bridge**: Seamless connection to production templates
+
+**See the complete [BMAD Implementation Plan](./BMAD_IMPLEMENTATION_PLAN.md)** for detailed development roadmap, technical architecture, and user stories.
+
+### Quick Start for Contributors
+
+```bash
+# Clone and explore the starter templates
+git clone https://github.com/Organized-AI/starter-stacks
+cd starter-stacks
+
+# Read the implementation plan
+cat BMAD_IMPLEMENTATION_PLAN.md
+
+# Start contributing
+# See individual stack READMEs for setup instructions
+```
+
