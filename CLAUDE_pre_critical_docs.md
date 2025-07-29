@@ -35,11 +35,6 @@ Read these files in order to understand the complete project scope and approach:
 - `CLAUDE_CODE_MASTER_PLAN.md` - Implementation strategy and session management
 - `TECH_STACK_GUIDE.md` - Technical specifications and tool choices
 
-### 3.5. Critical Operational Planning
-- `CLOUDFLARE_DEPLOYMENT_PLAN.md` - Domain configuration and SSL setup for organizedai.vip
-- `GITHUB_ORGANIZATION_PLAN.md` - Repository management and release strategy
-- `POST_DEPLOYMENT_CHECKLIST.md` - End-to-end validation procedures
-
 ### 4. Reference Materials
 - `AI_PATTERNS.md` - AI development patterns and best practices
 - `DEPLOYMENT.md` - Deployment strategy and infrastructure setup
