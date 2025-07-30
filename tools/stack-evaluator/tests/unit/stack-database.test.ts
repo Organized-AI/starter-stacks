@@ -3,7 +3,7 @@
  * Tests database loading, validation, and querying functionality
  */
 
-import { describe, it, expect, beforeEach, jest } from '@jest/globals';
+import { describe, it, expect, beforeEach } from '@jest/globals';
 import { StackDatabase } from '../../lib/data/stack-database.js';
 import { testUtils } from '../setup.js';
 
@@ -57,6 +57,10 @@ describe('StackDatabase', () => {
     it('should return stack by valid ID', async () => {
       const allStacks = await stackDatabase.getAllStacks();
       const firstStack = allStacks[0];
+      
+      if (!firstStack) {
+        throw new Error('No stacks found in database');
+      }
       
       const foundStack = await stackDatabase.getStackById(firstStack.id);
       

@@ -1,9 +1,9 @@
 # Ready-to-Use Subagent Orchestration Prompts
 
 **Project**: AI Tool Stack Evaluator  
-**Approach**: 1 Prompt Per Phase + Autonomous Execution + Strategic Model Usage + Context Management  
+**Approach**: 1 Prompt Per Phase + Autonomous Execution + Strategic Model Usage  
 **Usage**: Copy and paste each prompt directly into Claude Code  
-**Resource Optimization**: Strategic Opus 4/Sonnet 4 allocation + Strategic Autocompact for long sessions
+**Resource Optimization**: Strategic Opus 4/Sonnet 4 allocation for maximum efficiency
 
 ---
 
@@ -27,26 +27,6 @@ Use @model:sonnet-4 for all other tasks:
 - Steps 1-7: Project setup, dependencies, file structure
 - Steps 11-15: Database implementation, testing, validation
 - Documentation and routine implementation
-
-STRATEGIC CONTEXT MANAGEMENT:
-
-AUTOCOMPACT TIMING:
-- After completing project structure and dependencies (Step 7)
-- After implementing core evaluation engine (Step 10) 
-- After database implementation and before final testing (Step 13)
-- Never during active debugging or critical integration work
-
-BEFORE AUTOCOMPACTING:
-1. Create detailed progress summary of completed steps (1-15)
-2. List current task and next 2-3 immediate steps  
-3. Note TypeScript compilation status and any critical errors
-4. Document core architecture decisions and integration points
-5. Preserve evaluation engine design patterns and scoring logic
-
-AFTER AUTOCOMPACT:
-1. Review preserved context and validate critical information retained
-2. Continue with next logical development step seamlessly
-3. Maintain enterprise quality standards and framework patterns
 
 You are an autonomous development subagent implementing Phase 1: Foundation with integrated Anthropic orchestrator-workers pattern and community framework specialization.
 
@@ -90,7 +70,6 @@ SUCCESS CRITERIA (Enhanced):
 ✅ Test coverage follows test-automator comprehensive standards
 ✅ Performance benchmarks and monitoring integrated
 ✅ Optimal model usage - Opus 4 reserved for complex algorithm work only
-✅ Strategic autocompact used to maintain context efficiency
 
 DELIVERABLE: Enterprise-quality evaluation engine with framework-enhanced architecture
 
@@ -111,37 +90,15 @@ FRAMEWORK-ENHANCED WEB INTERFACE SUBAGENT
 
 RATIONALE: React component development, Tailwind styling, and standard web interface patterns are well-suited for Sonnet 4. No complex algorithms requiring Opus 4.
 
-STRATEGIC CONTEXT MANAGEMENT:
-
-AUTOCOMPACT TIMING:
-- After completing question flow components (Steps 16-25)
-- After implementing results display (Steps 26-30)
-- After API integration and before final testing (Step 33)
-- Never during component integration or state management implementation
-
-BEFORE AUTOCOMPACTING:
-1. Create detailed progress summary of UI components completed
-2. Document component architecture and state management decisions
-3. Note API integration patterns and error handling implementations
-4. Preserve current UI development status and remaining tasks
-5. Document performance optimization notes and Core Web Vitals metrics
-
-AFTER AUTOCOMPACT:
-1. Review preserved UI architecture and component decisions
-2. Validate React component integration status
-3. Continue seamless development with maintained quality standards
-4. Preserve mobile-first responsive design decisions
-
 You are an autonomous development subagent implementing Phase 2: Web Interface with framework enhancement patterns.
 
-FOUNDATION STATUS: Phase 1 COMPLETE ✅ - evaluation engine and stack database fully working and validated
+FOUNDATION STATUS: Phase 1 complete - evaluation engine and stack database ready for integration
 
 PROJECT CONTEXT:
 - Building Next.js web application with 5-question evaluation flow
 - Must integrate with existing evaluation engine from Phase 1
 - Enhanced with frontend-developer and performance-engineer patterns
 - Target: Production-ready web interface with enterprise quality
-- Location: /Users/jordaaan/starter-stacks/tools/stack-evaluator/web/
 
 FRAMEWORK-ENHANCED AUTONOMOUS EXECUTION:
 
@@ -158,21 +115,18 @@ FRAMEWORK-ENHANCED AUTONOMOUS EXECUTION:
 3. **Enterprise Quality Standards**:
    - SEO optimization for stack.organizedai.vip discoverability
    - Analytics integration for usage tracking
-   - Performance optimization with Core Web Vitals focus
+   - Performance monitoring and optimization
 
 AUTONOMOUS EXECUTION WORKFLOW:
 Read BUILD_PHASES.md Phase 2 (Steps 16-35), implement Next.js web interface with framework patterns, integrate evaluation engine, comprehensive testing and optimization
 
 SUCCESS CRITERIA:
-✅ Functional Next.js web interface with complete evaluation flow
+✅ Functional web interface with complete evaluation flow
 ✅ React components following frontend-developer best practices
-✅ 5-step question flow with progress tracking and validation
-✅ Results display with primary recommendation and alternatives  
 ✅ Responsive design with accessibility compliance
 ✅ Performance optimized with Core Web Vitals focus
-✅ SEO-ready for production deployment at stack.organizedai.vip
+✅ SEO-ready for production deployment
 ✅ Analytics and monitoring integration
-✅ Strategic autocompact maintains development continuity
 
 DELIVERABLE: Production-ready web application with enterprise-quality user experience
 
@@ -193,27 +147,6 @@ FRAMEWORK-ENHANCED CLI SUBAGENT
 
 RATIONALE: CLI development follows established patterns. Commander.js, inquirer, and GitHub integration are standard implementations suitable for Sonnet 4.
 
-STRATEGIC CONTEXT MANAGEMENT:
-
-AUTOCOMPACT TIMING:
-- After core CLI architecture and commands (Step 42)
-- After GitHub integration implementation (Step 46)
-- Before final testing and npm preparation (Step 48)
-- Never during GitHub API integration or authentication setup
-
-BEFORE AUTOCOMPACTING:
-1. Document CLI command structure and user flow decisions
-2. Preserve GitHub API integration patterns and auth handling status
-3. Note cross-platform compatibility implementations and testing
-4. List npm package preparation status and distribution readiness
-5. Document command validation and error handling patterns
-
-AFTER AUTOCOMPACT:
-1. Review CLI architecture decisions and command structure
-2. Validate GitHub integration functionality and error handling
-3. Continue development with maintained user experience standards
-4. Preserve professional CLI patterns and help system design
-
 You are an autonomous development subagent implementing Phase 3: CLI Tool with community framework patterns.
 
 PROJECT CONTEXT:
@@ -221,7 +154,6 @@ PROJECT CONTEXT:
 - Must work seamlessly with existing web interface
 - Enhanced with api-builder and deployment-engineer patterns
 - Target: Professional CLI tool ready for community distribution
-- Location: /Users/jordaaan/starter-stacks/tools/stack-evaluator/cli/
 
 FRAMEWORK-ENHANCED AUTONOMOUS EXECUTION:
 
@@ -249,7 +181,6 @@ SUCCESS CRITERIA:
 ✅ Cross-platform compatibility validated
 ✅ npm package ready for publication
 ✅ Comprehensive help system and documentation
-✅ Strategic autocompact maintains development momentum
 
 DELIVERABLE: Production-ready CLI tool for community distribution
 
@@ -269,27 +200,6 @@ FRAMEWORK-ENHANCED TESTING SUBAGENT
 @model:sonnet-4
 
 RATIONALE: Jest, React Testing Library, and E2E testing follow established patterns. Test generation and validation are routine tasks optimal for Sonnet 4.
-
-STRATEGIC CONTEXT MANAGEMENT:
-
-AUTOCOMPACT TIMING:
-- After unit test suite completion (Step 58)
-- After integration test implementation (Step 63)
-- After CI/CD setup and before final validation (Step 68)
-- Never during test debugging or coverage analysis
-
-BEFORE AUTOCOMPACTING:
-1. Document test coverage metrics and identified gaps
-2. Preserve performance benchmarking results and optimization notes
-3. Note CI/CD pipeline configuration decisions and quality gates
-4. List security vulnerability scan results and remediation status
-5. Document test automation patterns and validation strategies
-
-AFTER AUTOCOMPACT:
-1. Review test coverage status and remaining gaps
-2. Validate CI/CD pipeline functionality and quality gates
-3. Continue with maintained testing standards and automation
-4. Preserve performance optimization decisions and benchmarks
 
 You are an autonomous development subagent implementing Phase 4: Testing with comprehensive quality assurance patterns.
 
@@ -326,7 +236,6 @@ SUCCESS CRITERIA:
 ✅ Performance benchmarks and optimization
 ✅ CI/CD pipeline with quality gates
 ✅ Security validation and vulnerability scanning
-✅ Strategic autocompact maintains testing continuity
 
 DELIVERABLE: Enterprise-quality test suite with continuous integration
 
@@ -346,27 +255,6 @@ FRAMEWORK-ENHANCED DEPLOYMENT SUBAGENT
 @model:sonnet-4
 
 RATIONALE: Vercel deployment, domain configuration, and CI/CD setup are standard DevOps tasks. Sonnet 4 handles these efficiently.
-
-STRATEGIC CONTEXT MANAGEMENT:
-
-AUTOCOMPACT TIMING:
-- After Vercel deployment configuration (Step 75)
-- After monitoring and analytics setup (Step 78)
-- Before final launch preparation (Step 80)
-- Never during domain configuration or SSL setup
-
-BEFORE AUTOCOMPACTING:
-1. Document deployment configuration and environment variables
-2. Preserve domain and SSL setup status and configurations
-3. Note monitoring and analytics integration decisions
-4. List launch checklist status and remaining preparation tasks
-5. Document performance optimization and scaling configurations
-
-AFTER AUTOCOMPACT:
-1. Review deployment status and configuration decisions
-2. Validate monitoring and analytics integration functionality
-3. Continue with maintained production readiness standards
-4. Preserve community engagement and feedback system setup
 
 You are an autonomous development subagent implementing Phase 5: Deployment with enterprise deployment patterns.
 
@@ -402,7 +290,6 @@ SUCCESS CRITERIA:
 ✅ SEO optimization and social media integration
 ✅ Community feedback systems active
 ✅ Performance optimization and scaling ready
-✅ Strategic autocompact maintains deployment momentum
 
 DELIVERABLE: Live production system with monitoring and community engagement
 
@@ -420,18 +307,12 @@ BEGIN AUTONOMOUS DEPLOYMENT IMPLEMENTATION NOW.
 - **Quality Maintained**: Complex tasks still receive premium intelligence
 - **Capacity Preserved**: More Opus 4 hours available for other projects
 
-### Context Management Strategy:
-- **Strategic Autocompact**: Triggered at natural breakpoints to maintain efficiency
-- **Context Preservation**: Critical progress and decisions maintained across compacts
-- **Development Continuity**: Seamless workflow maintained through long autonomous sessions
-- **Performance Optimization**: Prevents context window limits from disrupting development
-
 ### Expected Resource Usage:
 - **Phase 1**: 1-2 Opus hours + 5-6 Sonnet hours = 6-8 total hours
-- **Phase 2**: 8-11 Sonnet hours (UI/React development) + Strategic autocompact
-- **Phase 3**: 5-7 Sonnet hours (CLI implementation) + Strategic autocompact  
-- **Phase 4**: 5-9 Sonnet hours (Testing and QA) + Strategic autocompact
-- **Phase 5**: 3-5 Sonnet hours (Deployment and monitoring) + Strategic autocompact
+- **Phase 2**: 8-11 Sonnet hours (UI/React development)
+- **Phase 3**: 5-7 Sonnet hours (CLI implementation)
+- **Phase 4**: 5-9 Sonnet hours (Testing and QA)
+- **Phase 5**: 3-5 Sonnet hours (Deployment and monitoring)
 
 **Total Project**: 3-4 Opus hours + 26-38 Sonnet hours = 29-42 total hours (21-30% of weekly capacity)
 

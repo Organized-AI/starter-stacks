@@ -47,7 +47,16 @@ export class StackDatabase {
       // Validate and load each stack
       for (const stackData of parsed.stacks) {
         try {
-          const validated = StackSchema.parse(stackData);
+          // Convert date strings to Date objects
+          const rawStack = stackData as any;
+          const processedData = {
+            ...rawStack,
+            metadata: {
+              ...rawStack.metadata,
+              lastUpdated: new Date(rawStack.metadata.lastUpdated)
+            }
+          };
+          const validated = StackSchema.parse(processedData);
           this.stacks.set(validated.id, validated);
         } catch (error) {
           console.error(`Failed to validate stack: ${JSON.stringify(stackData)}`);

@@ -3,7 +3,7 @@
  * Formats and enhances raw scoring data into user-friendly recommendations
  */
 
-import type { Stack, RecommendedStack, UserAnswers } from '../types/index.js';
+import type { Stack, UserAnswers } from '../types/index.js';
 
 export class RecommendationGenerator {
   /**
@@ -108,11 +108,11 @@ export class RecommendationGenerator {
    */
   public generateCostAnalysis(stack: Stack, userAnswers: UserAnswers): CostAnalysis {
     const teamSize = this.findAnswer(userAnswers, 'team-size');
-    const projectType = this.findAnswer(userAnswers, 'project-type');
+    const _projectType = this.findAnswer(userAnswers, 'project-type');
 
     return {
       setupCost: stack.pricing.setupCost,
-      monthlyEstimate: this.estimateMonthlyCost(stack, teamSize, projectType),
+      monthlyEstimate: this.estimateMonthlyCost(stack, teamSize, _projectType),
       freeTrialInfo: this.generateFreeTrialInfo(stack),
       scalingCosts: this.generateScalingCostInfo(stack),
       hiddenCosts: this.identifyHiddenCosts(stack),
@@ -125,7 +125,6 @@ export class RecommendationGenerator {
    */
   public generateImplementationRoadmap(stack: Stack, userAnswers: UserAnswers): ImplementationPhase[] {
     const background = this.findAnswer(userAnswers, 'background');
-    const timeline = this.findAnswer(userAnswers, 'timeline');
     const projectType = this.findAnswer(userAnswers, 'project-type');
 
     const phases: ImplementationPhase[] = [
@@ -161,7 +160,7 @@ export class RecommendationGenerator {
     return answer && typeof answer.value === 'string' ? answer.value : null;
   }
 
-  private generateQuickStartSteps(stack: Stack, background: string | null, timeline: string | null): string[] {
+  private generateQuickStartSteps(stack: Stack, _background: string | null, _timeline: string | null): string[] {
     const steps: string[] = [];
 
     if (stack.category === 'no-code') {
@@ -223,7 +222,7 @@ export class RecommendationGenerator {
     ];
   }
 
-  private estimateTimeCommitment(stack: Stack, background: string | null, timeline: string | null): string {
+  private estimateTimeCommitment(stack: Stack, background: string | null, _timeline: string | null): string {
     const baseTime = stack.timeToProduction;
     
     if (background === 'non-technical') {
@@ -271,7 +270,7 @@ export class RecommendationGenerator {
     return Math.round(baseCost * multiplier);
   }
 
-  private estimateMonthlyCase(stack: Stack, teamSize: string | null, projectType: string | null): number {
+  private estimateMonthlyCost(stack: Stack, teamSize: string | null, projectType: string | null): number {
     return this.estimateMonthlyTask(stack, teamSize, projectType);
   }
 
@@ -285,7 +284,7 @@ export class RecommendationGenerator {
     }
   }
 
-  private generateScalingCostInfo(stack: Stack): string[] {
+  private generateScalingCostInfo(_stack: Stack): string[] {
     return [
       'Costs typically scale with usage',
       'Monitor API calls and bandwidth',
@@ -299,7 +298,7 @@ export class RecommendationGenerator {
     
     hiddenCosts.push('AI API costs (OpenAI, Anthropic, etc.)');
     
-    if (!stack.components.some(c => c.category === 'database' && c.name.includes('included'))) {
+    if (!stack.components.some((c: any) => c.category === 'database' && c.name.includes('included'))) {
       hiddenCosts.push('Database hosting costs');
     }
     
@@ -343,7 +342,7 @@ export class RecommendationGenerator {
     return duration;
   }
 
-  private generateSetupTasks(stack: Stack): string[] {
+  private generateSetupTasks(_stack: Stack): string[] {
     const tasks: string[] = [];
     
     tasks.push('Install required software');
@@ -354,7 +353,7 @@ export class RecommendationGenerator {
     return tasks;
   }
 
-  private generateImplementationTasks(stack: Stack, projectType: string | null): string[] {
+  private generateImplementationTasks(_stack: Stack, _projectType: string | null): string[] {
     const tasks: string[] = [];
     
     tasks.push('Build core functionality');
@@ -366,7 +365,7 @@ export class RecommendationGenerator {
     return tasks;
   }
 
-  private generateDeploymentTasks(stack: Stack): string[] {
+  private generateDeploymentTasks(_stack: Stack): string[] {
     return [
       'Configure production environment',
       'Set up hosting and domains',
@@ -389,7 +388,7 @@ export class RecommendationGenerator {
     return blockers;
   }
 
-  private identifyImplementationBlockers(stack: Stack, background: string | null): string[] {
+  private identifyImplementationBlockers(_stack: Stack, background: string | null): string[] {
     const blockers: string[] = [];
     
     if (background === 'beginner') {
@@ -402,7 +401,7 @@ export class RecommendationGenerator {
     return blockers;
   }
 
-  private identifyDeploymentBlockers(stack: Stack): string[] {
+  private identifyDeploymentBlockers(_stack: Stack): string[] {
     return [
       'DNS and domain configuration',
       'SSL certificate setup',

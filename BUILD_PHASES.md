@@ -395,3 +395,139 @@ Total Project Consumption:
 - **More Capacity**: Significant Opus 4 hours preserved for other work
 - **Optimal Value**: Maximum benefit from $100 Max Plan investment
 
+
+---
+
+## 🧠 Strategic Context Management for Long Autonomous Sessions
+
+### Context Window Optimization Strategy
+
+Long autonomous sessions (6-11 hours) require strategic context management to maintain peak performance and avoid context window limits. Each phase has specific autocompact timing based on natural development breakpoints.
+
+### Phase-Specific Autocompact Strategy
+
+#### Phase 1: Foundation (6-8 hours)
+```markdown
+Strategic Autocompact Points:
+├── Breakpoint 1: After project structure setup (Step 7)
+│   Preserve: Dependencies, TypeScript config, build setup
+├── Breakpoint 2: After evaluation engine core (Step 10) 
+│   Preserve: Algorithm patterns, scoring logic, architecture decisions
+└── Breakpoint 3: After database implementation (Step 13)
+    Preserve: Data models, validation patterns, integration points
+```
+
+#### Phase 2: Web Interface (8-11 hours) 
+```markdown
+Strategic Autocompact Points:
+├── Breakpoint 1: After question flow components (Steps 16-25)
+│   Preserve: Component architecture, state management, validation patterns
+├── Breakpoint 2: After results display implementation (Steps 26-30)
+│   Preserve: UI/UX decisions, responsive design patterns, accessibility
+└── Breakpoint 3: After API integration (Step 33)
+    Preserve: Integration patterns, error handling, performance optimizations
+```
+
+#### Phase 3: CLI Tool (5-7 hours)
+```markdown
+Strategic Autocompact Points:
+├── Breakpoint 1: After CLI architecture and commands (Step 42)
+│   Preserve: Command structure, user flow patterns, help system design
+├── Breakpoint 2: After GitHub integration (Step 46)
+│   Preserve: API patterns, authentication, error handling, retry logic
+└── Breakpoint 3: Before npm preparation (Step 48)
+    Preserve: Cross-platform compatibility, testing results, distribution setup
+```
+
+#### Phase 4: Testing (5-9 hours)
+```markdown
+Strategic Autocompact Points:
+├── Breakpoint 1: After unit test suite (Step 58)
+│   Preserve: Test patterns, coverage metrics, mocking strategies
+├── Breakpoint 2: After integration tests (Step 63)
+│   Preserve: E2E patterns, performance benchmarks, quality gates
+└── Breakpoint 3: After CI/CD setup (Step 68)
+    Preserve: Pipeline config, automation patterns, deployment validation
+```
+
+#### Phase 5: Deployment (3-5 hours)
+```markdown
+Strategic Autocompact Points:
+├── Breakpoint 1: After Vercel deployment (Step 75)
+│   Preserve: Deployment config, environment variables, domain setup
+├── Breakpoint 2: After monitoring setup (Step 78)
+│   Preserve: Analytics integration, performance monitoring, alerting
+└── Breakpoint 3: Before launch preparation (Step 80)
+    Preserve: SEO optimization, community setup, feedback systems
+```
+
+### Context Preservation Guidelines
+
+#### Critical Information to Always Preserve:
+```markdown
+🔒 ALWAYS PRESERVE:
+├── Current phase and step progress (exact position in BUILD_PHASES.md)
+├── Architecture decisions and design patterns established
+├── Integration points between major components
+├── Performance optimization decisions and benchmarks
+├── Error handling patterns and debugging discoveries
+├── Quality standards and testing approaches
+├── Security considerations and implementations
+└── Deployment configurations and environment setup
+```
+
+#### Safe to Compact Information:
+```markdown
+♻️ SAFE TO COMPACT:
+├── Detailed implementation logs and verbose output
+├── Repetitive debugging information (once resolved)
+├── Intermediate code iterations (keep final versions)
+├── Routine dependency installation logs
+├── Standard configuration file generations
+├── Verbose test output (keep summary metrics)
+└── Routine file creation confirmations
+```
+
+### Autocompact Best Practices
+
+#### Pre-Autocompact Checklist:
+```markdown
+📋 BEFORE AUTOCOMPACTING:
+1. ✅ Create comprehensive progress summary
+2. ✅ Document current step and next 3 immediate actions
+3. ✅ Preserve critical architecture and integration decisions
+4. ✅ Note any unresolved issues or debugging contexts
+5. ✅ Save performance metrics and optimization notes
+6. ✅ Document quality standards and testing progress
+7. ✅ Preserve deployment configurations and environment setup
+```
+
+#### Post-Autocompact Validation:
+```markdown
+🔄 AFTER AUTOCOMPACTING:
+1. ✅ Verify preserved context completeness
+2. ✅ Confirm current task and objectives clarity
+3. ✅ Validate architecture decisions retained
+4. ✅ Check integration points documented
+5. ✅ Ensure development momentum maintained
+6. ✅ Confirm quality standards preserved
+7. ✅ Proceed with seamless development continuation
+```
+
+### Emergency Context Recovery
+
+#### If Context Loss Occurs:
+```markdown
+🚨 CONTEXT RECOVERY PROCEDURE:
+1. Review BUILD_PHASES.md to identify current phase and step
+2. Examine project file structure to assess completion status
+3. Run TypeScript compilation to identify current state
+4. Check git commit history for recent progress markers
+5. Review package.json and dependencies for setup status
+6. Run existing tests to validate current functionality
+7. Create new progress summary based on discovered state
+8. Continue development from validated checkpoint
+```
+
+This strategic context management ensures optimal performance throughout long autonomous development sessions while maintaining enterprise-quality output and development continuity.
+

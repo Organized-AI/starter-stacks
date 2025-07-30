@@ -13,21 +13,18 @@ import type {
 import type { StackSearchCriteria } from '../data/stack-database.js';
 import { stackDatabase } from '../data/stack-database.js';
 import { ScoringAlgorithm } from './scoring-algorithm.js';
-import { RecommendationGenerator } from './recommendation-generator.js';
 import { ConfidenceCalculator } from './confidence-calculator.js';
-import { EVALUATION_CONFIG, RECOMMENDATION_LIMITS } from '../constants.js';
+import { RECOMMENDATION_LIMITS } from '../constants.js';
 import { UserAnswersSchema } from '../schemas/index.js';
 import { v4 as uuidv4 } from 'uuid';
 
 export class EvaluationEngine {
   private scoringAlgorithm: ScoringAlgorithm;
-  private recommendationGenerator: RecommendationGenerator;
   private confidenceCalculator: ConfidenceCalculator;
   private cache: Map<string, StackRecommendation> = new Map();
 
   constructor() {
     this.scoringAlgorithm = new ScoringAlgorithm();
-    this.recommendationGenerator = new RecommendationGenerator();
     this.confidenceCalculator = new ConfidenceCalculator();
   }
 
@@ -258,7 +255,7 @@ export class EvaluationEngine {
   /**
    * Extract matched criteria with scores
    */
-  private extractMatchedCriteria(userAnswers: UserAnswers, stack: Stack, totalScore: number): any[] {
+  private extractMatchedCriteria(_userAnswers: UserAnswers, _stack: Stack, totalScore: number): any[] {
     // This would be implemented based on the scoring algorithm breakdown
     return [
       {

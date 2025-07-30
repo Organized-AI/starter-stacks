@@ -25,6 +25,7 @@ export interface ValidationWarning {
   code: string;
   message: string;
   field?: string;
+  value?: unknown;
   suggestion?: string;
 }
 
@@ -103,7 +104,7 @@ export class StackValidator {
     }
 
     // Validate component categories
-    const requiredCategories = ['framework', 'hosting'];
+    const requiredCategories = ['framework', 'hosting'] as const;
     const presentCategories = stack.components.map(c => c.category);
     
     for (const required of requiredCategories) {
