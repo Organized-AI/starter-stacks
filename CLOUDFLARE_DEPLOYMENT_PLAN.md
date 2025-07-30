@@ -2,7 +2,7 @@
 
 **Project**: AI Tool Stack Evaluator  
 **Domain**: organizedai.vip  
-**Target Subdomain**: stack.organized-ai.com  
+**Target Subdomain**: stack.organizedai.vip  
 **Cloudflare Account**: f87aedd25afd3b833561a343f538995b  
 
 ---
@@ -10,13 +10,13 @@
 ## 🎯 DEPLOYMENT OBJECTIVES
 
 ### Primary Goals
-- Deploy AI Tool Stack Evaluator at **stack.organized-ai.com**
+- Deploy AI Tool Stack Evaluator at **stack.organizedai.vip**
 - Configure SSL certificates and CDN optimization
 - Set up Vercel integration with custom domain
 - Optimize for global performance and security
 
 ### Success Criteria
-- ✅ stack.organized-ai.com resolves to deployed application
+- ✅ stack.organizedai.vip resolves to deployed application
 - ✅ SSL certificate valid and properly configured
 - ✅ CDN caching optimized for static assets
 - ✅ Performance metrics: < 2 second page load globally
@@ -29,10 +29,10 @@
 ### Domain Structure
 ```
 organizedai.vip (root domain)
-├── stack.organized-ai.com (AI Tool Stack Evaluator)
-├── api.organized-ai.com (future API endpoint)
-├── docs.organized-ai.com (future documentation)
-└── www.organized-ai.com (potential main site redirect)
+├── stack.organizedai.vip (AI Tool Stack Evaluator)
+├── api.organizedai.vip (future API endpoint)
+├── docs.organizedai.vip (future documentation)
+└── www.organizedai.vip (potential main site redirect)
 ```
 
 ### DNS Configuration
@@ -72,9 +72,9 @@ cloudflare_add_dns_record:
 #### 2. Vercel Domain Configuration
 ```bash
 # Vercel CLI commands for Claude Code:
-vercel domains add stack.organized-ai.com
-vercel domains verify stack.organized-ai.com
-vercel alias --prod stack.organized-ai.com
+vercel domains add stack.organizedai.vip
+vercel domains verify stack.organizedai.vip
+vercel alias --prod stack.organizedai.vip
 ```
 
 #### 3. SSL Certificate Verification
@@ -128,7 +128,7 @@ automatic_https_rewrites: true
 ```javascript
 // Using Cloudflare MCP tools
 cloudflare_dns_create({
-  zone: "organized-ai.com",
+  zone: "organizedai.vip",
   type: "CNAME", 
   name: "stack",
   content: "cname.vercel-dns.com",
@@ -139,21 +139,21 @@ cloudflare_dns_create({
 #### Verification Commands
 ```bash
 # Domain resolution testing
-dig stack.organized-ai.com
-nslookup stack.organized-ai.com
+dig stack.organizedai.vip
+nslookup stack.organizedai.vip
 
 # SSL certificate validation  
-curl -I https://stack.organized-ai.com
-openssl s_client -connect stack.organized-ai.com:443 -servername stack.organized-ai.com
+curl -I https://stack.organizedai.vip
+openssl s_client -connect stack.organizedai.vip:443 -servername stack.organizedai.vip
 ```
 
 #### Performance Testing
 ```bash
 # Page speed validation
-curl -w "@curl-format.txt" -o /dev/null -s https://stack.organized-ai.com
+curl -w "@curl-format.txt" -o /dev/null -s https://stack.organizedai.vip
 
 # CDN edge location testing
-curl -H "CF-Connecting-IP: 1.1.1.1" https://stack.organized-ai.com
+curl -H "CF-Connecting-IP: 1.1.1.1" https://stack.organizedai.vip
 ```
 
 ---
@@ -188,7 +188,7 @@ curl -H "CF-Connecting-IP: 1.1.1.1" https://stack.organized-ai.com
 ```bash
 # If DNS not resolving immediately:
 # 1. Check Cloudflare DNS propagation
-dig @1.1.1.1 stack.organized-ai.com
+dig @1.1.1.1 stack.organizedai.vip
 
 # 2. Force cache clear
 cloudflare purge_cache --everything
@@ -217,10 +217,10 @@ vercel certs ls
 cloudflare page_rules list
 
 # 2. Verify compression settings
-curl -H "Accept-Encoding: br,gzip" -I https://stack.organized-ai.com
+curl -H "Accept-Encoding: br,gzip" -I https://stack.organizedai.vip
 
 # 3. Test from multiple locations
-curl --resolve stack.organized-ai.com:443:1.1.1.1 https://stack.organized-ai.com
+curl --resolve stack.organizedai.vip:443:1.1.1.1 https://stack.organizedai.vip
 ```
 
 ---
@@ -236,14 +236,14 @@ curl --resolve stack.organized-ai.com:443:1.1.1.1 https://stack.organized-ai.com
 - [ ] Local testing passed all validation
 
 **Cloudflare Configuration**:
-- [ ] DNS CNAME record created for stack.organized-ai.com
+- [ ] DNS CNAME record created for stack.organizedai.vip
 - [ ] SSL certificate issued and valid
 - [ ] Security headers configured
 - [ ] Caching rules optimized
 - [ ] Performance monitoring enabled
 
 **Post-Deployment Verification**:
-- [ ] Domain resolves correctly: `https://stack.organized-ai.com`
+- [ ] Domain resolves correctly: `https://stack.organizedai.vip`
 - [ ] SSL certificate valid (A+ rating on SSL Labs)
 - [ ] All pages load successfully
 - [ ] API endpoints responding correctly
@@ -271,10 +271,10 @@ When implementing Phase 5 (Steps 71-80), Claude Code should:
 ### Success Validation
 Phase 5 is complete when:
 - All Cloudflare configuration checklist items are verified
-- stack.organized-ai.com loads the functional application
+- stack.organizedai.vip loads the functional application
 - Performance metrics meet or exceed targets
 - Security headers and SSL configuration are optimal
 
 ---
 
-**🎯 OUTCOME**: stack.organized-ai.com will serve as the production deployment of the AI Tool Stack Evaluator with optimal security, performance, and reliability through Cloudflare's global network.
+**🎯 OUTCOME**: stack.organizedai.vip will serve as the production deployment of the AI Tool Stack Evaluator with optimal security, performance, and reliability through Cloudflare's global network.

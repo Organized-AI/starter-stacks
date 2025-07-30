@@ -273,7 +273,7 @@ CLI Tool (Node.js):
 
 ### Infrastructure Setup
 - **Hosting**: Vercel (web) + npm registry (CLI)
-- **Domain**: stack.organized-ai.com
+- **Domain**: stack.organizedai.vip
 - **CDN**: Vercel Edge Network for global performance
 - **Monitoring**: Vercel Analytics + Sentry for errors
 - **Analytics**: PostHog for user behavior tracking

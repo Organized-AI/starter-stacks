@@ -148,7 +148,7 @@ Features:
 - Complete web interface for stack evaluation
 - CLI tool with project generation
 - 10 AI tool stacks with detailed metadata
-- Automated deployment to stack.organized-ai.com"
+- Automated deployment to stack.organizedai.vip"
 
 git push origin main --tags
 ```

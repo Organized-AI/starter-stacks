@@ -223,7 +223,7 @@ claude code
 - [ ] Phase 2: `npm run build && npm run dev # Test: http://localhost:3000`
 - [ ] Phase 3: `./cli/bin/stack-eval --help && ./cli/bin/stack-eval evaluate`
 - [ ] Phase 4: `npm test && npm run test:coverage`
-- [ ] Phase 5: `npm run deploy && curl https://stack.organized-ai.com`
+- [ ] Phase 5: `npm run deploy && curl https://stack.organizedai.vip`
 
 ### Resource Threshold Management
 - [ ] **75% Sonnet 4 Weekly**: Prioritize MVP features only
@@ -275,7 +275,7 @@ claude code
 - **Build Success**: All phases compile without errors
 - **Test Coverage**: 80%+ for critical evaluation paths
 - **Performance**: Build time < 60 seconds, bundle < 500KB
-- **Deployment**: Accessible at https://stack.organized-ai.com
+- **Deployment**: Accessible at https://stack.organizedai.vip
 
 ### Resource Utilization Success
 - **Total Sonnet 4 Usage**: 41-52 hours (29-37% of weekly limit)

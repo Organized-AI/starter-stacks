@@ -1,6 +1,6 @@
 # Post-Deployment Checklist - Comprehensive Validation
 
-**Target Domain**: stack.organized-ai.com  
+**Target Domain**: stack.organizedai.vip  
 **Deployment Platform**: Vercel + Cloudflare  
 **Validation Approach**: End-to-End User Experience Testing  
 
@@ -31,17 +31,17 @@
 #### Landing Page Verification
 ```bash
 # Automated testing commands for Claude Code
-curl -I https://stack.organized-ai.com
+curl -I https://stack.organizedai.vip
 # Expected: 200 OK, correct headers
 
-curl -s https://stack.organized-ai.com | grep -i "AI Tool Stack Evaluator"
+curl -s https://stack.organizedai.vip | grep -i "AI Tool Stack Evaluator"
 # Expected: Page title and main heading present
 ```
 
 #### Evaluation Flow Testing
 **Manual Test Scenario**:
 ```
-1. Visit https://stack.organized-ai.com
+1. Visit https://stack.organizedai.vip
 2. Click "Start Evaluation" or equivalent CTA
 3. Complete 5-question flow:
    - Question 1: Select "Experienced Developer"
@@ -60,7 +60,7 @@ curl -s https://stack.organized-ai.com | grep -i "AI Tool Stack Evaluator"
 #### API Endpoint Validation
 ```bash
 # Test evaluation API directly
-curl -X POST https://stack.organized-ai.com/api/evaluate \
+curl -X POST https://stack.organizedai.vip/api/evaluate \
   -H "Content-Type: application/json" \
   -d '{
     "background": "experienced",
@@ -109,7 +109,7 @@ const browsers = [
 #### Core Web Vitals Testing
 ```bash
 # Performance testing commands
-curl -w "@curl-format.txt" -o /dev/null -s https://stack.organized-ai.com
+curl -w "@curl-format.txt" -o /dev/null -s https://stack.organizedai.vip
 
 # Expected metrics:
 # First Contentful Paint: < 1.5s
@@ -121,9 +121,9 @@ curl -w "@curl-format.txt" -o /dev/null -s https://stack.organized-ai.com
 #### SEO & Meta Tags Verification
 ```bash
 # Check meta tags and structured data
-curl -s https://stack.organized-ai.com | grep -i "<meta"
-curl -s https://stack.organized-ai.com | grep -i "og:"
-curl -s https://stack.organized-ai.com | grep -i "application/ld+json"
+curl -s https://stack.organizedai.vip | grep -i "<meta"
+curl -s https://stack.organizedai.vip | grep -i "og:"
+curl -s https://stack.organizedai.vip | grep -i "application/ld+json"
 
 # Expected: Complete meta tags for social sharing and SEO
 ```
@@ -211,11 +211,11 @@ npm run dev
 #### SSL & Security Configuration
 ```bash
 # Test SSL configuration
-curl -I https://stack.organized-ai.com | grep -i security
-curl -I https://stack.organized-ai.com | grep -i strict-transport
+curl -I https://stack.organizedai.vip | grep -i security
+curl -I https://stack.organizedai.vip | grep -i strict-transport
 
 # Test redirect from HTTP to HTTPS
-curl -I http://stack.organized-ai.com
+curl -I http://stack.organizedai.vip
 
 # Expected: Proper security headers and HTTPS redirect
 ```
@@ -223,7 +223,7 @@ curl -I http://stack.organized-ai.com
 #### Content Security Policy
 ```bash
 # Check CSP headers
-curl -I https://stack.organized-ai.com | grep -i content-security-policy
+curl -I https://stack.organizedai.vip | grep -i content-security-policy
 
 # Expected: Restrictive CSP preventing XSS attacks
 ```
@@ -244,7 +244,7 @@ Manual Test:
 ```bash
 # Automated accessibility testing
 # (Using axe-core or similar tool)
-npx @axe-core/cli https://stack.organized-ai.com
+npx @axe-core/cli https://stack.organizedai.vip
 
 # Expected: No critical accessibility violations
 ```
@@ -269,8 +269,8 @@ npx @axe-core/cli https://stack.organized-ai.com
 #### Data Collection Compliance
 ```bash
 # Check privacy policy and GDPR compliance
-curl -s https://stack.organized-ai.com/privacy | grep -i "data collection"
-curl -s https://stack.organized-ai.com/privacy | grep -i "gdpr"
+curl -s https://stack.organizedai.vip/privacy | grep -i "data collection"
+curl -s https://stack.organizedai.vip/privacy | grep -i "gdpr"
 
 # Expected: Clear privacy policy and data handling disclosure
 ```
@@ -293,7 +293,7 @@ curl -s https://stack.organized-ai.com/privacy | grep -i "gdpr"
 #### Invalid Input Testing
 ```bash
 # Test evaluation API with invalid data
-curl -X POST https://stack.organized-ai.com/api/evaluate \
+curl -X POST https://stack.organizedai.vip/api/evaluate \
   -H "Content-Type: application/json" \
   -d '{"invalid": "data"}'
 
@@ -304,7 +304,7 @@ curl -X POST https://stack.organized-ai.com/api/evaluate \
 ```bash
 # Test API rate limits
 for i in {1..100}; do
-  curl -X POST https://stack.organized-ai.com/api/evaluate \
+  curl -X POST https://stack.organizedai.vip/api/evaluate \
     -H "Content-Type: application/json" \
     -d '{"background": "experienced", "timeline": "days"}' &
 done
@@ -326,18 +326,18 @@ echo "🚀 Starting Post-Deployment Validation..."
 
 # 1. Basic connectivity
 echo "✅ Testing basic connectivity..."
-curl -f https://stack.organized-ai.com > /dev/null || exit 1
+curl -f https://stack.organizedai.vip > /dev/null || exit 1
 
 # 2. Core functionality
 echo "✅ Testing evaluation API..."
-response=$(curl -s -X POST https://stack.organized-ai.com/api/evaluate \
+response=$(curl -s -X POST https://stack.organizedai.vip/api/evaluate \
   -H "Content-Type: application/json" \
   -d '{"background":"experienced","timeline":"days","projectType":"chat","teamSize":"small","designNeeds":"good"}')
 echo $response | grep -q "recommendation" || exit 1
 
 # 3. Performance check
 echo "✅ Testing performance..."
-load_time=$(curl -w "%{time_total}" -o /dev/null -s https://stack.organized-ai.com)
+load_time=$(curl -w "%{time_total}" -o /dev/null -s https://stack.organizedai.vip)
 if (( $(echo "$load_time > 2.0" | bc -l) )); then
   echo "❌ Site loading too slowly: ${load_time}s"
   exit 1
@@ -350,7 +350,7 @@ stack-eval --version || exit 1
 
 # 5. Security headers check
 echo "✅ Testing security headers..."
-curl -I https://stack.organized-ai.com | grep -q "Strict-Transport-Security" || exit 1
+curl -I https://stack.organizedai.vip | grep -q "Strict-Transport-Security" || exit 1
 
 echo "🎉 All validation tests passed!"
 ```
@@ -362,7 +362,7 @@ echo "🎉 All validation tests passed!"
 ### For Claude Code Phase 5 Completion
 
 **Infrastructure Validation**:
-- [ ] Domain resolves: https://stack.organized-ai.com
+- [ ] Domain resolves: https://stack.organizedai.vip
 - [ ] SSL certificate valid and secure
 - [ ] CDN caching working properly
 - [ ] All security headers present
@@ -404,4 +404,4 @@ echo "🎉 All validation tests passed!"
 
 ---
 
-**🎯 OUTCOME**: Complete confidence that stack.organized-ai.com delivers a fully functional, secure, performant, and accessible AI Tool Stack Evaluator that provides real value to users seeking AI development guidance.
+**🎯 OUTCOME**: Complete confidence that stack.organizedai.vip delivers a fully functional, secure, performant, and accessible AI Tool Stack Evaluator that provides real value to users seeking AI development guidance.
