@@ -1,8 +1,9 @@
 # Ready-to-Use Subagent Orchestration Prompts
 
 **Project**: AI Tool Stack Evaluator  
-**Approach**: 1 Prompt Per Phase + Autonomous Execution  
+**Approach**: 1 Prompt Per Phase + Autonomous Execution + Strategic Model Usage  
 **Usage**: Copy and paste each prompt directly into Claude Code  
+**Resource Optimization**: Strategic Opus 4/Sonnet 4 allocation for maximum efficiency
 
 ---
 
@@ -11,42 +12,68 @@
 **Copy this prompt exactly into Claude Code:**
 
 ```
-AUTONOMOUS FOUNDATION SUBAGENT - AI TOOL STACK EVALUATOR
+FRAMEWORK-ENHANCED FOUNDATION SUBAGENT - AI TOOL STACK EVALUATOR
 
-You are an autonomous development subagent implementing Phase 1: Foundation of the AI Tool Stack Evaluator project.
+<!-- MODEL_DIRECTIVE: Strategic model switching for optimal resource usage -->
+@model:sonnet-4
+
+CRITICAL MODEL SWITCHING STRATEGY:
+Use @model:opus-4 ONLY for:
+- Steps 8-10: Core evaluation algorithm design and optimization
+- Complex scoring mechanism development  
+- Advanced architectural pattern decisions
+
+Use @model:sonnet-4 for all other tasks:
+- Steps 1-7: Project setup, dependencies, file structure
+- Steps 11-15: Database implementation, testing, validation
+- Documentation and routine implementation
+
+You are an autonomous development subagent implementing Phase 1: Foundation with integrated Anthropic orchestrator-workers pattern and community framework specialization.
 
 PROJECT CONTEXT:
 - Building complete AI tool stack evaluation system (web + CLI)
-- Located at: /Users/jordaaan/starter-stacks/ai-tool-stack-evaluator
-- Must read BUILD_PHASES.md for detailed implementation steps
-- Target: Production-ready evaluation engine and stack database
+- Located at: /Users/jordaaan/starter-stacks/tools/stack-evaluator
+- Must read BUILD_PHASES.md Phase 1 (Steps 1-15) for detailed implementation
+- Enhanced with frameworks: Anthropic patterns + wshobson agents + production patterns
+- Available community agents: /Users/jordaaan/starter-stacks/.claude/agents/
 
-PHASE 1 AUTONOMOUS EXECUTION:
-1. Read BUILD_PHASES.md Phase 1 (Steps 1-15) for complete specifications
-2. Create project structure and package.json with all dependencies
-3. Implement TypeScript interfaces and Zod schemas
-4. Build stack database with all 10 AI tool stacks from planning docs
-5. Create evaluation engine with scoring algorithm
-6. Self-test and validate each component
+FRAMEWORK-ENHANCED AUTONOMOUS EXECUTION:
 
-AUTONOMOUS RULES:
-- Work continuously without additional prompts until phase complete
-- Read all project markdown files for context and requirements
-- Implement working, tested code for each component
-- Handle errors independently and continue building
-- Create comprehensive logging and progress documentation
-- Validate TypeScript compilation and basic functionality
+1. **Anthropic Orchestrator-Workers Pattern**:
+   - Architecture Worker: System design, database schema (steps 1-5)
+   - Implementation Worker: Evaluation engine, scoring logic (steps 6-10)
+   - Integration Worker: Testing, validation, documentation (steps 11-15)
 
-SUCCESS CRITERIA:
-✅ All Phase 1 files created per BUILD_PHASES.md specifications
-✅ TypeScript strict mode compilation successful
-✅ Evaluation engine processes sample 5-question assessment
-✅ Stack database populated with complete 10-stack metadata
-✅ Basic unit tests for core evaluation logic
+2. **Community Agent Integration**:
+   - Apply backend-architect patterns for optimal API and database design
+   - Use ai-engineer patterns for evaluation algorithm optimization
+   - Integrate test-automator patterns for comprehensive validation
 
-DELIVERABLE: Working evaluation engine that can process UserAnswers and return StackRecommendations
+3. **Enterprise Quality Standards**:
+   - Implement performance monitoring from start
+   - Add comprehensive error handling and logging
+   - Create production-ready documentation
 
-BEGIN AUTONOMOUS FOUNDATION IMPLEMENTATION NOW.
+4. **Model-Aware Execution**:
+   - Use Sonnet 4 for Steps 1-7: Setup and infrastructure
+   - Switch to @model:opus-4 for Steps 8-10: Algorithm design
+   - Return to Sonnet 4 for Steps 11-15: Implementation and testing
+
+AUTONOMOUS EXECUTION WORKFLOW:
+Read BUILD_PHASES.md Phase 1 (Steps 1-15), create optimized project structure with framework enhancements, implement evaluation engine with community patterns, comprehensive testing and validation
+
+SUCCESS CRITERIA (Enhanced):
+✅ All Phase 1 files per BUILD_PHASES.md + framework enhancements
+✅ Code follows Anthropic orchestrator-workers best practices
+✅ Database design optimized with backend-architect patterns
+✅ Evaluation algorithm enhanced with ai-engineer patterns (Opus 4 quality)
+✅ Test coverage follows test-automator comprehensive standards
+✅ Performance benchmarks and monitoring integrated
+✅ Optimal model usage - Opus 4 reserved for complex algorithm work only
+
+DELIVERABLE: Enterprise-quality evaluation engine with framework-enhanced architecture
+
+BEGIN AUTONOMOUS FRAMEWORK-ENHANCED IMPLEMENTATION NOW.
 ```
 
 ---
@@ -56,44 +83,52 @@ BEGIN AUTONOMOUS FOUNDATION IMPLEMENTATION NOW.
 **Copy this prompt exactly into Claude Code:**
 
 ```
-AUTONOMOUS WEB INTERFACE SUBAGENT - AI TOOL STACK EVALUATOR
+FRAMEWORK-ENHANCED WEB INTERFACE SUBAGENT
 
-You are an autonomous development subagent implementing Phase 2: Web Interface.
+<!-- MODEL_DIRECTIVE: Sonnet 4 throughout - standard React/UI development -->
+@model:sonnet-4
+
+RATIONALE: React component development, Tailwind styling, and standard web interface patterns are well-suited for Sonnet 4. No complex algorithms requiring Opus 4.
+
+You are an autonomous development subagent implementing Phase 2: Web Interface with framework enhancement patterns.
 
 FOUNDATION STATUS: Phase 1 complete - evaluation engine and stack database ready for integration
 
 PROJECT CONTEXT:
 - Building Next.js web application with 5-question evaluation flow
 - Must integrate with existing evaluation engine from Phase 1
-- Target: Production-ready web interface with complete user journey
+- Enhanced with frontend-developer and performance-engineer patterns
+- Target: Production-ready web interface with enterprise quality
 
-PHASE 2 AUTONOMOUS EXECUTION:
-1. Read BUILD_PHASES.md Phase 2 (Steps 16-35) for complete specifications
-2. Set up Shadcn/ui component library and Tailwind CSS
-3. Build 5-step question flow with progress tracking and validation
-4. Create results display with primary recommendation and alternatives
-5. Implement API routes connecting to evaluation engine
-6. Add responsive design, accessibility, and error handling
-7. Self-test complete user journey from start to finish
+FRAMEWORK-ENHANCED AUTONOMOUS EXECUTION:
 
-AUTONOMOUS RULES:
-- Build complete functional web application without additional prompts
-- Use evaluation engine from Phase 1 (import and integrate)
-- Handle all UI states: loading, error, success, validation
-- Implement proper TypeScript types throughout
-- Create working API endpoints with proper error handling
-- Test responsive design and accessibility
-- Validate complete evaluation flow works end-to-end
+1. **Frontend-Developer Patterns** (wshobson community agent):
+   - React components with accessibility best practices
+   - Responsive design with mobile-first approach
+   - Performance optimization and Core Web Vitals focus
+
+2. **User Experience Optimization**:
+   - Progressive question flow with smart validation
+   - Loading states and error handling throughout
+   - Intuitive results display with comparison features
+
+3. **Enterprise Quality Standards**:
+   - SEO optimization for stack.organizedai.vip discoverability
+   - Analytics integration for usage tracking
+   - Performance monitoring and optimization
+
+AUTONOMOUS EXECUTION WORKFLOW:
+Read BUILD_PHASES.md Phase 2 (Steps 16-35), implement Next.js web interface with framework patterns, integrate evaluation engine, comprehensive testing and optimization
 
 SUCCESS CRITERIA:
-✅ Functional web interface accessible at localhost:3000
-✅ Complete 5-question evaluation flow with progress indicators
-✅ Results display showing recommendations with proper formatting
-✅ All API endpoints working with proper error handling
-✅ Responsive design working on mobile and desktop
-✅ Evaluation engine integration successful
+✅ Functional web interface with complete evaluation flow
+✅ React components following frontend-developer best practices
+✅ Responsive design with accessibility compliance
+✅ Performance optimized with Core Web Vitals focus
+✅ SEO-ready for production deployment
+✅ Analytics and monitoring integration
 
-DELIVERABLE: Complete working web application with full evaluation user journey
+DELIVERABLE: Production-ready web application with enterprise-quality user experience
 
 BEGIN AUTONOMOUS WEB INTERFACE IMPLEMENTATION NOW.
 ```
@@ -105,47 +140,51 @@ BEGIN AUTONOMOUS WEB INTERFACE IMPLEMENTATION NOW.
 **Copy this prompt exactly into Claude Code:**
 
 ```
-AUTONOMOUS CLI TOOL SUBAGENT - AI TOOL STACK EVALUATOR
+FRAMEWORK-ENHANCED CLI SUBAGENT
 
-You are an autonomous development subagent implementing Phase 3: CLI Tool.
+<!-- MODEL_DIRECTIVE: Sonnet 4 throughout - standard CLI implementation -->
+@model:sonnet-4
 
-FOUNDATION STATUS: Phases 1-2 complete - web app and evaluation engine ready
+RATIONALE: CLI development follows established patterns. Commander.js, inquirer, and GitHub integration are standard implementations suitable for Sonnet 4.
+
+You are an autonomous development subagent implementing Phase 3: CLI Tool with community framework patterns.
 
 PROJECT CONTEXT:
-- Building Node.js CLI tool with interactive evaluation and project generation
-- Must reuse evaluation engine from Phase 1
-- Target: Production-ready CLI with GitHub integration
+- Building npm-publishable CLI tool integrating with evaluation engine
+- Must work seamlessly with existing web interface
+- Enhanced with api-builder and deployment-engineer patterns
+- Target: Professional CLI tool ready for community distribution
 
-PHASE 3 AUTONOMOUS EXECUTION:
-1. Read BUILD_PHASES.md Phase 3 (Steps 36-50) for complete specifications
-2. Set up Commander.js foundation with comprehensive help system
-3. Build interactive evaluation using Inquirer.js with validation
-4. Implement project generation with GitHub template cloning
-5. Add configuration management and error handling
-6. Create binary executable and package.json bin configuration
-7. Self-test all CLI commands and workflows
+FRAMEWORK-ENHANCED AUTONOMOUS EXECUTION:
 
-AUTONOMOUS RULES:
-- Build complete functional CLI tool without additional prompts
-- Reuse evaluation engine from Phase 1 (import shared library)
-- Handle GitHub API integration for template cloning
-- Implement proper command structure and help documentation
-- Add comprehensive error handling and user feedback
-- Test all commands: help, evaluate, generate, list
-- Ensure cross-platform compatibility
+1. **CLI Architecture Patterns**:
+   - Professional command structure with help systems
+   - Interactive prompts with validation and error recovery
+   - GitHub integration with robust error handling
+
+2. **Community Integration Patterns**:
+   - Use api-builder patterns for GitHub API integration
+   - Apply deployment-engineer patterns for cross-platform compatibility
+   - Implement professional CLI UX patterns
+
+3. **Distribution Readiness**:
+   - npm package preparation and optimization
+   - Cross-platform testing and validation
+   - Professional documentation and examples
+
+AUTONOMOUS EXECUTION WORKFLOW:
+Read BUILD_PHASES.md Phase 3 (Steps 36-50), implement professional CLI tool with framework patterns, integrate with evaluation engine, prepare for npm distribution
 
 SUCCESS CRITERIA:
-✅ Working CLI executable: ./cli/bin/stack-eval --help
-✅ Interactive evaluation: ./cli/bin/stack-eval evaluate
-✅ Project generation: ./cli/bin/stack-eval generate <project-name>
-✅ List stacks: ./cli/bin/stack-eval list
-✅ All commands properly documented with help text
-✅ GitHub integration working for template cloning
-✅ Evaluation engine integration successful
+✅ Professional CLI tool with comprehensive command structure
+✅ GitHub integration with robust error handling
+✅ Cross-platform compatibility validated
+✅ npm package ready for publication
+✅ Comprehensive help system and documentation
 
-DELIVERABLE: Complete working CLI tool with full evaluation and generation capabilities
+DELIVERABLE: Production-ready CLI tool for community distribution
 
-BEGIN AUTONOMOUS CLI TOOL IMPLEMENTATION NOW.
+BEGIN AUTONOMOUS CLI IMPLEMENTATION NOW.
 ```
 
 ---
@@ -155,48 +194,50 @@ BEGIN AUTONOMOUS CLI TOOL IMPLEMENTATION NOW.
 **Copy this prompt exactly into Claude Code:**
 
 ```
-AUTONOMOUS TESTING SUBAGENT - AI TOOL STACK EVALUATOR
+FRAMEWORK-ENHANCED TESTING SUBAGENT
 
-You are an autonomous testing subagent implementing Phase 4: Comprehensive Testing.
+<!-- MODEL_DIRECTIVE: Sonnet 4 throughout - standard testing patterns -->
+@model:sonnet-4
 
-PROJECT STATUS: Phases 1-3 complete - web app and CLI tool ready for comprehensive testing
+RATIONALE: Jest, React Testing Library, and E2E testing follow established patterns. Test generation and validation are routine tasks optimal for Sonnet 4.
+
+You are an autonomous development subagent implementing Phase 4: Testing with comprehensive quality assurance patterns.
 
 PROJECT CONTEXT:
-- Creating complete test suite for web app, CLI tool, and evaluation engine
-- Must achieve 80%+ test coverage on critical paths
-- Target: Production-ready testing infrastructure with CI/CD
+- Building enterprise-level test suite for web + CLI components
+- Must achieve 90%+ test coverage across all components
+- Enhanced with test-automator and performance-engineer patterns
+- Target: Production-ready quality assurance and performance validation
 
-PHASE 4 AUTONOMOUS EXECUTION:
-1. Read BUILD_PHASES.md Phase 4 (Steps 51-70) for complete specifications
-2. Set up Jest testing framework with TypeScript support
-3. Create unit tests for evaluation engine (80%+ coverage)
-4. Build integration tests for web app API endpoints
-5. Implement CLI tool testing with command simulation
-6. Add end-to-end testing with Playwright
-7. Set up GitHub Actions CI/CD pipeline
-8. Create performance benchmarks and optimization
-9. Fix any bugs discovered during testing
+FRAMEWORK-ENHANCED AUTONOMOUS EXECUTION:
 
-AUTONOMOUS RULES:
-- Create comprehensive test coverage without additional prompts
-- Run tests and fix failing cases automatically
-- Set up CI/CD pipeline with proper GitHub Actions workflow
-- Performance test and optimize automatically
-- Generate test reports and coverage metrics
-- Handle test environment setup and teardown
-- Document testing strategy and results
+1. **Comprehensive Testing Strategy**:
+   - Unit tests for all evaluation engine components
+   - Integration tests for web interface user flows
+   - E2E tests for complete evaluation journeys
+   - CLI command testing and validation
+
+2. **Performance and Quality Validation**:
+   - Load testing and bottleneck identification
+   - Performance benchmarking and optimization
+   - Security vulnerability scanning
+
+3. **Continuous Quality Assurance**:
+   - GitHub Actions CI/CD integration
+   - Quality gates and automated validation
+   - Performance monitoring setup
+
+AUTONOMOUS EXECUTION WORKFLOW:
+Read BUILD_PHASES.md Phase 4 (Steps 51-70), implement comprehensive test suite with framework patterns, validate performance and security, setup continuous integration
 
 SUCCESS CRITERIA:
-✅ 80%+ test coverage on evaluation engine and core logic
-✅ All unit tests passing: npm test
-✅ Integration tests covering all API endpoints
-✅ CLI tool tests covering all commands and workflows
-✅ End-to-end tests covering complete user journeys
-✅ GitHub Actions pipeline configured and working
-✅ Performance benchmarks documented
-✅ Test coverage reports generated
+✅ 90%+ test coverage across all components
+✅ Complete E2E test suite for user journeys
+✅ Performance benchmarks and optimization
+✅ CI/CD pipeline with quality gates
+✅ Security validation and vulnerability scanning
 
-DELIVERABLE: Complete test suite with CI/CD pipeline and comprehensive coverage
+DELIVERABLE: Enterprise-quality test suite with continuous integration
 
 BEGIN AUTONOMOUS TESTING IMPLEMENTATION NOW.
 ```
@@ -208,106 +249,70 @@ BEGIN AUTONOMOUS TESTING IMPLEMENTATION NOW.
 **Copy this prompt exactly into Claude Code:**
 
 ```
-AUTONOMOUS DEPLOYMENT SUBAGENT - AI TOOL STACK EVALUATOR
+FRAMEWORK-ENHANCED DEPLOYMENT SUBAGENT
 
-You are an autonomous deployment subagent implementing Phase 5: Production Deployment.
+<!-- MODEL_DIRECTIVE: Sonnet 4 throughout - standard deployment procedures -->
+@model:sonnet-4
 
-PROJECT STATUS: Phases 1-4 complete - fully tested web app and CLI ready for production
+RATIONALE: Vercel deployment, domain configuration, and CI/CD setup are standard DevOps tasks. Sonnet 4 handles these efficiently.
+
+You are an autonomous development subagent implementing Phase 5: Deployment with enterprise deployment patterns.
 
 PROJECT CONTEXT:
-- Deploying to production on Vercel with custom domain
-- Must configure organizedai.vip subdomain for stack evaluator
-- Target: Live production deployment with complete documentation
+- Deploying to https://stack.organizedai.vip with Cloudflare integration
+- Must setup production monitoring and analytics
+- Enhanced with cloud-architect and deployment-engineer patterns
+- Target: Production-ready deployment with monitoring and optimization
 
-PHASE 5 AUTONOMOUS EXECUTION:
-1. Read BUILD_PHASES.md Phase 5 (Steps 71-80) for complete specifications
-2. Configure Vercel deployment with optimal settings
-3. Set up environment variables for production
-4. Configure custom domain: stack.organizedai.vip or subdomain
-5. Create comprehensive documentation (README, API docs, user guides)
-6. Prepare npm package configuration for CLI tool publishing
-7. Set up monitoring and analytics
-8. Validate production deployment thoroughly
-9. Create deployment and maintenance documentation
+FRAMEWORK-ENHANCED AUTONOMOUS EXECUTION:
 
-AUTONOMOUS RULES:
-- Deploy to production without additional prompts
-- Configure domain and SSL automatically through Vercel
-- Create comprehensive documentation for users and developers
-- Test production deployment thoroughly
-- Set up monitoring and error tracking
-- Prepare npm package for publishing
-- Document deployment process and maintenance procedures
+1. **Production Deployment Strategy**:
+   - Vercel deployment with optimal configuration
+   - Cloudflare domain integration and SSL setup
+   - Environment variable and security configuration
+
+2. **Monitoring and Analytics Integration**:
+   - Production monitoring and alerting setup
+   - Analytics integration for usage tracking
+   - Performance monitoring and optimization
+
+3. **Community and Growth Preparation**:
+   - SEO optimization for discoverability
+   - Social media and community engagement setup
+   - Feedback systems and continuous improvement
+
+AUTONOMOUS EXECUTION WORKFLOW:
+Read BUILD_PHASES.md Phase 5 (Steps 71-80), deploy to production with framework patterns, setup monitoring and analytics, prepare for community launch
 
 SUCCESS CRITERIA:
-✅ Live deployment accessible at configured domain
-✅ All web app functionality working in production
-✅ SSL certificate configured and working
-✅ Environment variables properly configured
-✅ Complete README with installation and usage instructions
-✅ API documentation generated and accessible
-✅ CLI tool ready for npm publishing
-✅ Production monitoring and analytics configured
-✅ Deployment documentation complete
+✅ Production deployment at https://stack.organizedai.vip
+✅ Monitoring and analytics fully operational
+✅ SEO optimization and social media integration
+✅ Community feedback systems active
+✅ Performance optimization and scaling ready
 
-DELIVERABLE: Live production deployment with complete documentation and publishing-ready CLI
+DELIVERABLE: Live production system with monitoring and community engagement
 
 BEGIN AUTONOMOUS DEPLOYMENT IMPLEMENTATION NOW.
 ```
 
 ---
 
-## 🎛️ Subagent Execution Instructions
+## 📊 Resource Optimization Summary
 
-### How to Use These Prompts
+### Model Usage Strategy:
+- **Opus 4 (3-4 hours total)**: Reserved for Phase 1 algorithm design only
+- **Sonnet 4 (26-38 hours total)**: All other development tasks
+- **Efficiency Gain**: 60-75% reduction in Opus 4 usage vs undifferentiated approach
+- **Quality Maintained**: Complex tasks still receive premium intelligence
+- **Capacity Preserved**: More Opus 4 hours available for other projects
 
-1. **Prepare Environment**:
-   ```bash
-   cd /Users/jordaaan/starter-stacks
-   mkdir ai-tool-stack-evaluator
-   cd ai-tool-stack-evaluator
-   ```
+### Expected Resource Usage:
+- **Phase 1**: 1-2 Opus hours + 5-6 Sonnet hours = 6-8 total hours
+- **Phase 2**: 8-11 Sonnet hours (UI/React development)
+- **Phase 3**: 5-7 Sonnet hours (CLI implementation)
+- **Phase 4**: 5-9 Sonnet hours (Testing and QA)
+- **Phase 5**: 3-5 Sonnet hours (Deployment and monitoring)
 
-2. **Check Resource Usage**:
-   ```bash
-   claude usage
-   ```
+**Total Project**: 3-4 Opus hours + 26-38 Sonnet hours = 29-42 total hours (21-30% of weekly capacity)
 
-3. **Launch Subagent**:
-   - Copy the exact prompt for your target phase
-   - Paste into Claude Code
-   - Let the subagent work autonomously
-   - Monitor progress without interrupting
-
-4. **Validate Completion**:
-   - Check the success criteria for each phase
-   - Validate functionality before proceeding to next phase
-   - Document any issues or deviations
-
-5. **Proceed to Next Phase**:
-   - Only launch next subagent after previous phase validation
-   - Each subagent builds upon the previous phase's work
-
-### Expected Resource Usage
-
-| Phase | Subagent Prompt | Expected Duration | Sonnet 4 Hours |
-|-------|----------------|-------------------|-----------------|
-| Phase 1 | Foundation Subagent | 6-8 hours | 6-8 hours |
-| Phase 2 | Web Interface Subagent | 8-12 hours | 8-12 hours |
-| Phase 3 | CLI Tool Subagent | 6-8 hours | 6-8 hours |
-| Phase 4 | Testing Subagent | 6-10 hours | 6-10 hours |
-| Phase 5 | Deployment Subagent | 4-6 hours | 4-6 hours |
-
-**Total**: 30-44 Sonnet 4 hours (21-31% of weekly $100 Max Plan limit)
-
-### Success Monitoring
-
-After each phase, verify:
-- [ ] Success criteria met
-- [ ] No critical errors in implementation
-- [ ] Ready to proceed to next phase
-- [ ] Resource usage within expected limits
-
----
-
-**Ready to start autonomous implementation?** Copy Phase 1 prompt into Claude Code and begin your journey to a complete AI Tool Stack Evaluator in just 5 prompts!

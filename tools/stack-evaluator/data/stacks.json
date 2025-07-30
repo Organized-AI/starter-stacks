@@ -1,0 +1,822 @@
+{
+  "stacks": [
+    {
+      "id": "nextjs-vercel-ai",
+      "name": "Next.js + Vercel AI SDK",
+      "description": "Modern full-stack framework with best-in-class AI developer experience",
+      "category": "traditional",
+      "components": [
+        {
+          "name": "Next.js 14",
+          "category": "framework",
+          "description": "React framework with App Router and Server Components"
+        },
+        {
+          "name": "Vercel AI SDK",
+          "category": "ai-provider",
+          "description": "Unified API for streaming AI responses"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "ui-library",
+          "description": "Utility-first CSS framework"
+        },
+        {
+          "name": "Vercel",
+          "category": "hosting",
+          "description": "Optimized hosting for Next.js apps"
+        },
+        {
+          "name": "PostgreSQL",
+          "category": "database",
+          "description": "Robust relational database"
+        }
+      ],
+      "pros": [
+        "Single language (TypeScript/JavaScript)",
+        "Built-in streaming AI support",
+        "Excellent developer experience",
+        "Fast iteration cycles",
+        "Great documentation"
+      ],
+      "cons": [
+        "Vendor lock-in potential",
+        "Can get expensive at scale",
+        "Learning curve for App Router"
+      ],
+      "bestFor": [
+        "JavaScript developers",
+        "Chat interfaces",
+        "Rapid prototyping",
+        "Team projects"
+      ],
+      "avoidIf": [
+        "Need maximum performance",
+        "Prefer Python ecosystem",
+        "Strict budget constraints at scale"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Hobby",
+            "minCost": 0,
+            "maxCost": 20,
+            "includedResources": ["Basic hosting", "SSL", "CI/CD"]
+          },
+          {
+            "name": "Pro",
+            "minCost": 20,
+            "maxCost": 120,
+            "includedResources": ["Team features", "Analytics", "Priority support"]
+          }
+        ],
+        "hasFreeTier": true,
+        "freeTrialDays": 0
+      },
+      "learningCurve": "moderate",
+      "timeToProduction": "1-day",
+      "communitySupport": "massive",
+      "metadata": {
+        "githubStars": 118000,
+        "npmDownloads": 5000000,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "excellent",
+        "ecosystem": "mature"
+      }
+    },
+    {
+      "id": "fastapi-streamlit",
+      "name": "FastAPI + Streamlit",
+      "description": "Python powerhouse for data-heavy AI applications",
+      "category": "traditional",
+      "components": [
+        {
+          "name": "FastAPI",
+          "category": "framework",
+          "description": "Modern Python web framework with automatic API docs"
+        },
+        {
+          "name": "Streamlit",
+          "category": "ui-library",
+          "description": "Python framework for data apps"
+        },
+        {
+          "name": "LangChain",
+          "category": "ai-provider",
+          "description": "LLM orchestration framework"
+        },
+        {
+          "name": "PostgreSQL + pgvector",
+          "category": "database",
+          "description": "Postgres with vector search capabilities"
+        },
+        {
+          "name": "Docker",
+          "category": "hosting",
+          "description": "Container deployment"
+        }
+      ],
+      "pros": [
+        "Full Python ecosystem access",
+        "Excellent for data processing",
+        "Built-in API documentation",
+        "Great for ML model integration",
+        "Strong async support"
+      ],
+      "cons": [
+        "Two separate apps to maintain",
+        "More complex deployment",
+        "Limited UI customization in Streamlit"
+      ],
+      "bestFor": [
+        "Data scientists",
+        "Research tools",
+        "Complex ML pipelines",
+        "Internal tools"
+      ],
+      "avoidIf": [
+        "Need pixel-perfect UI",
+        "Want single-language stack",
+        "Building consumer apps"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Self-hosted",
+            "minCost": 5,
+            "maxCost": 50,
+            "includedResources": ["VPS hosting", "Database"]
+          },
+          {
+            "name": "Managed",
+            "minCost": 25,
+            "maxCost": 200,
+            "includedResources": ["Auto-scaling", "Monitoring", "Backups"]
+          }
+        ],
+        "hasFreeTier": true,
+        "freeTrialDays": 0
+      },
+      "learningCurve": "moderate",
+      "timeToProduction": "1-week",
+      "communitySupport": "vibrant",
+      "metadata": {
+        "githubStars": 65000,
+        "npmDownloads": 0,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "excellent",
+        "ecosystem": "mature"
+      }
+    },
+    {
+      "id": "astro-cloudflare",
+      "name": "Astro + Cloudflare Workers",
+      "description": "Edge-first architecture for globally distributed AI apps",
+      "category": "performance-optimized",
+      "components": [
+        {
+          "name": "Astro",
+          "category": "framework",
+          "description": "Content-focused web framework with islands architecture"
+        },
+        {
+          "name": "Cloudflare Workers AI",
+          "category": "ai-provider",
+          "description": "Edge-deployed AI models"
+        },
+        {
+          "name": "Cloudflare Pages",
+          "category": "hosting",
+          "description": "Global CDN with edge functions"
+        },
+        {
+          "name": "D1 Database",
+          "category": "database",
+          "description": "SQLite at the edge"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "ui-library",
+          "description": "Utility-first CSS"
+        }
+      ],
+      "pros": [
+        "Incredible global performance",
+        "Cost-effective at scale",
+        "Zero cold starts",
+        "Built-in DDoS protection",
+        "Automatic scaling"
+      ],
+      "cons": [
+        "Limited AI model selection",
+        "Edge computing constraints",
+        "Steeper learning curve"
+      ],
+      "bestFor": [
+        "Global applications",
+        "Performance-critical apps",
+        "Cost-conscious teams",
+        "High-traffic sites"
+      ],
+      "avoidIf": [
+        "Need custom ML models",
+        "Complex backend logic",
+        "New to web development"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Free",
+            "minCost": 0,
+            "maxCost": 0,
+            "includedResources": ["100k requests/day", "10GB bandwidth"]
+          },
+          {
+            "name": "Pro",
+            "minCost": 5,
+            "maxCost": 50,
+            "includedResources": ["Unlimited requests", "Analytics", "More AI models"]
+          }
+        ],
+        "hasFreeTier": true,
+        "freeTrialDays": 0
+      },
+      "learningCurve": "steep",
+      "timeToProduction": "1-week",
+      "communitySupport": "growing",
+      "metadata": {
+        "githubStars": 42000,
+        "npmDownloads": 500000,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "good",
+        "ecosystem": "emerging"
+      }
+    },
+    {
+      "id": "replit-gumloop",
+      "name": "Replit + Gumloop",
+      "description": "Visual AI workflow builder with instant deployment",
+      "category": "rapid-prototype",
+      "components": [
+        {
+          "name": "Replit",
+          "category": "tool",
+          "description": "Browser-based IDE with instant deployment"
+        },
+        {
+          "name": "Gumloop",
+          "category": "ai-provider",
+          "description": "Visual AI workflow automation"
+        },
+        {
+          "name": "Replit Database",
+          "category": "database",
+          "description": "Simple key-value store"
+        },
+        {
+          "name": "Replit Hosting",
+          "category": "hosting",
+          "description": "One-click deployment"
+        }
+      ],
+      "pros": [
+        "Zero setup required",
+        "Visual workflow builder",
+        "Instant deployment",
+        "Great templates",
+        "Collaborative editing"
+      ],
+      "cons": [
+        "Platform limitations",
+        "Less customization",
+        "Resource constraints",
+        "Vendor lock-in"
+      ],
+      "bestFor": [
+        "Quick prototypes",
+        "Learning AI development",
+        "Hackathons",
+        "Team collaboration"
+      ],
+      "avoidIf": [
+        "Need production scale",
+        "Complex requirements",
+        "Custom infrastructure"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Free",
+            "minCost": 0,
+            "maxCost": 0,
+            "includedResources": ["Basic compute", "Public repos"]
+          },
+          {
+            "name": "Hacker",
+            "minCost": 7,
+            "maxCost": 25,
+            "includedResources": ["More compute", "Private repos", "Custom domains"]
+          }
+        ],
+        "hasFreeTier": true,
+        "freeTrialDays": 0
+      },
+      "learningCurve": "easy",
+      "timeToProduction": "2-hours",
+      "communitySupport": "active",
+      "metadata": {
+        "githubStars": 0,
+        "npmDownloads": 0,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "good",
+        "ecosystem": "emerging"
+      }
+    },
+    {
+      "id": "windsurf-claude",
+      "name": "Windsurf + Claude Code",
+      "description": "AI-assisted development with architectural guidance",
+      "category": "traditional",
+      "components": [
+        {
+          "name": "Windsurf Editor",
+          "category": "tool",
+          "description": "AI-powered code editor"
+        },
+        {
+          "name": "Claude Code",
+          "category": "tool",
+          "description": "AI pair programmer"
+        },
+        {
+          "name": "Any Framework",
+          "category": "framework",
+          "description": "Choose your preferred stack"
+        },
+        {
+          "name": "GitHub",
+          "category": "tool",
+          "description": "Version control and CI/CD"
+        }
+      ],
+      "pros": [
+        "AI architectural guidance",
+        "Any tech stack supported",
+        "Learning-focused approach",
+        "High code quality",
+        "Best practices built-in"
+      ],
+      "cons": [
+        "Requires AI tool proficiency",
+        "Subscription costs",
+        "Learning curve for tools"
+      ],
+      "bestFor": [
+        "Complex applications",
+        "Learning best practices",
+        "Architectural decisions",
+        "Code quality focus"
+      ],
+      "avoidIf": [
+        "Need immediate results",
+        "Prefer visual builders",
+        "Limited budget"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Tools",
+            "minCost": 20,
+            "maxCost": 50,
+            "includedResources": ["AI assistance", "Editor features"]
+          },
+          {
+            "name": "Plus hosting",
+            "minCost": 0,
+            "maxCost": 200,
+            "includedResources": ["Depends on chosen stack"]
+          }
+        ],
+        "hasFreeTier": false,
+        "freeTrialDays": 14
+      },
+      "learningCurve": "moderate",
+      "timeToProduction": "1-week",
+      "communitySupport": "growing",
+      "metadata": {
+        "githubStars": 0,
+        "npmDownloads": 0,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "good",
+        "ecosystem": "emerging"
+      }
+    },
+    {
+      "id": "lovable-supabase",
+      "name": "Lovable + Supabase",
+      "description": "Natural language to full-stack app in minutes",
+      "category": "no-code",
+      "components": [
+        {
+          "name": "Lovable",
+          "category": "tool",
+          "description": "AI app builder using natural language"
+        },
+        {
+          "name": "Supabase",
+          "category": "database",
+          "description": "Open source Firebase alternative"
+        },
+        {
+          "name": "React",
+          "category": "framework",
+          "description": "Generated React components"
+        },
+        {
+          "name": "Tailwind CSS",
+          "category": "ui-library",
+          "description": "Styling framework"
+        }
+      ],
+      "pros": [
+        "Natural language to code",
+        "Beautiful UI by default",
+        "Full-stack in minutes",
+        "No coding required",
+        "Production-ready output"
+      ],
+      "cons": [
+        "Limited customization",
+        "Black-box code generation",
+        "Platform dependency",
+        "Monthly costs"
+      ],
+      "bestFor": [
+        "Non-technical founders",
+        "Rapid MVPs",
+        "Beautiful prototypes",
+        "Validating ideas"
+      ],
+      "avoidIf": [
+        "Need full control",
+        "Complex logic required",
+        "Custom integrations"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Starter",
+            "minCost": 29,
+            "maxCost": 29,
+            "includedResources": ["5 projects", "Basic features"]
+          },
+          {
+            "name": "Pro",
+            "minCost": 149,
+            "maxCost": 149,
+            "includedResources": ["Unlimited projects", "Advanced features"]
+          }
+        ],
+        "hasFreeTier": false,
+        "freeTrialDays": 7
+      },
+      "learningCurve": "minimal",
+      "timeToProduction": "30-minutes",
+      "communitySupport": "growing",
+      "metadata": {
+        "githubStars": 0,
+        "npmDownloads": 0,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "basic",
+        "ecosystem": "emerging"
+      }
+    },
+    {
+      "id": "v0-stackblitz",
+      "name": "v0.dev + StackBlitz + Netlify",
+      "description": "AI-generated UI components with instant deployment",
+      "category": "rapid-prototype",
+      "components": [
+        {
+          "name": "v0.dev",
+          "category": "tool",
+          "description": "AI UI component generator"
+        },
+        {
+          "name": "StackBlitz",
+          "category": "tool",
+          "description": "Browser-based development environment"
+        },
+        {
+          "name": "React/Next.js",
+          "category": "framework",
+          "description": "Modern web frameworks"
+        },
+        {
+          "name": "Netlify",
+          "category": "hosting",
+          "description": "Static site hosting with functions"
+        }
+      ],
+      "pros": [
+        "Zero local setup",
+        "AI-generated components",
+        "Instant deployment",
+        "Free for prototypes",
+        "Great for learning"
+      ],
+      "cons": [
+        "Browser limitations",
+        "Limited backend options",
+        "Generated code quality varies"
+      ],
+      "bestFor": [
+        "UI prototypes",
+        "Client demos",
+        "Learning React",
+        "Quick experiments"
+      ],
+      "avoidIf": [
+        "Need complex backend",
+        "Large applications",
+        "Team development"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Free",
+            "minCost": 0,
+            "maxCost": 0,
+            "includedResources": ["Basic hosting", "100GB bandwidth"]
+          },
+          {
+            "name": "Pro",
+            "minCost": 19,
+            "maxCost": 99,
+            "includedResources": ["Team features", "More bandwidth", "Analytics"]
+          }
+        ],
+        "hasFreeTier": true,
+        "freeTrialDays": 0
+      },
+      "learningCurve": "easy",
+      "timeToProduction": "30-minutes",
+      "communitySupport": "active",
+      "metadata": {
+        "githubStars": 0,
+        "npmDownloads": 0,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "good",
+        "ecosystem": "stable"
+      }
+    },
+    {
+      "id": "zapier-bubble",
+      "name": "Zapier + Bubble + OpenAI",
+      "description": "No-code automation platform with visual app builder",
+      "category": "no-code",
+      "components": [
+        {
+          "name": "Zapier",
+          "category": "tool",
+          "description": "Workflow automation platform"
+        },
+        {
+          "name": "Bubble",
+          "category": "tool",
+          "description": "Visual web app builder"
+        },
+        {
+          "name": "OpenAI",
+          "category": "ai-provider",
+          "description": "AI API integration"
+        },
+        {
+          "name": "Bubble Database",
+          "category": "database",
+          "description": "Built-in database"
+        }
+      ],
+      "pros": [
+        "No coding required",
+        "Powerful automations",
+        "Visual development",
+        "Quick to market",
+        "Great for business logic"
+      ],
+      "cons": [
+        "Platform lock-in",
+        "Scaling costs",
+        "Performance limitations",
+        "Limited customization"
+      ],
+      "bestFor": [
+        "Non-technical founders",
+        "Business automation",
+        "Internal tools",
+        "MVP validation"
+      ],
+      "avoidIf": [
+        "Need custom code",
+        "High performance required",
+        "Complex integrations"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Starter",
+            "minCost": 64,
+            "maxCost": 64,
+            "includedResources": ["Basic features", "Limited API calls"]
+          },
+          {
+            "name": "Professional",
+            "minCost": 144,
+            "maxCost": 300,
+            "includedResources": ["More API calls", "Advanced features"]
+          }
+        ],
+        "hasFreeTier": true,
+        "freeTrialDays": 14
+      },
+      "learningCurve": "easy",
+      "timeToProduction": "2-hours",
+      "communitySupport": "vibrant",
+      "metadata": {
+        "githubStars": 0,
+        "npmDownloads": 0,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "excellent",
+        "ecosystem": "mature"
+      }
+    },
+    {
+      "id": "glitch-claude",
+      "name": "Glitch + Claude Artifacts + Railway",
+      "description": "Remix-friendly platform with AI assistance",
+      "category": "rapid-prototype",
+      "components": [
+        {
+          "name": "Glitch",
+          "category": "tool",
+          "description": "Collaborative web IDE"
+        },
+        {
+          "name": "Claude Artifacts",
+          "category": "tool",
+          "description": "AI code generation"
+        },
+        {
+          "name": "Express.js",
+          "category": "framework",
+          "description": "Node.js web framework"
+        },
+        {
+          "name": "Railway",
+          "category": "hosting",
+          "description": "Simple cloud deployment"
+        }
+      ],
+      "pros": [
+        "Instant remix capability",
+        "Real-time collaboration",
+        "AI-assisted coding",
+        "Great community",
+        "Learn from examples"
+      ],
+      "cons": [
+        "Resource limitations",
+        "Public by default",
+        "Limited scalability"
+      ],
+      "bestFor": [
+        "Learning projects",
+        "Hackathons",
+        "Team experiments",
+        "Quick demos"
+      ],
+      "avoidIf": [
+        "Private code required",
+        "Production workloads",
+        "High performance needs"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Free",
+            "minCost": 0,
+            "maxCost": 0,
+            "includedResources": ["1000 hours/month", "Public projects"]
+          },
+          {
+            "name": "Pro",
+            "minCost": 8,
+            "maxCost": 25,
+            "includedResources": ["More hours", "Private projects", "Custom domains"]
+          }
+        ],
+        "hasFreeTier": true,
+        "freeTrialDays": 0
+      },
+      "learningCurve": "easy",
+      "timeToProduction": "2-hours",
+      "communitySupport": "active",
+      "metadata": {
+        "githubStars": 0,
+        "npmDownloads": 0,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "good",
+        "ecosystem": "stable"
+      }
+    },
+    {
+      "id": "cursor-copilot",
+      "name": "Cursor + GitHub Copilot + Vercel",
+      "description": "AI-powered development environment with pair programming",
+      "category": "traditional",
+      "components": [
+        {
+          "name": "Cursor",
+          "category": "tool",
+          "description": "AI-first code editor"
+        },
+        {
+          "name": "GitHub Copilot",
+          "category": "tool",
+          "description": "AI pair programmer"
+        },
+        {
+          "name": "Next.js",
+          "category": "framework",
+          "description": "React framework"
+        },
+        {
+          "name": "Vercel",
+          "category": "hosting",
+          "description": "Deployment platform"
+        }
+      ],
+      "pros": [
+        "AI-assisted everything",
+        "High-quality code suggestions",
+        "Any framework supported",
+        "Great for learning",
+        "Productivity boost"
+      ],
+      "cons": [
+        "Subscription costs",
+        "AI dependency",
+        "Learning curve"
+      ],
+      "bestFor": [
+        "Professional developers",
+        "Complex applications",
+        "Learning best practices",
+        "Productivity focus"
+      ],
+      "avoidIf": [
+        "Limited budget",
+        "Prefer visual tools",
+        "Simple projects"
+      ],
+      "pricing": {
+        "setupCost": 0,
+        "monthlyCost": [
+          {
+            "name": "Tools",
+            "minCost": 30,
+            "maxCost": 50,
+            "includedResources": ["Cursor Pro", "GitHub Copilot"]
+          },
+          {
+            "name": "Hosting",
+            "minCost": 0,
+            "maxCost": 120,
+            "includedResources": ["Vercel hosting", "Team features"]
+          }
+        ],
+        "hasFreeTier": false,
+        "freeTrialDays": 30
+      },
+      "learningCurve": "moderate",
+      "timeToProduction": "1-day",
+      "communitySupport": "massive",
+      "metadata": {
+        "githubStars": 0,
+        "npmDownloads": 0,
+        "lastUpdated": "2024-01-15T00:00:00Z",
+        "documentation": "excellent",
+        "ecosystem": "mature"
+      }
+    }
+  ]
+}
