@@ -6,7 +6,7 @@ import chalk from 'chalk';
 import { writeFileSync } from 'fs';
 import { join } from 'path';
 
-import { CLIContext, EvaluationOptions, UserAnswers, StackRecommendation } from '@/types';
+import { CLIContext, EvaluationOptions, UserAnswers, StackRecommendation, RecommendedStack } from '@/types';
 import { Logger } from '@/utils/logger';
 import { APIClient } from '@/utils/api';
 
@@ -114,11 +114,11 @@ async function runEvaluation(
   const userAnswers: UserAnswers = {
     userId: 'cli-user-' + Date.now(),
     answers: [
-      { questionId: 'timeline', value: answers.timeline },
-      { questionId: 'background', value: answers.background },
-      { questionId: 'project-type', value: answers.projectType },
-      { questionId: 'team-size', value: answers.teamSize },
-      { questionId: 'design-priority', value: answers.designPriority },
+      { questionId: 'timeline', value: answers.timeline || 'standard' },
+      { questionId: 'background', value: answers.background || 'intermediate' },
+      { questionId: 'project-type', value: answers.projectType || 'chatbot' },
+      { questionId: 'team-size', value: answers.teamSize || 'small' },
+      { questionId: 'design-priority', value: answers.designPriority || 'standard' },
     ],
     completedAt: new Date(),
   };
