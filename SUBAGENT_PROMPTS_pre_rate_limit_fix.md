@@ -186,100 +186,75 @@ BEGIN AUTONOMOUS WEB INTERFACE IMPLEMENTATION NOW.
 **Copy this prompt exactly into Claude Code:**
 
 ```
-FRAMEWORK-ENHANCED CLI SUBAGENT - CONSERVATIVE SESSION MANAGEMENT
+FRAMEWORK-ENHANCED CLI SUBAGENT
 
 <!-- MODEL_DIRECTIVE: Sonnet 4 throughout - standard CLI implementation -->
 @model:sonnet-4
 
-🚨 CRITICAL: REAL-TIME USAGE TRACKING REQUIRED
-SESSION LIMIT: 3.5 hours MAX (Conservative buffer for vibe coding flow)
-STOP RULE: At 70% estimated usage, begin graceful completion
-
-USAGE TRACKING (MANDATORY EVERY HOUR):
-Hour 1: [Document prompts used and % of estimated budget]
-Hour 2: [Document prompts used and % of estimated budget] 
-Hour 3: [Document prompts used and % of estimated budget]
-Hour 3.5: STOP POINT - Create handoff documentation if needed
+RATIONALE: CLI development follows established patterns. Commander.js, inquirer, and GitHub integration are standard implementations suitable for Sonnet 4.
 
 STRATEGIC CONTEXT MANAGEMENT:
 
 AUTOCOMPACT TIMING:
-- After core CLI architecture and commands (Hour 1.5)
-- After GitHub integration basics (Hour 2.5)
-- Before final testing and npm preparation (Hour 3)
-- NEVER during GitHub API integration debugging
-
-CONSERVATIVE SESSION PLANNING:
-- CLI GitHub integration: 40-50 prompts/hour (COMPLEX)
-- Basic CLI commands: 25-35 prompts/hour (MEDIUM)
-- Testing and npm prep: 20-30 prompts/hour (SIMPLE)
-- TOTAL SESSION BUDGET: 85-115 prompts for 3.5 hours
+- After core CLI architecture and commands (Step 42)
+- After GitHub integration implementation (Step 46)
+- Before final testing and npm preparation (Step 48)
+- Never during GitHub API integration or authentication setup
 
 BEFORE AUTOCOMPACTING:
-1. Document current CLI command progress and GitHub integration status
-2. Preserve authentication patterns and error handling implementations
-3. Note cross-platform compatibility decisions and testing approach
-4. List npm package preparation requirements and remaining tasks
-5. Document usage rate and remaining session capacity
+1. Document CLI command structure and user flow decisions
+2. Preserve GitHub API integration patterns and auth handling status
+3. Note cross-platform compatibility implementations and testing
+4. List npm package preparation status and distribution readiness
+5. Document command validation and error handling patterns
 
 AFTER AUTOCOMPACT:
-1. Review CLI architecture and validate GitHub integration patterns
-2. Continue with maintained code quality and error handling standards
-3. Monitor usage rate and adjust complexity based on remaining capacity
-4. Prepare graceful stopping point if approaching 70% usage
+1. Review CLI architecture decisions and command structure
+2. Validate GitHub integration functionality and error handling
+3. Continue development with maintained user experience standards
+4. Preserve professional CLI patterns and help system design
 
-You are an autonomous development subagent implementing Phase 3: CLI Tool with conservative session management.
-
-FOUNDATION STATUS: Phases 1, 2, 5 COMPLETE ✅
-- Phase 1: Evaluation engine working (18 stacks, 7ms response time)  
-- Phase 2: Next.js web interface complete and tested (5-question flow working)
-- Phase 5: Deployment configuration ready (stack.organizedai.vip prepared)
-- Phase 3: PARTIALLY COMPLETE - Need to finish from TemplateGenerator utility
+You are an autonomous development subagent implementing Phase 3: CLI Tool with community framework patterns.
 
 PROJECT CONTEXT:
 - Building npm-publishable CLI tool integrating with evaluation engine
-- CRITICAL: Session was rate-limited during previous attempt
 - Must work seamlessly with existing web interface
 - Enhanced with api-builder and deployment-engineer patterns
 - Target: Professional CLI tool ready for community distribution
 - Location: /Users/jordaaan/starter-stacks/tools/stack-evaluator/cli/
 
-CONSERVATIVE EXECUTION APPROACH:
+FRAMEWORK-ENHANCED AUTONOMOUS EXECUTION:
 
-1. **Session Management (MANDATORY)**:
-   - Track prompts used every hour
-   - Stop at 70% of estimated capacity (80-85 prompts)
-   - Create handoff documentation if needed
-   - Never exceed 3.5 hour session limit
+1. **CLI Architecture Patterns**:
+   - Professional command structure with help systems
+   - Interactive prompts with validation and error recovery
+   - GitHub integration with robust error handling
 
-2. **CLI Implementation Priorities (Conservative)**:
-   - Complete TemplateGenerator utility (continue from stopping point)
-   - Implement basic CLI commands with robust error handling
-   - GitHub integration with conservative complexity management
-   - Cross-platform testing and npm preparation
+2. **Community Integration Patterns**:
+   - Use api-builder patterns for GitHub API integration
+   - Apply deployment-engineer patterns for cross-platform compatibility
+   - Implement professional CLI UX patterns
 
-3. **Quality Over Speed**:
-   - Prefer completing 80% reliably over risky 100% completion
-   - Build in graceful stopping points every hour
-   - Document progress thoroughly for potential handoff
-   - Maintain vibe coding flow protection
+3. **Distribution Readiness**:
+   - npm package preparation and optimization
+   - Cross-platform testing and validation
+   - Professional documentation and examples
 
 AUTONOMOUS EXECUTION WORKFLOW:
-Continue Phase 3 from previous stopping point, implement CLI tool with GitHub integration, prepare for npm distribution, WHILE maintaining conservative session management and real-time usage tracking
+Read BUILD_PHASES.md Phase 3 (Steps 36-50), implement professional CLI tool with framework patterns, integrate with evaluation engine, prepare for npm distribution
 
-SUCCESS CRITERIA (Conservative):
+SUCCESS CRITERIA:
 ✅ Professional CLI tool with comprehensive command structure
 ✅ GitHub integration with robust error handling
 ✅ Cross-platform compatibility validated
-✅ npm package ready for publication OR graceful handoff documentation
-✅ Conservative session management maintained throughout
-✅ Real-time usage tracking documented every hour
-✅ Emergency stopping procedures followed if needed
+✅ npm package ready for publication
+✅ Comprehensive help system and documentation
+✅ Strategic autocompact maintains development momentum
 
-DELIVERABLE: Production-ready CLI tool for community distribution OR detailed handoff for completion
+DELIVERABLE: Production-ready CLI tool for community distribution
 
-BEGIN CONSERVATIVE CLI IMPLEMENTATION WITH USAGE TRACKING NOW.
-``````
+BEGIN AUTONOMOUS CLI IMPLEMENTATION NOW.
+```
 
 ---
 

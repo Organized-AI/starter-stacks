@@ -4,7 +4,7 @@
  */
 
 // Core types and schemas
-export * from './types/index.js';
+export * from './types/index';
 export { 
   TechnicalBackgroundSchema,
   TimelineUrgencySchema,
@@ -14,12 +14,12 @@ export {
   StackRecommendationSchema,
   UserAnswersSchema,
   EvaluationResultSchema 
-} from './schemas/index.js';
-export { APP_CONFIG, EVALUATION_CONFIG, DEFAULT_QUESTIONS } from './constants.js';
+} from './schemas/index';
+export { APP_CONFIG, EVALUATION_CONFIG, DEFAULT_QUESTIONS } from './constants';
 
 // Database and validation
-export { stackDatabase, type StackSearchCriteria, type StackStats } from './data/stack-database.js';
-export { validateStack, validateStacks, type ValidationResult } from './data/stack-validator.js';
+export { stackDatabase, type StackSearchCriteria, type StackStats } from './data/stack-database';
+export { validateStack, validateStacks, type ValidationResult } from './data/stack-validator';
 
 // Evaluation engine
 export { 
@@ -28,26 +28,26 @@ export {
   EvaluationError,
   type EvaluationResult,
   type CacheStats 
-} from './evaluation/evaluation-engine.js';
+} from './evaluation/evaluation-engine';
 
-export { ScoringAlgorithm } from './evaluation/scoring-algorithm.js';
-export { ConfidenceCalculator, type ConfidenceLevel } from './evaluation/confidence-calculator.js';
+export { ScoringAlgorithm } from './evaluation/scoring-algorithm';
+export { ConfidenceCalculator, type ConfidenceLevel } from './evaluation/confidence-calculator';
 export { 
   RecommendationGenerator,
   type GettingStartedGuide,
   type CostAnalysis,
   type ImplementationPhase 
-} from './evaluation/recommendation-generator.js';
+} from './evaluation/recommendation-generator';
 
 // Performance monitoring
 export { 
   performanceMonitor, 
   type PerformanceStats,
   type PerformanceReport 
-} from './utils/performance-monitor.js';
+} from './utils/performance-monitor';
 
 // Main evaluation function for easy use
 export async function evaluateStack(userAnswers: any) {
-  const { evaluationEngine } = await import('./evaluation/evaluation-engine.js');
+  const { evaluationEngine } = await import('./evaluation/evaluation-engine');
   return evaluationEngine.evaluate(userAnswers);
 }

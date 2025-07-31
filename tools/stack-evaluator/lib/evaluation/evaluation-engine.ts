@@ -9,13 +9,13 @@ import type {
   StackRecommendation, 
   RecommendedStack,
   PerformanceMetrics 
-} from '../types/index.js';
-import type { StackSearchCriteria } from '../data/stack-database.js';
-import { stackDatabase } from '../data/stack-database.js';
-import { ScoringAlgorithm } from './scoring-algorithm.js';
-import { ConfidenceCalculator } from './confidence-calculator.js';
-import { RECOMMENDATION_LIMITS } from '../constants.js';
-import { UserAnswersSchema } from '../schemas/index.js';
+} from '../types/index';
+import type { StackSearchCriteria } from '../data/stack-database';
+import { stackDatabase } from '../data/stack-database';
+import { ScoringAlgorithm } from './scoring-algorithm';
+import { ConfidenceCalculator } from './confidence-calculator';
+import { RECOMMENDATION_LIMITS } from '../constants';
+import { UserAnswersSchema } from '../schemas/index';
 import { v4 as uuidv4 } from 'uuid';
 
 export class EvaluationEngine {

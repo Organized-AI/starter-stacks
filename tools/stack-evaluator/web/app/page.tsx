@@ -4,8 +4,48 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://stack.organizedai.vip'),
   title: 'AI Tool Stack Evaluator | Find Your Perfect Tech Stack in 2 Minutes',
   description: 'Get personalized AI tool stack recommendations in 2 minutes. From Next.js to FastAPI, find the perfect tech stack for your AI project based on your experience and timeline.',
+  keywords: ['AI', 'tech stack', 'recommendations', 'developer tools', 'machine learning', 'artificial intelligence', 'framework', 'evaluation'],
+  authors: [{ name: 'Organized AI' }],
+  creator: 'Organized AI',
+  publisher: 'Organized AI',
+  category: 'technology',
+  openGraph: {
+    title: 'AI Tool Stack Evaluator | Find Your Perfect Tech Stack',
+    description: 'Get personalized AI tool stack recommendations in 2 minutes. From Next.js to FastAPI, find the perfect tech stack for your AI project.',
+    url: 'https://stack.organizedai.vip',
+    siteName: 'AI Tool Stack Evaluator',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'AI Tool Stack Evaluator - Find Your Perfect Tech Stack',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Tool Stack Evaluator | Find Your Perfect Tech Stack',
+    description: 'Get personalized AI tool stack recommendations in 2 minutes.',
+    creator: '@OrganizedAI',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function HomePage() {

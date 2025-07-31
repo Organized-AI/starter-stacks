@@ -7,8 +7,8 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import type { Stack } from '../types/index.js';
-import { StackSchema } from '../schemas/index.js';
+import type { Stack } from '../types/index';
+import { StackSchema } from '../schemas/index';
 import { z } from 'zod';
 
 const __filename = fileURLToPath(import.meta.url);

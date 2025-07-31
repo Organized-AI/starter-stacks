@@ -3,8 +3,8 @@
  * Tracks evaluation performance and generates metrics
  */
 
-import type { PerformanceMetrics } from '../types/index.js';
-import { PERFORMANCE_THRESHOLDS, MONITORING_EVENTS } from '../constants.js';
+import type { PerformanceMetrics } from '../types/index';
+import { PERFORMANCE_THRESHOLDS, MONITORING_EVENTS } from '../constants';
 
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;

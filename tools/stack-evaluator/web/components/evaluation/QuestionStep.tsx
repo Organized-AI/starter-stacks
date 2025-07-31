@@ -34,7 +34,7 @@ export default function QuestionStep({
 
       {/* Options */}
       <div className="space-y-3">
-        {question.options.map((option, index) => (
+        {question.options.map((option: any, index: number) => (
           <motion.button
             key={option.value}
             initial={{ opacity: 0, y: 10 }}

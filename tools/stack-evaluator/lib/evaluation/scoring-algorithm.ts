@@ -3,8 +3,8 @@
  * Implements weighted multi-criteria scoring with ai-engineer optimization patterns
  */
 
-import type { UserAnswers, Stack } from '../types/index.js';
-import { SCORING_WEIGHTS } from '../constants.js';
+import type { UserAnswers, Stack } from '../types/index';
+import { SCORING_WEIGHTS } from '../constants';
 
 export class ScoringAlgorithm {
   /**

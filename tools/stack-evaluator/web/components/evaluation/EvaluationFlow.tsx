@@ -14,7 +14,9 @@ const EVALUATION_QUESTIONS = [
     id: 'timeline',
     question: 'What\'s your project timeline?',
     description: 'How quickly do you need to have a working prototype or MVP?',
-    type: 'single' as const,
+    type: 'single-choice' as const,
+    required: true,
+    order: 1,
     options: [
       { value: 'immediate', label: 'ASAP (1-2 weeks)', description: 'Need something working quickly' },
       { value: 'fast', label: '1-2 months', description: 'Fast development with good foundation' },
@@ -26,7 +28,9 @@ const EVALUATION_QUESTIONS = [
     id: 'background',
     question: 'What\'s your technical background?',
     description: 'This helps us recommend tools that match your skill level.',
-    type: 'single' as const,
+    type: 'single-choice' as const,
+    required: true,
+    order: 2,
     options: [
       { value: 'beginner', label: 'Beginner', description: 'New to programming or AI development' },
       { value: 'intermediate', label: 'Intermediate', description: 'Some programming experience, new to AI' },
@@ -38,7 +42,9 @@ const EVALUATION_QUESTIONS = [
     id: 'projectType',
     question: 'What type of AI tool are you building?',
     description: 'Different tools work better for different types of AI applications.',
-    type: 'single' as const,
+    type: 'single-choice' as const,
+    required: true,
+    order: 3,
     options: [
       { value: 'chatbot', label: 'Chatbot/Conversational AI', description: 'Chat interfaces, customer support bots' },
       { value: 'content', label: 'Content Generation', description: 'Text, image, or media generation tools' },
@@ -51,7 +57,9 @@ const EVALUATION_QUESTIONS = [
     id: 'teamSize',
     question: 'What\'s your team size?',
     description: 'Team size affects architecture complexity and collaboration needs.',
-    type: 'single' as const,
+    type: 'single-choice' as const,
+    required: true,
+    order: 4,
     options: [
       { value: 'solo', label: 'Solo Developer', description: 'Just me working on this project' },
       { value: 'small', label: '2-5 people', description: 'Small team or startup' },
@@ -63,7 +71,9 @@ const EVALUATION_QUESTIONS = [
     id: 'designPriority',
     question: 'How important is custom design?',
     description: 'This affects whether we recommend component libraries or custom solutions.',
-    type: 'single' as const,
+    type: 'single-choice' as const,
+    required: true,
+    order: 5,
     options: [
       { value: 'minimal', label: 'Minimal', description: 'Function over form, basic UI is fine' },
       { value: 'standard', label: 'Standard', description: 'Clean, professional look with components' },
@@ -139,11 +149,15 @@ export default function EvaluationFlow() {
     try {
       // Convert form data to UserAnswers format
       const userAnswers: UserAnswers = {
-        timeline: state.formData.timeline || 'standard',
-        background: state.formData.background || 'intermediate',
-        projectType: state.formData.projectType || 'chatbot',
-        teamSize: state.formData.teamSize || 'small',
-        designPriority: state.formData.designPriority || 'standard'
+        userId: '123e4567-e89b-12d3-a456-426614174000', // TODO: Replace with actual user ID
+        answers: [
+          { questionId: 'timeline', value: state.formData.timeline || 'standard' },
+          { questionId: 'background', value: state.formData.background || 'intermediate' },
+          { questionId: 'project-type', value: state.formData.projectType || 'chat-interface' },
+          { questionId: 'team-size', value: state.formData.teamSize || 'small' },
+          { questionId: 'design-priority', value: state.formData.designPriority || 'important' }
+        ],
+        completedAt: new Date()
       };
 
       // Call the evaluation API

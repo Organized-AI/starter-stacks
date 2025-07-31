@@ -3,7 +3,7 @@
  * Formats and enhances raw scoring data into user-friendly recommendations
  */
 
-import type { Stack, UserAnswers } from '../types/index.js';
+import type { Stack, UserAnswers } from '../types/index';
 
 export class RecommendationGenerator {
   /**

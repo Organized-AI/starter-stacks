@@ -1,13 +1,22 @@
-// Re-export types from the core evaluation engine
-export type {
-  UserAnswers,
-  Stack,
-  StackRecommendation,
-  RecommendedStack,
-  Answer,
-  EvaluationQuestion,
-  QuestionOption,
-} from '../../../lib/types/index.js';
+// Import types from the core evaluation engine
+import type {
+  UserAnswers as CoreUserAnswers,
+  Stack as CoreStack,
+  StackRecommendation as CoreStackRecommendation,
+  RecommendedStack as CoreRecommendedStack,
+  Answer as CoreAnswer,
+  EvaluationQuestion as CoreEvaluationQuestion,
+  QuestionOption as CoreQuestionOption,
+} from '@/core/index';
+
+// Re-export core types
+export type UserAnswers = CoreUserAnswers;
+export type Stack = CoreStack;
+export type StackRecommendation = CoreStackRecommendation;
+export type RecommendedStack = CoreRecommendedStack;
+export type Answer = CoreAnswer;
+export type EvaluationQuestion = CoreEvaluationQuestion;
+export type QuestionOption = CoreQuestionOption;
 
 // Web-specific types
 export interface EvaluationFormData {
@@ -19,7 +28,7 @@ export interface EvaluationFormData {
 }
 
 export interface QuestionStepProps {
-  question: EvaluationQuestion;
+  question: CoreEvaluationQuestion;
   value: string | string[];
   onChange: (value: string | string[]) => void;
   onNext: () => void;
@@ -42,17 +51,17 @@ export interface EvaluationState {
   error: string | null;
   progress: ProgressState;
   formData: Partial<EvaluationFormData>;
-  results: StackRecommendation | null;
+  results: CoreStackRecommendation | null;
 }
 
 export interface RecommendationCardProps {
-  recommendation: RecommendedStack;
+  recommendation: CoreRecommendedStack;
   rank: number;
   isPrimary?: boolean;
 }
 
 export interface ComparisonTableProps {
-  recommendations: RecommendedStack[];
+  recommendations: CoreRecommendedStack[];
   selectedStacks?: string[];
   onSelectionChange?: (stackIds: string[]) => void;
 }
@@ -60,8 +69,8 @@ export interface ComparisonTableProps {
 export interface ShareableResult {
   id: string;
   timestamp: Date;
-  userAnswers: UserAnswers;
-  recommendations: RecommendedStack[];
+  userAnswers: CoreUserAnswers;
+  recommendations: CoreRecommendedStack[];
   metadata: {
     userAgent?: string;
     source?: string;

@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://stack.organizedai.vip/sitemap.xml
+
+# Optimized for search engines
+Crawl-delay: 1
+
+# Allow indexing of main content
+Allow: /
+Allow: /api/health
+
+# Disallow admin or sensitive areas (none currently)
+# Disallow: /admin/
+
+# Allow all bots to access the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

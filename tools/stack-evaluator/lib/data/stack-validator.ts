@@ -3,8 +3,8 @@
  * Comprehensive validation for stack database integrity
  */
 
-import type { Stack } from '../types/index.js';
-import { StackSchema } from '../schemas/index.js';
+import type { Stack } from '../types/index';
+import { StackSchema } from '../schemas/index';
 import { z } from 'zod';
 
 export interface ValidationResult {

@@ -3,7 +3,7 @@
  * Determines how certain we are about each recommendation
  */
 
-import type { UserAnswers, Stack } from '../types/index.js';
+import type { UserAnswers, Stack } from '../types/index';
 
 export class ConfidenceCalculator {
   /**
