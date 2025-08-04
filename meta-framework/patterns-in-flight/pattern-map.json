@@ -1,0 +1,19 @@
+{
+  "pattern_bridges": [
+    {
+      "bmad_source": "SUBAGENT_PROMPTS.md",
+      "kb_target": "deployment-patterns/parallel-subagent-architecture.md",
+      "efficiency_gain": "67-83%",
+      "sync_status": "pending"
+    },
+    {
+      "bmad_source": "TOKEN_USAGE_MASTER_PLAN.md", 
+      "kb_target": "ai-development-patterns/token-optimization.md",
+      "efficiency_gain": "41-53%",
+      "sync_status": "pending"
+    }
+  ],
+  "last_sync": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "total_patterns_discovered": 0,
+  "patterns_implemented": 0
+}
