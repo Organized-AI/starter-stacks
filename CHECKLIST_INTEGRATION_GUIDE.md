@@ -1,17 +1,17 @@
-# Claude Code Agent-Based Checklist Integration Guide
+# Claude Code Phase-Based Agent Integration Guide
 
-*How to integrate agent-driven development practices into each StarterStack README*
+*How to integrate phase-driven agent development practices into each StarterStack README*
 
 ## 📋 Integration Strategy
 
-Each starter stack includes a link to its specialized agent system checklist plus key agent coordination patterns integrated directly into the existing README structure.
+Each starter stack includes a link to its specialized phase-based agent system plus key phase coordination patterns integrated directly into the existing README structure.
 
 ## 🔗 README Integration Template
 
 Add this section to each stack's README after the existing "Pricing" section:
 
 ```markdown
-## 🤖 Claude Code Agent System
+## 🤖 Claude Code Phase-Based Agent System
 
 ### Quick Agent Setup
 ```bash
@@ -19,292 +19,329 @@ Add this section to each stack's README after the existing "Pricing" section:
 
 **Role**: Master Orchestration Agent for [STACK_NAME] development
 **Specialization**: [STACK_FOCUS] with [KEY_TECHNOLOGIES]
-**Agent Team**: 6 specialized sub-agents for complete development lifecycle
+**Phase Framework**: 4 structured development phases with 6 specialized agents
 
-# Copy the complete agent system from: 
+# Copy the complete phase-based agent system from: 
 # /checklists/[XX-stack-name-checklist.md]
 ```
 
-### Agent-Driven Development
-- **🚀 Development Workflow Agent** (15-30 prompts): Feature implementation and architecture
-- **🧪 Testing & Verification Agent** (8-15 prompts): Quality assurance and validation  
-- **💰 Token Budget Agent** (3-8 prompts): Resource optimization and session planning
-- **🎯 Pattern & Solution Agent** (6-15 prompts): Reusable components and best practices
-- **🚀 Deployment Agent** (5-12 prompts): Production deployment and infrastructure
-- **📊 Success Metrics Agent** (4-10 prompts): Performance monitoring and optimization
+### Phase-Based Development
+- **Phase 1: [Phase Name]** (15-25% tokens): [Phase Focus]
+- **Phase 2: [Phase Name]** (50-65% tokens): [Phase Focus]  
+- **Phase 3: [Phase Name]** (12-20% tokens): [Phase Focus]
+- **Phase 4: [Phase Name]** (8-15% tokens): [Phase Focus]
 
-### Agent Coordination
-- **Small Feature**: 1 primary + 1-2 support agents, 15-35 prompts total
-- **Medium Feature**: 1 primary + 2-3 support agents, 30-60 prompts total
-- **Large Feature**: All agents coordinated, 60-120 prompts total
+### Token Budget Planning
+- **Small Feature**: 25K-60K tokens across 4 phases, 1-2 sessions
+- **Medium Feature**: 60K-150K tokens across 4 phases, 2-4 sessions
+- **Large Feature**: 150K-400K tokens across 4 phases, 4-8 sessions
 
-🤖 **[Complete Agent System Guide →](../checklists/[XX-stack-name-checklist.md])**
+🤖 **[Complete Phase-Based Agent System →](../checklists/[XX-stack-name-checklist.md])**
 
-*Includes master orchestration prompts, agent coordination strategies, and framework-specific sub-agent specializations*
+*Includes master orchestration prompts, phase coordination strategies, and token budget optimization*
 ```
 
 ## 📁 File Structure
 
 ```
 starter-stacks/
-├── CLAUDE_CODE_BEST_PRACTICES.md        # Agent-based best practices
+├── CLAUDE_CODE_BEST_PRACTICES.md        # Phase-based agent framework
 ├── CHECKLIST_INTEGRATION_GUIDE.md       # This file
-├── checklists/                          # Agent system guides
-│   ├── 01-nextjs-vercel-checklist.md    # ✅ AI-native React agents
+├── checklists/                          # Phase-based agent systems
+│   ├── 01-nextjs-vercel-checklist.md    # ✅ AI-native React phases
 │   ├── 02-fastapi-streamlit-checklist.md
 │   ├── 03-astro-cloudflare-checklist.md
 │   ├── 04-replit-gumloop-checklist.md
 │   ├── 05-windsurf-claude-checklist.md
-│   ├── 06-lovable-supabase-checklist.md # ✅ Rapid prototyping agents
+│   ├── 06-lovable-supabase-checklist.md # ✅ Rapid prototyping phases
 │   ├── 07-v0-stackblitz-netlify-checklist.md
-│   ├── 08-zapier-bubble-openai-checklist.md # ✅ No-code automation agents
+│   ├── 08-zapier-bubble-openai-checklist.md # ✅ Business automation phases
 │   ├── 09-glitch-claude-railway-checklist.md
 │   └── 10-cursor-copilot-vercel-checklist.md
 ├── 01-nextjs-vercel/
-│   └── README.md                        # Updated with agent system link
+│   └── README.md                        # Updated with phase-based system link
 ├── 02-fastapi-streamlit/
-│   └── README.md                        # Updated with agent system link
+│   └── README.md                        # Updated with phase-based system link
 ... (all other stacks)
 ```
 
-## 🎯 Agent System Structure Template
+## 🎯 Phase-Based Agent System Structure
 
-Each agent system guide follows this standardized structure:
+Each phase-based agent system guide follows this standardized structure:
 
 ### 1. Master Orchestration Agent Prompt
-- Stack-specific framework context and constraints
-- 6 specialized sub-agent definitions
-- Coordination principles and handoff protocols
+- Stack-specific framework context and technologies
+- 4-phase development framework definition
+- 6 specialized sub-agent coordination architecture
+- Token budget context and optimization strategies
 
-### 2. Six Core Agent Categories
+### 2. Four Development Phases
 
-#### 🚀 Development Workflows
-**Primary Agent**: Development Workflow Agent
-**Sub-Agents**: 
-- Stack-specific implementation agents (UI, API, Database, etc.)
-- Framework-focused specializations
-- Integration and feature development
+#### Phase 1: Planning & Architecture (15-25% tokens)
+**Focus**: Requirements analysis, technical architecture, and resource planning
+**Primary Agents**: Requirements/Architecture sub-agents
+**Token Range**: 4K-80K depending on feature complexity
+**Deliverables**: Technical specifications, implementation roadmap, resource allocation
 
-#### 🧪 Testing & Verification
-**Primary Agent**: Testing & Verification Agent
-**Sub-Agents**:
-- Quality assurance specialists
-- Performance and security validators
-- Stack-specific testing approaches
+#### Phase 2: Core Implementation (50-65% tokens)  
+**Focus**: Feature development, component creation, and system integration
+**Primary Agents**: Development Workflow Agent and implementation sub-agents
+**Token Range**: 15K-240K depending on feature complexity
+**Deliverables**: Functional features, component libraries, API integrations
 
-#### 💰 Token Budget Templates
-**Primary Agent**: Token Budget Agent
-**Sub-Agents**:
-- Session planning and resource allocation
-- Cost optimization across multiple platforms
-- ROI and efficiency tracking
+#### Phase 3: Integration & Testing (12-20% tokens)
+**Focus**: System integration, quality assurance, and user validation
+**Primary Agents**: Testing & Verification Agent and validation sub-agents  
+**Token Range**: 3K-60K depending on feature complexity
+**Deliverables**: Tested integrations, validated user flows, performance optimization
 
-#### 🎯 Common Patterns & Solutions
-**Primary Agent**: Pattern & Solution Agent
-**Sub-Agents**:
-- Reusable component and pattern specialists
-- Architecture and integration pattern experts
-- Best practice template creators
+#### Phase 4: Deployment & Optimization (8-15% tokens)
+**Focus**: Production deployment, monitoring setup, and performance optimization
+**Primary Agents**: Deployment Agent and optimization sub-agents
+**Token Range**: 2K-40K depending on feature complexity
+**Deliverables**: Production deployment, monitoring systems, documentation
 
-#### 🚀 Deployment Checklist
-**Primary Agent**: Deployment Agent
-**Sub-Agents**:
-- Platform-specific deployment specialists
-- Security and performance optimization
-- Production monitoring and scaling
+### 3. Six Specialized Agent Categories
 
-#### 📊 Success Metrics
-**Primary Agent**: Success Metrics Agent
-**Sub-Agents**:
-- Performance monitoring specialists
-- Business impact and ROI measurement
-- User experience and adoption tracking
+#### 🚀 Development Workflow Agent
+**Responsibilities**: Feature implementation, component architecture, code generation
+**Phase Distribution**: Heavy in Phase 2 (60-70%), supporting in others
+**Sub-Agents**: Stack-specific implementation specialists
 
-### 3. Agent Coordination Master Prompts
-- Session orchestration patterns
-- Emergency and optimization protocols
-- Cross-agent communication templates
+#### 🧪 Testing & Verification Agent
+**Responsibilities**: Quality assurance, testing strategies, validation
+**Phase Distribution**: Active across all phases, peak in Phase 3
+**Sub-Agents**: Code quality, performance, security specialists
 
-## 🚀 Agent System Customization by Stack Type
+#### 💰 Token Budget Agent
+**Responsibilities**: Resource optimization, session planning, cost management
+**Phase Distribution**: Consistent across all phases for optimization
+**Sub-Agents**: Session planning, resource allocation, ROI analysis
+
+#### 🎯 Pattern & Solution Agent
+**Responsibilities**: Reusable components, best practices, architectural patterns
+**Phase Distribution**: Peak in Phase 1 and 2 for architecture and implementation
+**Sub-Agents**: Component libraries, architecture patterns, integration templates
+
+#### 🚀 Deployment Agent
+**Responsibilities**: Production deployment, infrastructure, DevOps
+**Phase Distribution**: Peak in Phase 4, supporting in Phase 3
+**Sub-Agents**: Platform deployment, security setup, performance optimization
+
+#### 📊 Success Metrics Agent
+**Responsibilities**: Performance monitoring, analytics, optimization
+**Phase Distribution**: Active across all phases, increasing toward Phase 4
+**Sub-Agents**: Performance tracking, user validation, business impact measurement
+
+### 4. Agent Coordination Master Prompts
+- Phase initiation and completion protocols
+- Inter-phase handoff procedures
+- Emergency response and optimization protocols
+
+## 🚀 Phase Framework Customization by Stack Type
 
 ### Stack Complexity Categories
 
-**🚀 Rapid Prototyping** (Optimized for speed):
+**🚀 Rapid Prototyping** (Speed-optimized phases):
 - Stacks 06, 07, 08: Lovable, v0, Zapier
-- **Agent Focus**: Development Workflow Agent dominance (60-70%)
-- **Token Distribution**: Front-loaded development, lightweight testing
-- **Coordination**: Minimal handoffs, streamlined validation
+- **Phase 1**: "Rapid Planning" (15% tokens) - Quick architecture decisions
+- **Phase 2**: "Accelerated Implementation" (65% tokens) - Fast feature development  
+- **Phase 3**: "Quick Validation" (12% tokens) - Essential testing and user feedback
+- **Phase 4**: "Rapid Deployment" (8% tokens) - Fast market entry and basic monitoring
 
-**⚖️ Balanced Development** (Speed + Quality):
+**⚖️ Balanced Development** (Speed + Quality balance):
 - Stacks 04, 05, 09, 10: Replit, Windsurf, Glitch, Cursor
-- **Agent Focus**: Balanced agent utilization (20-30% each)
-- **Token Distribution**: Even across development, testing, patterns
-- **Coordination**: Standard handoff protocols with learning focus
+- **Phase 1**: "Comprehensive Planning" (20% tokens) - Balanced architecture approach
+- **Phase 2**: "Quality Implementation" (60% tokens) - Feature development with learning
+- **Phase 3**: "Thorough Testing" (15% tokens) - Comprehensive validation and optimization
+- **Phase 4**: "Optimized Deployment" (10% tokens) - Performance-focused production setup
 
-**🏗️ Production Applications** (Quality + Scalability):
+**🏗️ Production Applications** (Quality-optimized phases):
 - Stacks 01, 02, 03: Next.js, FastAPI, Astro
-- **Agent Focus**: Pattern & Solution + Testing emphasis (40-50%)
-- **Token Distribution**: Heavy on architecture and comprehensive testing
-- **Coordination**: Complex multi-agent coordination with quality gates
+- **Phase 1**: "Detailed Planning" (25% tokens) - Comprehensive architecture and risk analysis
+- **Phase 2**: "Careful Implementation" (50% tokens) - Quality-first development approach
+- **Phase 3**: "Extensive Testing" (18% tokens) - Production readiness validation
+- **Phase 4**: "Full Deployment" (12% tokens) - Complete monitoring and scaling setup
 
-### Agent Specialization by Framework
+### Framework-Specific Phase Adaptations
 
 **React-based Stacks** (01, 06, 07, 10):
 ```bash
-# Development Workflow Sub-Agents:
-- Component Architecture Sub-Agent
-- State Management Sub-Agent  
-- Performance Optimization Sub-Agent
+# Phase 2 Implementation Sub-Agents:
+- UI Component Sub-Agent (8K-25K tokens)
+- State Management Sub-Agent (5K-15K tokens)
+- Performance Optimization Sub-Agent (3K-10K tokens)
 ```
 
 **Python-based Stacks** (02):
 ```bash
-# Development Workflow Sub-Agents:
-- FastAPI Backend Sub-Agent
-- Data Processing Sub-Agent
-- Async/Await Pattern Sub-Agent
+# Phase 2 Implementation Sub-Agents:
+- FastAPI Backend Sub-Agent (10K-30K tokens)
+- Data Processing Sub-Agent (8K-20K tokens)
+- Async Pattern Sub-Agent (5K-15K tokens)
 ```
 
 **Static Site Stacks** (03, 07):
 ```bash
-# Development Workflow Sub-Agents:
-- Build Optimization Sub-Agent
-- CDN Configuration Sub-Agent
-- Performance Monitoring Sub-Agent
+# Phase 2 Implementation Sub-Agents:
+- Build Optimization Sub-Agent (6K-18K tokens)
+- Content Management Sub-Agent (8K-25K tokens)
+- Performance Sub-Agent (4K-12K tokens)
 ```
 
 **No-Code Stacks** (04, 08):
 ```bash
-# Development Workflow Sub-Agents:
-- Workflow Design Sub-Agent
-- Integration Pattern Sub-Agent
-- Business Logic Sub-Agent
+# Phase 2 Implementation Sub-Agents:
+- Workflow Design Sub-Agent (10K-30K tokens)
+- Integration Pattern Sub-Agent (8K-25K tokens)
+- Business Logic Sub-Agent (6K-20K tokens)
 ```
 
 **AI-Enhanced Stacks** (05, 09, 10):
 ```bash
-# Development Workflow Sub-Agents:
-- AI Pair Programming Sub-Agent
-- Code Review Sub-Agent
-- Learning Documentation Sub-Agent
+# Phase 2 Implementation Sub-Agents:
+- AI Integration Sub-Agent (10K-35K tokens)
+- Code Generation Sub-Agent (8K-25K tokens)
+- Learning Documentation Sub-Agent (5K-15K tokens)
 ```
 
-## 💰 Token Budget Planning by Agent System
+## 💰 Token Budget Planning Templates
 
-### Agent Budget Distribution Templates
+### Phase Distribution by Feature Size
 
-**Small Feature Development (15-35 total prompts)**
+**Small Feature Token Allocation**
 ```markdown
-**Primary Agent**: [Stack-appropriate primary]
-**Support Agents**: 1-2 related agents
-**Distribution**:
-- Primary Agent: 8-20 prompts (60-70%)
-- Support Agent 1: 3-8 prompts (20-25%)
-- Support Agent 2: 2-5 prompts (10-15%)
-- Coordination: 2-2 prompts (5%)
+**Total Budget**: 25K-60K tokens
+**Phase 1**: 4K-12K tokens (Planning & Requirements)
+**Phase 2**: 15K-39K tokens (Core Implementation)  
+**Phase 3**: 3K-7K tokens (Testing & Integration)
+**Phase 4**: 2K-4K tokens (Deployment & Monitoring)
+
+**Ideal For**: UI components, simple integrations, feature enhancements
+**Sessions**: 1-2 focused development sessions
+**Timeline**: 2-6 hours of development work
 ```
 
-**Medium Feature Development (30-60 total prompts)**
+**Medium Feature Token Allocation**
 ```markdown
-**Primary Agent**: Development Workflow Agent
-**Support Agents**: 2-3 specialized agents
-**Distribution**:
-- Development Workflow: 15-30 prompts (50-55%)
-- Testing & Verification: 6-12 prompts (20-25%)
-- Pattern & Solution: 4-8 prompts (15-20%)
-- Token Budget: 2-4 prompts (5-10%)
-- Coordination: 3-6 prompts (5-10%)
+**Total Budget**: 60K-150K tokens
+**Phase 1**: 12K-30K tokens (Architecture & Planning)
+**Phase 2**: 35K-95K tokens (Full Implementation)
+**Phase 3**: 8K-22K tokens (Comprehensive Testing)
+**Phase 4**: 5K-12K tokens (Production Deployment)
+
+**Ideal For**: User flows, authentication systems, data management
+**Sessions**: 2-4 focused development sessions  
+**Timeline**: 4-12 hours of development work
 ```
 
-**Large Feature Development (60-120 total prompts)**
+**Large Feature Token Allocation**
 ```markdown
-**All Agents Coordinated**: Full team approach
-**Distribution**:
-- Development Workflow: 25-50 prompts (40-45%)
-- Testing & Verification: 12-25 prompts (20-25%)
-- Pattern & Solution: 8-15 prompts (15-20%)
-- Deployment: 5-12 prompts (8-12%)
-- Success Metrics: 4-10 prompts (5-8%)
-- Token Budget: 3-8 prompts (5-8%)
-- Coordination: 3-10 prompts (5-10%)
+**Total Budget**: 150K-400K tokens
+**Phase 1**: 30K-80K tokens (Comprehensive Planning)
+**Phase 2**: 80K-240K tokens (Complex Implementation)
+**Phase 3**: 25K-60K tokens (Extensive Testing)
+**Phase 4**: 15K-40K tokens (Full Production Setup)
+
+**Ideal For**: Multi-user systems, complex workflows, enterprise features
+**Sessions**: 4-8 focused development sessions
+**Timeline**: 8-24 hours of development work
 ```
 
-## 📊 Agent Performance Metrics
+### Budget Optimization Strategies
+
+**Session Boundary Optimization**
+- Align phase boundaries with natural session breaks
+- Minimize context rebuilding between sessions
+- Plan for 25K-200K tokens per focused session
+- Use phase handoff documentation for context preservation
+
+**Cross-Phase Token Reallocation**
+- Monitor actual vs. planned token usage per phase
+- Reallocate unused tokens from early phases to later phases
+- Maintain minimum quality thresholds while optimizing efficiency
+- Document lessons learned for future phase planning
+
+## 📊 Phase Success Metrics
 
 ### Development Velocity Targets
-- **Agent Coordination Efficiency**: < 10% token overhead for coordination
-- **Handoff Success Rate**: 95%+ successful agent handoffs without information loss
-- **Quality Consistency**: Consistent output quality regardless of primary agent
-- **Feature Completion**: 90%+ of planned features delivered within agent budget
+- **Phase Completion Rate**: 95%+ of phases completed within token budget
+- **Quality Consistency**: Consistent output quality across all phases
+- **Handoff Efficiency**: < 5% token overhead for phase transitions
+- **Feature Delivery**: 90%+ of planned features delivered across all phases
 
 ### Quality Assurance Metrics
-- **Agent Specialization**: Each agent operating within expertise domain
-- **Cross-Agent Learning**: Patterns and improvements shared between agents
-- **Token Optimization**: Continuous improvement in agent efficiency
-- **Documentation Quality**: Clear agent coordination and decision documentation
+- **Architecture Quality**: Phase 1 planning reduces Phase 2 iterations by 40%+
+- **Implementation Quality**: Phase 2 code quality reduces Phase 3 testing by 30%+
+- **Integration Success**: Phase 3 testing reduces Phase 4 deployment issues by 80%+
+- **Production Readiness**: Phase 4 deployments successful 95%+ of the time
 
 ## 🔄 Implementation Phases
 
-### Phase 1: Core Agent Systems (Completed)
-- [x] Master orchestration agent framework
-- [x] 6 core agent type definitions
+### Phase 1: Core Phase Framework (Completed)
+- [x] Master orchestration agent framework with 4-phase structure
+- [x] 6 core agent type definitions with phase distribution
+- [x] Token budget allocation templates by feature size
 - [x] 3 example stack implementations (Next.js, Lovable, Zapier)
 
-### Phase 2: Complete Agent Library (In Progress)
-- [ ] Generate remaining 7 stack agent systems
-- [ ] Customize coordination patterns for each framework
-- [ ] Test and optimize token budgets across all stacks
+### Phase 2: Complete Phase Library (In Progress)
+- [ ] Generate remaining 7 stack phase-based agent systems
+- [ ] Customize phase coordination patterns for each framework
+- [ ] Test and optimize token budgets across all stack types
+- [ ] Validate phase boundaries and handoff procedures
 
 ### Phase 3: README Integration
-- [ ] Update all 10 stack READMEs with agent system links
-- [ ] Add quick reference sections for agent coordination
-- [ ] Test all links and agent prompt templates
+- [ ] Update all 10 stack READMEs with phase-based system links
+- [ ] Add quick reference sections for phase coordination
+- [ ] Test all phase coordination prompts and token estimates
+- [ ] Validate phase success criteria and optimization strategies
 
-### Phase 4: Advanced Agent Features
-- [ ] Cross-stack agent learning and optimization
-- [ ] Automatic agent selection based on task complexity
-- [ ] Performance analytics and continuous improvement
+### Phase 4: Advanced Phase Features
+- [ ] Cross-stack phase learning and optimization
+- [ ] Automatic phase planning based on feature complexity
+- [ ] Performance analytics and continuous phase improvement
+- [ ] Community feedback integration and phase template updates
 
 ## 📝 Content Quality Guidelines
 
 ### Master Agent Prompt Requirements
-- Stack-specific framework context and technologies
-- Clear 6-agent architecture definition
-- Coordination principles and handoff protocols
-- Token budget optimization strategies
+- Stack-specific framework context and phase adaptations
+- Clear 4-phase development framework with token allocations
+- 6-agent coordination architecture with phase responsibilities
+- Token budget optimization strategies with realistic estimates
 
-### Agent System Guide Requirements
-- Actionable agent coordination prompts
-- Clear sub-agent specialization and responsibilities
-- Token budget templates with realistic estimates
-- Framework-specific examples and patterns
+### Phase System Guide Requirements
+- Actionable phase coordination prompts with clear success criteria
+- Sub-agent specialization with token allocation ranges
+- Phase handoff protocols with context preservation strategies
+- Framework-specific examples with validated token estimates
 
 ### Integration Requirements
-- Easy copy-paste agent setup prompts
-- Clear agent selection guidance
-- Realistic token budget estimates
-- Links to complete agent system guides
+- Easy copy-paste phase setup prompts
+- Clear phase selection guidance based on feature complexity
+- Realistic token budget estimates with optimization strategies
+- Links to complete phase-based agent system guides
 
-## 🛠️ Maintenance and Updates
+## 🛠️ Maintenance and Phase Optimization
 
-### Regular Optimization
-- **Weekly**: Review agent coordination patterns for efficiency
-- **Monthly**: Update token budgets based on actual usage data  
-- **Quarterly**: Major agent system improvements based on results
-- **Annually**: Framework updates and new agent specializations
+### Regular Phase Optimization
+- **Weekly**: Review phase coordination efficiency and token usage patterns
+- **Monthly**: Update token budgets based on actual development session data
+- **Quarterly**: Major phase system improvements based on results and feedback
+- **Annually**: Framework updates and new phase specialization development
 
 ### Quality Assurance Process
-- Test all agent coordination prompts with Claude Code
+- Test all phase coordination prompts with Claude Code
 - Verify token budget estimates with real development sessions
-- Validate agent handoff protocols work smoothly
-- Check consistency across all stack implementations
+- Validate phase handoff protocols minimize context loss
+- Check consistency across all stack phase implementations
 
 ### Community Integration
-- Collect feedback on agent system effectiveness
-- Share successful agent coordination patterns
-- Update based on framework changes and new features
-- Expand agent specializations based on community needs
+- Collect feedback on phase system effectiveness and optimization opportunities
+- Share successful phase coordination patterns and token optimization strategies
+- Update based on framework changes and new development patterns
+- Expand phase specializations based on community needs and results
 
 ---
 
-*This agent-based integration approach transforms each StarterStack into a coordinated development team, maximizing both development velocity and code quality while optimizing token usage.*
+*This phase-based integration approach transforms each StarterStack into a structured development pipeline with predictable token usage, clear quality gates, and systematic progress toward production-ready features.*
