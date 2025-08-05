@@ -3,7 +3,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "regions": ["iad1", "sfo1", "lhr1"],
   "env": {
     "NODE_ENV": "production"
   },
@@ -14,7 +13,6 @@
   },
   "functions": {
     "app/api/**/*.ts": {
-      "runtime": "nodejs18.x",
       "maxDuration": 10
     }
   },
@@ -50,7 +48,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2))",
+      "source": "/(.*\\.(?:js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2))",
       "headers": [
         {
           "key": "Cache-Control",
