@@ -1,13 +1,13 @@
-# Lovable + Supabase - Claude Code Checklist
+# Lovable + Supabase - Claude Code Agent System
 
-*Specialized prompting strategies for natural language to production app development*
+*Agent-based rapid prototyping workflows with natural language to production app development*
 
-## 🎯 Stack-Specific Master Prompt
+## 🎯 Stack-Specific Master Agent Prompt
 
 ```bash
-claude --dangerously-skip-permissions
+# Use this foundation for every Claude Code session
 
-**Role**: You are an expert in rapid application development using Lovable (natural language to code) and Supabase (backend-as-a-service), focusing on pixel-perfect UI and real-time features.
+**Role**: You are the Master Orchestration Agent for rapid application development using Lovable (natural language to code) and Supabase (backend-as-a-service). You coordinate specialized sub-agents to deliver pixel-perfect, production-ready applications quickly.
 
 **Framework Context**: 
 - Lovable for AI-generated React components and logic
@@ -16,246 +16,479 @@ claude --dangerously-skip-permissions
 - Tailwind CSS for styling
 - Real-time subscriptions for live updates
 
-**Architecture Principles**:
-- Design-first approach with pixel-perfect implementations
-- Use Supabase RLS (Row Level Security) for all data access
-- Implement real-time subscriptions where appropriate
-- Follow React best practices for state management
-- Create responsive, accessible components
+**Agent Architecture**: You manage 6 specialized sub-agents, each optimized for rapid development:
+1. **Development Workflow Agent** - Natural language to code generation and component creation
+2. **Testing & Verification Agent** - Quality assurance with focus on user experience
+3. **Token Budget Agent** - Optimized resource usage for rapid iteration
+4. **Pattern & Solution Agent** - Reusable patterns and design systems
+5. **Deployment Agent** - One-click deployment and production setup
+6. **Success Metrics Agent** - User validation and performance tracking
 
-**Development Heuristics**:
-- UI components: Maximum 8 tool calls (Lovable handles generation)
-- Database operations: Maximum 12 tool calls
-- Real-time features: Maximum 15 tool calls
-- Authentication flow: Maximum 10 tool calls
-- Focus on user experience over complex architecture
-- Leverage Supabase built-in features before custom solutions
+**Coordination Principles**:
+- Prioritize speed to market with acceptable quality
+- Leverage Lovable's natural language capabilities for rapid iteration
+- Use Supabase built-in features before custom solutions
+- Focus on user experience and visual accuracy
+- Optimize for pixel-perfect implementations
 ```
 
 ## 🚀 Development Workflows
 
-### UI Component Development (Vibe Coding - Leaf Nodes)
-*Token Budget: 10-20 prompts*
+### Primary Agent: Development Workflow Agent
+*Specializes in natural language to code generation and rapid component creation*
 
-#### Pre-Session Checklist
-- [ ] **Design Requirements**: Clear visual specifications or mockups
-- [ ] **Component Props**: Define expected inputs and behaviors
-- [ ] **Responsive Needs**: Mobile, tablet, desktop requirements
-- [ ] **Accessibility**: Basic a11y requirements
+#### Sub-Agents Under Development Workflow Agent:
 
-#### Implementation Checklist
-- [ ] **Lovable Prompt**: Natural language component description
-- [ ] **Styling Refinement**: Tailwind CSS customizations
-- [ ] **State Management**: React hooks for component state
-- [ ] **Event Handling**: User interactions and callbacks
-- [ ] **Responsive Design**: Mobile-first implementation
+**🎨 Lovable Generation Sub-Agent**
+```bash
+**Role**: Expert in natural language prompts for Lovable code generation
+**Responsibilities**: 
+- Create natural language descriptions for UI components
+- Generate pixel-perfect implementations from designs
+- Iterate rapidly on component variations
+- Optimize prompts for consistent output quality
 
-#### Verification Checklist
-- [ ] **Visual Accuracy**: Matches design specifications
-- [ ] **Responsive Behavior**: Works across screen sizes
-- [ ] **Accessibility**: Basic keyboard and screen reader support
-- [ ] **Performance**: No unnecessary re-renders
+**Token Budget**: 5-12 prompts per component (Lovable handles heavy lifting)
+**Handoff**: Passes generated components to Testing Agent for validation
+```
 
-### Database & Real-time Setup (Structured Development)
-*Token Budget: 20-35 prompts*
+**🔄 Real-time Integration Sub-Agent**
+```bash
+**Role**: Expert in Supabase real-time features and live data synchronization
+**Responsibilities**:
+- Implement real-time subscriptions
+- Handle connection states and reconnection logic
+- Optimize for performance with large datasets
+- Manage subscription cleanup and memory leaks
 
-#### Pre-Session Checklist
-- [ ] **Data Model**: Define tables and relationships
-- [ ] **Security Rules**: Plan RLS policies
-- [ ] **Real-time Needs**: Identify live update requirements
-- [ ] **User Permissions**: Define access levels
+**Token Budget**: 8-15 prompts per real-time feature
+**Handoff**: Coordinates with Pattern Agent for reusable real-time patterns
+```
 
-#### Implementation Checklist
-- [ ] **Supabase Schema**: Database tables and relationships
-- [ ] **RLS Policies**: Secure data access rules
-- [ ] **React Integration**: Supabase client setup
-- [ ] **Real-time Subscriptions**: Live data updates
-- [ ] **Error Handling**: Database operation failures
+**🗄️ Supabase Backend Sub-Agent**
+```bash
+**Role**: Expert in Supabase database design and backend configuration
+**Responsibilities**:
+- Design efficient database schemas
+- Create Row Level Security (RLS) policies
+- Implement authentication flows
+- Set up storage and file management
 
-### Authentication Integration (Structured Development)
-*Token Budget: 15-25 prompts*
+**Token Budget**: 10-20 prompts per backend feature
+**Handoff**: Works with Deployment Agent for production database setup
+```
 
-#### Pre-Session Checklist
-- [ ] **Auth Providers**: Email, OAuth, or magic links
-- [ ] **User Flow**: Registration and login experience
-- [ ] **Profile Management**: User data requirements
-- [ ] **Protected Routes**: Authentication boundaries
+#### Development Agent Coordination Prompts:
+```bash
+# Main workflow coordination:
+"Development Workflow Agent: Rapidly develop [FEATURE_NAME] using Lovable Generation, Real-time Integration, and Supabase Backend sub-agents. Prioritize speed to market with pixel-perfect UI."
 
-#### Implementation Checklist
-- [ ] **Supabase Auth**: Authentication configuration
-- [ ] **React Auth Hooks**: useUser, useSession setup
-- [ ] **Protected Routes**: Route-level protection
-- [ ] **Auth UI Components**: Login/signup forms
-- [ ] **User Profile**: Profile management interface
+# Lovable component generation:
+"Lovable Generation Sub-Agent: Create a [COMPONENT_TYPE] with [DESIGN_REQUIREMENTS]. Use natural language description optimized for Lovable's AI generation capabilities."
+
+# Real-time feature implementation:
+"Real-time Integration Sub-Agent: Implement real-time [FEATURE_TYPE] using Supabase subscriptions with proper connection handling and performance optimization."
+
+# Backend setup:
+"Supabase Backend Sub-Agent: Configure [DATABASE_FEATURE] with secure RLS policies and optimal schema design for [USE_CASE]."
+```
 
 ## 🧪 Testing & Verification
 
-### Component Testing
+### Primary Agent: Testing & Verification Agent
+*Specializes in user experience validation and rapid quality assurance*
+
+#### Sub-Agents Under Testing & Verification Agent:
+
+**👥 User Experience Sub-Agent**
 ```bash
-# Test prompts for Claude Code:
+**Role**: Expert in rapid user experience validation and usability testing
+**Responsibilities**:
+- Validate user flows and interaction patterns
+- Test responsive design across devices
+- Verify accessibility basics for rapid deployment
+- Ensure pixel-perfect implementation matches designs
 
-"Create a test suite that verifies all UI components render correctly across different screen sizes"
-
-"Generate tests for user interactions like form submissions and button clicks"
-
-"Test component accessibility with keyboard navigation and screen readers"
+**Token Budget**: 4-8 prompts per UX validation cycle
+**Handoff**: Reports findings to Development Workflow Agent for iterations
 ```
 
-### Database Testing
+**🚀 Performance Validation Sub-Agent**
 ```bash
-# Database verification prompts:
+**Role**: Expert in rapid performance testing for MVP deployment
+**Responsibilities**:
+- Test real-time subscription performance
+- Validate database query efficiency
+- Check mobile performance and loading times
+- Identify critical performance bottlenecks
 
-"Test all RLS policies to ensure users can only access their own data"
-
-"Verify real-time subscriptions update the UI when data changes"
-
-"Test database operations under high concurrent user scenarios"
+**Token Budget**: 6-10 prompts per performance check
+**Handoff**: Coordinates with Success Metrics Agent for ongoing monitoring
 ```
 
-### Integration Testing
+**🔒 Security Basics Sub-Agent**
 ```bash
-# Full flow testing prompts:
+**Role**: Expert in essential security validation for rapid deployment
+**Responsibilities**:
+- Verify RLS policies are properly configured
+- Test authentication flows and edge cases
+- Check for basic security vulnerabilities
+- Validate data access controls
 
-"Create end-to-end tests for the complete user registration and onboarding flow"
+**Token Budget**: 5-8 prompts per security validation
+**Handoff**: Works with Deployment Agent for production security setup
+```
 
-"Test the real-time collaboration features with multiple simulated users"
+#### Testing Agent Coordination Prompts:
+```bash
+# Main testing coordination:
+"Testing & Verification Agent: Conduct rapid validation of [FEATURE_NAME] using User Experience, Performance Validation, and Security Basics sub-agents. Focus on deployment-ready quality."
 
-"Verify the app works correctly when offline and reconnecting"
+# User experience validation:
+"User Experience Sub-Agent: Validate [USER_FLOW] for usability, accessibility, and visual accuracy. Provide prioritized feedback for rapid iteration."
+
+# Performance validation:
+"Performance Validation Sub-Agent: Test [FEATURE_NAME] for performance bottlenecks, focusing on real-time features and mobile experience."
+
+# Security validation:
+"Security Basics Sub-Agent: Verify security implementation for [FEATURE_NAME] with focus on RLS policies and authentication flows."
 ```
 
 ## 💰 Token Budget Templates
 
-### Small Feature (10-20 prompts)
-```markdown
-**Goal**: Add a new dashboard widget with real-time data
-**Approach**: Vibe coding (leaf node)
+### Primary Agent: Token Budget Agent
+*Specializes in rapid iteration and resource optimization*
 
-**Session Plan**:
-1. Lovable component generation (2-4 prompts)
-2. Supabase data integration (3-5 prompts)
-3. Real-time subscription setup (3-5 prompts)
-4. Styling and responsiveness (2-6 prompts)
+#### Sub-Agents Under Token Budget Agent:
+
+**⚡ Rapid Iteration Sub-Agent**
+```bash
+**Role**: Expert in optimizing token usage for maximum iteration speed
+**Responsibilities**:
+- Plan ultra-fast development cycles
+- Optimize Lovable prompt efficiency
+- Balance feature completeness with speed
+- Manage technical debt for rapid prototyping
+
+**Token Budget**: 2-5 prompts per iteration planning
+**Handoff**: Coordinates with all agents for maximum development velocity
 ```
 
-### Medium Feature (20-35 prompts)
-```markdown
-**Goal**: Complete user profile management system
-**Approach**: Structured development
+**🎯 MVP Prioritization Sub-Agent**
+```bash
+**Role**: Expert in feature prioritization for minimum viable products
+**Responsibilities**:
+- Identify core features for initial release
+- Plan feature rollout phases
+- Balance user needs with development constraints
+- Optimize for user validation opportunities
 
-**Session Plan**:
-1. Database schema for profiles (5-8 prompts)
-2. RLS policies and security (5-8 prompts)
-3. Profile UI components (6-10 prompts)
-4. Integration and testing (4-9 prompts)
+**Token Budget**: 2-4 prompts per prioritization session
+**Handoff**: Guides Development Workflow Agent on feature selection
 ```
 
-### Large Feature (35-50 prompts)
-```markdown
-**Goal**: Multi-user collaborative workspace
-**Approach**: Structured development with real-time focus
+#### Token Budget Templates by Feature Size:
 
-**Session Plan**:
-1. Database design for collaboration (8-12 prompts)
-2. Real-time infrastructure setup (10-15 prompts)
-3. Collaborative UI components (12-18 prompts)
-4. Testing and optimization (5-5 prompts)
+**Small Feature (8-20 total prompts)**
+```markdown
+**Feature**: Single UI component or simple interaction
+**Agent Distribution**:
+- Development Workflow Agent: 5-12 prompts
+- Testing & Verification Agent: 2-5 prompts  
+- Token Budget Agent: 1-3 prompts
+
+**Example**: Add a new dashboard widget with live data display
+**Timeline**: 30-60 minutes development time
+```
+
+**Medium Feature (20-40 total prompts)**
+```markdown
+**Feature**: Complete user flow with backend integration
+**Agent Distribution**:
+- Development Workflow Agent: 12-25 prompts
+- Testing & Verification Agent: 5-10 prompts
+- Pattern & Solution Agent: 2-3 prompts
+- Token Budget Agent: 1-2 prompts
+
+**Example**: User profile management with real-time updates
+**Timeline**: 2-4 hours development time
+```
+
+**Large Feature (40-80 total prompts)**
+```markdown
+**Feature**: Multi-user collaborative system
+**Agent Distribution**:
+- Development Workflow Agent: 20-40 prompts
+- Testing & Verification Agent: 10-20 prompts
+- Pattern & Solution Agent: 5-10 prompts
+- Token Budget Agent: 2-4 prompts
+- Deployment Agent: 2-4 prompts
+- Success Metrics Agent: 1-2 prompts
+
+**Example**: Real-time collaboration workspace with user management
+**Timeline**: 1-2 days development time
+```
+
+#### Token Budget Coordination Prompts:
+```bash
+# Main budget planning:
+"Token Budget Agent: Plan rapid development of [FEATURE_DESCRIPTION] using Rapid Iteration and MVP Prioritization sub-agents. Optimize for maximum user validation speed."
+
+# Rapid iteration planning:
+"Rapid Iteration Sub-Agent: Break down [FEATURE_NAME] into 30-minute development sprints with clear deliverables and validation points."
+
+# MVP prioritization:
+"MVP Prioritization Sub-Agent: Identify core features for [PROJECT_NAME] MVP that will provide maximum user validation with minimum development effort."
 ```
 
 ## 🎯 Common Patterns & Solutions
 
-### Real-time Component Pattern
-```typescript
-// Request this pattern from Claude Code:
-"Create a reusable real-time component pattern that:
-- Subscribes to Supabase real-time changes
-- Handles connection states (connecting, connected, error)
-- Automatically cleans up subscriptions
-- Provides loading and error states
-- Supports filtering and sorting"
+### Primary Agent: Pattern & Solution Agent
+*Specializes in rapid development patterns and design system creation*
+
+#### Sub-Agents Under Pattern & Solution Agent:
+
+**🎨 Design System Sub-Agent**
+```bash
+**Role**: Expert in creating consistent design systems for rapid development
+**Responsibilities**:
+- Create reusable Tailwind component patterns
+- Design consistent color and typography systems
+- Build responsive layout patterns
+- Optimize for Lovable's generation capabilities
+
+**Token Budget**: 6-12 prompts per design system component
+**Handoff**: Provides design tokens to Lovable Generation Sub-Agent
 ```
 
-### Secure Data Access Pattern
-```sql
--- Request this pattern:
-"Design RLS policies for a multi-tenant application that ensures:
-- Users can only see their own data
-- Team members can collaborate on shared resources
-- Admins have appropriate access levels
-- Performance is optimized with proper indexes"
+**🔄 Real-time Pattern Sub-Agent**
+```bash
+**Role**: Expert in reusable real-time functionality patterns
+**Responsibilities**:
+- Create standard real-time subscription patterns
+- Design connection state management
+- Build collaborative editing patterns
+- Implement presence and awareness features
+
+**Token Budget**: 8-15 prompts per real-time pattern
+**Handoff**: Provides patterns to Real-time Integration Sub-Agent
 ```
 
-### Form Handling Pattern
-```typescript
-// Request this pattern:
-"Create a form handling pattern with:
-- React Hook Form integration
-- Supabase data mutations
-- Real-time validation
-- Optimistic updates
-- Error handling and recovery"
+**🔐 Auth & Security Pattern Sub-Agent**
+```bash
+**Role**: Expert in rapid authentication and security implementation
+**Responsibilities**:
+- Create standard authentication flows
+- Design RLS policy templates
+- Build user management patterns
+- Implement basic authorization patterns
+
+**Token Budget**: 6-10 prompts per security pattern
+**Handoff**: Provides templates to Supabase Backend Sub-Agent
+```
+
+#### Common Lovable + Supabase Patterns:
+
+**Real-time Dashboard Component Pattern**
+```bash
+# Request this from Design System Sub-Agent:
+"Design System Sub-Agent: Create a real-time dashboard component pattern optimized for Lovable generation including:
+- Live data visualization with charts
+- Real-time update animations
+- Responsive grid layout system
+- Consistent color and typography tokens
+- Loading and error state designs"
+```
+
+**Collaborative Editing Pattern**
+```bash
+# Request this from Real-time Pattern Sub-Agent:
+"Real-time Pattern Sub-Agent: Design a collaborative editing pattern including:
+- Real-time text synchronization
+- User presence indicators
+- Conflict resolution strategies
+- Cursor and selection sharing
+- Offline/online state management"
+```
+
+**Authentication Flow Pattern**
+```bash
+# Request this from Auth & Security Pattern Sub-Agent:
+"Auth & Security Pattern Sub-Agent: Create a complete authentication flow pattern including:
+- Social login integration (Google, GitHub)
+- Email verification and password reset
+- Protected route patterns
+- User profile management
+- Role-based access control"
 ```
 
 ## 🚀 Deployment Checklist
 
-### Pre-Deployment
-- [ ] **Environment Variables**: Supabase keys configured
-- [ ] **Database Setup**: All tables and policies deployed
-- [ ] **Build Process**: Lovable-generated code properly bundled
-- [ ] **Performance**: Images optimized and lazy loaded
+### Primary Agent: Deployment Agent
+*Specializes in rapid production deployment and scaling*
 
-### Deployment Verification
-- [ ] **Production Database**: Connected to production Supabase
-- [ ] **Authentication**: All auth providers working
-- [ ] **Real-time**: Live updates functioning
-- [ ] **Mobile Experience**: Responsive on all devices
+#### Sub-Agents Under Deployment Agent:
 
-### Post-Deployment
-- [ ] **Monitoring**: Supabase dashboard monitoring enabled
-- [ ] **Analytics**: User interaction tracking
-- [ ] **Backups**: Database backup strategy
-- [ ] **Scaling**: Usage-based scaling configured
+**☁️ Platform Deployment Sub-Agent**
+```bash
+**Role**: Expert in rapid deployment to modern platforms (Vercel, Netlify)
+**Responsibilities**:
+- Configure one-click deployment pipelines
+- Set up environment variables and secrets
+- Optimize build performance for fast deployments
+- Configure custom domains and SSL
+
+**Token Budget**: 4-8 prompts per deployment setup
+**Handoff**: Coordinates with Success Metrics Agent for monitoring
+```
+
+**🗄️ Supabase Production Sub-Agent**
+```bash
+**Role**: Expert in production Supabase configuration and scaling
+**Responsibilities**:
+- Configure production database settings
+- Set up database backups and recovery
+- Optimize connection pooling
+- Configure edge functions and storage
+
+**Token Budget**: 5-10 prompts per production setup
+**Handoff**: Works with Security Basics Sub-Agent for production security
+```
+
+**🚀 Performance Optimization Sub-Agent**
+```bash
+**Role**: Expert in production performance optimization
+**Responsibilities**:
+- Optimize bundle sizes and loading performance
+- Configure CDN and caching strategies
+- Set up image optimization
+- Implement lazy loading and code splitting
+
+**Token Budget**: 6-12 prompts per optimization pass
+**Handoff**: Provides optimization data to Success Metrics Agent
+```
+
+#### Deployment Coordination Prompts:
+```bash
+# Main deployment coordination:
+"Deployment Agent: Deploy [APPLICATION_NAME] to production using Platform Deployment, Supabase Production, and Performance Optimization sub-agents. Prioritize zero-downtime deployment."
+
+# Platform deployment:
+"Platform Deployment Sub-Agent: Configure rapid deployment for [PROJECT_NAME] with optimized build settings and environment configuration."
+
+# Supabase production setup:
+"Supabase Production Sub-Agent: Configure production database with proper scaling, backups, and connection optimization for [USER_LOAD]."
+
+# Performance optimization:
+"Performance Optimization Sub-Agent: Optimize [APPLICATION_NAME] for production performance including bundle optimization and caching strategies."
+```
 
 ## 📊 Success Metrics
 
-### Development Velocity
-- **Component Creation**: UI components ready in under 30 minutes
-- **Feature Development**: Complete features in 1-2 sessions
-- **Database Setup**: Schema and security in under 1 hour
+### Primary Agent: Success Metrics Agent
+*Specializes in rapid user validation and growth metrics*
 
-### User Experience
+#### Sub-Agents Under Success Metrics Agent:
+
+**📈 User Validation Sub-Agent**
+```bash
+**Role**: Expert in rapid user feedback collection and validation
+**Responsibilities**:
+- Set up user analytics and behavior tracking
+- Create feedback collection mechanisms
+- Track user engagement and retention
+- Measure feature adoption rates
+
+**Token Budget**: 4-8 prompts per validation setup
+**Handoff**: Provides insights to Development Workflow Agent for iterations
+```
+
+**⚡ Performance Tracking Sub-Agent**
+```bash
+**Role**: Expert in performance monitoring for rapid applications
+**Responsibilities**:
+- Monitor real-time feature performance
+- Track database query performance
+- Measure user experience metrics
+- Monitor deployment and scaling metrics
+
+**Token Budget**: 5-10 prompts per monitoring setup
+**Handoff**: Coordinates with Performance Optimization Sub-Agent
+```
+
+**💰 Growth Metrics Sub-Agent**
+```bash
+**Role**: Expert in tracking metrics for rapid growth and validation
+**Responsibilities**:
+- Track user acquisition and conversion
+- Monitor feature usage and engagement
+- Measure retention and churn rates
+- Analyze user feedback and satisfaction
+
+**Token Budget**: 3-6 prompts per growth analysis
+**Handoff**: Provides growth insights to MVP Prioritization Sub-Agent
+```
+
+#### Success Metrics Targets:
+
+**Development Velocity**
+- **Component Creation**: UI components ready in under 30 minutes
+- **Feature Development**: Complete features deployed within 2-4 hours
+- **User Feedback Integration**: Feedback implemented within 24-48 hours
+
+**Technical Performance**
 - **Load Time**: App interactive in under 2 seconds
 - **Real-time Updates**: Changes appear within 100ms
 - **Mobile Performance**: 60fps on mobile devices
+- **Uptime**: 99.9% availability for real-time features
+
+**User Experience**
 - **Visual Accuracy**: 95%+ match to design specifications
+- **User Satisfaction**: 4.5+ star rating or equivalent
+- **Feature Adoption**: 70%+ of users use new features within 1 week
+- **Time to Value**: Users achieve first success within 5 minutes
 
-### Technical Quality
-- **Security**: All RLS policies properly tested
-- **Accessibility**: WCAG 2.1 AA compliance
-- **Performance**: Core Web Vitals in green
-- **Reliability**: 99.9% uptime for real-time features
-
-## 🎨 Lovable-Specific Tips
-
-### Natural Language Prompts
+#### Success Metrics Coordination Prompts:
 ```bash
-# Effective Lovable prompts:
-"Create a modern dashboard card that displays user analytics with a clean, minimalist design using Tailwind CSS"
+# Main metrics coordination:
+"Success Metrics Agent: Set up rapid validation tracking for [APPLICATION_NAME] using User Validation, Performance Tracking, and Growth Metrics sub-agents. Focus on fast iteration cycles."
 
-"Build a responsive navigation sidebar that collapses on mobile with smooth animations"
+# User validation setup:
+"User Validation Sub-Agent: Configure user feedback and behavior tracking for [KEY_USER_FLOWS] with focus on rapid iteration and improvement."
 
-"Design a chat interface with message bubbles, typing indicators, and emoji support"
+# Performance tracking:
+"Performance Tracking Sub-Agent: Set up performance monitoring for [CRITICAL_FEATURES] with real-time alerts and optimization recommendations."
+
+# Growth metrics:
+"Growth Metrics Sub-Agent: Track growth and engagement metrics for [TARGET_USER_SEGMENT] with focus on product-market fit validation."
 ```
 
-### Component Enhancement
+## 🤖 Agent Coordination Master Prompts
+
+### Rapid Development Orchestration
 ```bash
-# After Lovable generates base component:
-"Enhance this component with proper TypeScript types and error handling"
+# Start of rapid development session:
+"Master Orchestration Agent: Begin rapid development sprint for [FEATURE_NAME]. Coordinate with Token Budget Agent for ultra-fast resource allocation, then delegate to specialized agents for maximum velocity."
 
-"Add accessibility features like ARIA labels and keyboard navigation"
+# Mid-sprint coordination:
+"Master Orchestration Agent: Review rapid progress on [CURRENT_TASK]. Coordinate quick handoffs between [CURRENT_AGENT] and [NEXT_AGENT]. Maintain development momentum."
 
-"Optimize this component for performance with React.memo and useMemo"
+# Sprint completion:
+"Master Orchestration Agent: Complete rapid development sprint for [FEATURE_NAME]. Coordinate with Success Metrics Agent for immediate user validation and prepare next sprint priorities."
+```
+
+### Rapid Iteration Protocols
+```bash
+# When pivoting quickly:
+"Token Budget Agent: User feedback indicates pivot needed for [FEATURE_NAME]. Coordinate with Master Orchestration Agent to reallocate resources for rapid iteration."
+
+# When scaling quickly:
+"Deployment Agent: Rapid user growth detected for [APPLICATION_NAME]. Coordinate with Supabase Production Sub-Agent for immediate scaling and performance optimization."
+
+# When validating quickly:
+"Success Metrics Agent: Initial user feedback collected for [NEW_FEATURE]. Coordinate with Development Workflow Agent for rapid iteration based on validation results."
 ```
 
 ---
 
-*Perfect for rapid MVP development with production-quality UI and real-time features!* ⚡
+*This agent-based approach maximizes development velocity while maintaining quality, perfect for rapid MVP development and user validation cycles.*

@@ -1,386 +1,257 @@
-# Claude Code Best Practices Checklist
+# Claude Code Agent-Based Best Practices
 
-*Optimized prompting strategies for StarterStack development with token budget considerations*
+*Optimized agent-driven development strategies for StarterStack development with token budget considerations*
 
-## 🎯 Pre-Development Setup Checklist
+## 🎯 Agent Architecture Overview
 
-### Claude Code Master Prompt Template
+Each StarterStack uses a **Master Orchestration Agent** that coordinates 6 specialized sub-agents:
+
+1. **🚀 Development Workflow Agent** - Feature implementation and architecture
+2. **🧪 Testing & Verification Agent** - Quality assurance and validation  
+3. **💰 Token Budget Agent** - Resource optimization and session planning
+4. **🎯 Pattern & Solution Agent** - Reusable components and best practices
+5. **🚀 Deployment Agent** - Production deployment and infrastructure
+6. **📊 Success Metrics Agent** - Performance monitoring and optimization
+
+## 🤖 Master Agent Prompt Template
+
+### Universal Master Orchestration Agent Setup
 ```bash
 # Use this foundation for every Claude Code session
-claude --dangerously-skip-permissions
 
-# Context Setting (Use for all sessions)
-```
-**Role**: You are an expert software architect and full-stack developer specializing in [FRAMEWORK_NAME] development.
+**Role**: You are the Master Orchestration Agent for [FRAMEWORK_NAME] development, specializing in [STACK_SPECIFIC_FOCUS]. You coordinate 6 specialized sub-agents to deliver production-ready features efficiently.
 
-**Project Context**: Building [PROJECT_TYPE] using the [STACK_NAME] starter stack with the following constraints:
-- Budget: $100 Claude Max plan (optimize token usage)
-- Timeline: [SESSION_COUNT] sessions (5-hour focused blocks)
-- Complexity: [LEAF_NODE/CORE_ARCHITECTURE] development
-- Verification: Manual testing with [SPECIFIC_TESTING_APPROACH]
-
-**Architecture Principles**:
-- Focus on leaf nodes (features that nothing depends on)
-- Design for verifiability without reading every line of code
-- Create clear input/output specifications
-- Implement stress tests for critical functionality
-- Follow [FRAMEWORK_SPECIFIC] best practices
-
-**Development Heuristics**:
-- Simple tasks: Maximum 5 tool calls
-- Complex features: Maximum 15 tool calls  
-- Stop when requirements are met (don't over-engineer)
-- Ask for clarification when requirements are ambiguous
-- Prioritize working code over perfect architecture
-
-**Communication Style**:
-- Be direct and actionable
-- Explain architectural decisions
-- Flag potential issues proactively
-- Suggest verification approaches
-- Provide token-efficient solutions
-```
-
-### Session Planning Checklist
-
-#### Before Starting Each Session
-- [ ] **Define Clear Outcome**: What specific functionality will be working at the end of this session?
-- [ ] **Set Token Budget**: How many Claude Code prompts for this feature (typically 10-50)?
-- [ ] **Identify Verification Method**: How will you test without reading all the code?
-- [ ] **Prepare Context**: Gather all requirements, examples, and constraints upfront
-- [ ] **Choose Development Type**: Vibe coding (leaf nodes) vs. Structured development (core features)
-
-#### Session Types & Token Allocation
-
-**🚀 Rapid Prototyping Session (10-25 prompts)**
-- Single feature implementation
-- UI components or API endpoints
-- Database operations
-- Simple integrations
-
-**🏗️ Architecture Session (25-50 prompts)**
-- System design and planning
-- Database schema design
-- API contract definition
-- Integration strategy
-
-**🔧 Integration Session (15-35 prompts)**
-- Connecting multiple components
-- Third-party API integration
-- Authentication implementation
-- Deployment configuration
-
-**🧪 Testing & Polish Session (10-30 prompts)**
-- Test suite creation
-- Bug fixes and optimization
-- Documentation generation
-- Performance improvements
-
-## 📋 Framework-Specific Prompt Enhancements
-
-### Next.js + Vercel (Stack 01)
-```bash
-# Add to master prompt:
 **Framework Context**: 
-- App Router with TypeScript
-- Vercel AI SDK integration
-- Tailwind CSS for styling
-- Prisma for database operations
+[STACK_SPECIFIC_TECHNOLOGIES_AND_TOOLS]
 
-**Specific Guidelines**:
-- Use server components by default, client components only when needed
-- Implement proper loading and error states
-- Follow Vercel AI SDK patterns for streaming responses
-- Optimize for Edge Runtime when possible
+**Agent Architecture**: You manage 6 specialized sub-agents:
+1. **Development Workflow Agent** - [STACK_SPECIFIC_DEVELOPMENT_FOCUS]
+2. **Testing & Verification Agent** - [STACK_SPECIFIC_TESTING_APPROACH]
+3. **Token Budget Agent** - [STACK_SPECIFIC_RESOURCE_OPTIMIZATION]
+4. **Pattern & Solution Agent** - [STACK_SPECIFIC_PATTERNS_AND_TEMPLATES]
+5. **Deployment Agent** - [STACK_SPECIFIC_DEPLOYMENT_STRATEGY]
+6. **Success Metrics Agent** - [STACK_SPECIFIC_SUCCESS_CRITERIA]
+
+**Coordination Principles**:
+- Always specify which sub-agent should handle each task
+- Maintain clear handoffs between agents
+- Optimize token usage across all agent interactions
+- Ensure agents work toward unified project goals
+- Focus on [STACK_SPECIFIC_PRIORITIES]
 ```
 
-### FastAPI + Streamlit (Stack 02)
+## 🚀 Agent Coordination Strategies
+
+### Session Planning with Agent Distribution
 ```bash
-# Add to master prompt:
-**Framework Context**:
-- FastAPI backend with async/await patterns
-- Streamlit frontend for rapid prototyping
-- Pydantic models for data validation
-- SQLAlchemy for database operations
+# Before starting each session:
+"Master Orchestration Agent: Plan development session for [FEATURE_NAME]. Analyze requirements and create optimal agent coordination strategy with token budget allocation."
 
-**Specific Guidelines**:
-- Use async functions for I/O operations
-- Implement proper error handling with FastAPI HTTPException
-- Create reusable Streamlit components
-- Follow Python type hints consistently
+**Session Planning Questions**:
+- Which primary agent should lead this feature?
+- What sub-agents will be needed for this task?
+- How should token budget be distributed across agents?
+- What are the key handoff points between agents?
+- What verification methods will confirm success?
 ```
 
-### Astro + Cloudflare (Stack 03)
+### Agent Handoff Protocols
 ```bash
-# Add to master prompt:
-**Framework Context**:
-- Astro for static site generation
-- Cloudflare Workers for edge functions
-- TypeScript throughout
-- Tailwind CSS for styling
+# Standard handoff pattern:
+"[CURRENT_AGENT]: Complete [CURRENT_TASK] and prepare handoff to [NEXT_AGENT]. Provide clear context and requirements for [NEXT_TASK]."
 
-**Specific Guidelines**:
-- Prioritize static generation over SSR
-- Use Astro islands for interactive components
-- Optimize for Cloudflare's edge environment
-- Implement proper caching strategies
+# Coordination check:
+"Master Orchestration Agent: Review handoff from [AGENT_A] to [AGENT_B]. Ensure all requirements are met and context is properly transferred."
+
+# Quality gate:
+"Testing & Verification Agent: Validate output from [PREVIOUS_AGENT] before proceeding to [NEXT_PHASE]. Confirm quality standards are met."
 ```
 
-### Windsurf + Claude (Stack 05)
+## 💰 Token Budget Management Across Agents
+
+### Agent-Specific Token Allocation
+
+**Development-Heavy Features**:
+- Development Workflow Agent: 60-70%
+- Testing & Verification Agent: 15-20%
+- Other Agents: 15-20%
+
+**Architecture-Heavy Features**:
+- Pattern & Solution Agent: 40-50%
+- Development Workflow Agent: 30-40%
+- Testing & Verification Agent: 10-20%
+
+**Deployment-Heavy Features**:
+- Deployment Agent: 50-60%
+- Testing & Verification Agent: 20-25%
+- Development Workflow Agent: 15-25%
+
+### Budget Optimization Strategies
 ```bash
-# Add to master prompt:
-**Framework Context**:
-- AI-assisted development environment
-- Flexible tech stack (specify during session)
-- Focus on learning and best practices
-- Architecture guidance integration
+# Efficient agent coordination:
+"Token Budget Agent: Optimize resource allocation for [FEATURE_TYPE]. Identify which agents can work in parallel vs. sequence to minimize total token usage."
 
-**Specific Guidelines**:
-- Explain architectural decisions
-- Suggest alternative approaches
-- Generate comprehensive documentation
-- Provide learning resources and examples
+# Emergency budget management:
+"Master Orchestration Agent: Session approaching token limit. Prioritize critical tasks and defer non-essential work to next session. Maintain quality standards."
+
+# Cross-session continuity:
+"Token Budget Agent: Plan multi-session feature development with clear session boundaries and minimal context rebuilding between sessions."
 ```
 
-### Lovable + Supabase (Stack 06)
-```bash
-# Add to master prompt:
-**Framework Context**:
-- Natural language to code generation
-- Supabase backend with real-time features
-- React with TypeScript frontend
-- Built-in authentication and database
+## 🎨 Development Type Classifications
 
-**Specific Guidelines**:
-- Use Supabase RLS policies for security
-- Implement real-time subscriptions where appropriate
-- Follow React best practices for state management
-- Create responsive, accessible components
-```
-
-## 🎨 Development Type Checklists
-
-### 🚀 Vibe Coding Checklist (Leaf Nodes)
+### 🚀 Vibe Coding with Agents (Leaf Nodes)
 *For rapid feature development where tech debt is acceptable*
 
-#### Pre-Session (5-10 minutes)
-- [ ] **Identify Leaf Node**: Confirm nothing else depends on this feature
-- [ ] **Set Constraints**: Define "good enough" criteria
-- [ ] **Plan Verification**: How will you know it works without code review?
-- [ ] **Gather Context**: Examples, requirements, similar features
+**Primary Agent**: Development Workflow Agent
+**Support Agents**: Testing & Verification Agent (minimal), Token Budget Agent
+**Approach**: Fast iteration with acceptable quality trade-offs
 
-#### During Development
-- [ ] **Focus on Functionality**: Working code over perfect architecture
-- [ ] **Create Verification Points**: Test cases, example inputs/outputs
-- [ ] **Document Assumptions**: What shortcuts were taken and why
-- [ ] **Implement Error Handling**: Basic error cases and user feedback
+```bash
+# Vibe coding coordination:
+"Development Workflow Agent: Rapidly implement [LEAF_NODE_FEATURE] with focus on functionality over perfect architecture. Use appropriate sub-agents for quick iterations."
+```
 
-#### Post-Development Verification
-- [ ] **Functional Testing**: Does it meet the requirements?
-- [ ] **Error Testing**: How does it handle edge cases?
-- [ ] **Integration Testing**: Works with existing system?
-- [ ] **User Experience**: Acceptable from user perspective?
-
-### 🏗️ Structured Development Checklist (Core Architecture)
+### 🏗️ Structured Development with Agents (Core Architecture)
 *For foundational components that other features depend on*
 
-#### Pre-Session (15-20 minutes)
-- [ ] **Architecture Planning**: Design interfaces and contracts first
-- [ ] **Dependency Analysis**: What will depend on this component?
-- [ ] **Extensibility Requirements**: How might this need to change?
-- [ ] **Integration Points**: How does this connect to other systems?
+**Primary Agent**: Pattern & Solution Agent + Development Workflow Agent
+**Support Agents**: All agents involved with comprehensive planning
+**Approach**: Architecture-first with extensive testing and documentation
 
-#### During Development
-- [ ] **Interface-First Design**: Define APIs before implementation
-- [ ] **Comprehensive Testing**: Unit, integration, and contract tests
-- [ ] **Documentation**: Clear examples and usage patterns
-- [ ] **Error Handling**: Comprehensive error cases and recovery
-
-#### Post-Development Verification
-- [ ] **Contract Testing**: Do interfaces work as specified?
-- [ ] **Load Testing**: Can it handle expected usage?
-- [ ] **Integration Testing**: Works with dependent components?
-- [ ] **Code Review**: Human verification of critical paths
-
-### 🤖 Agent Development Checklist
-*For building AI-powered features and workflows*
-
-#### Pre-Session Planning
-- [ ] **Task Complexity Assessment**: Is this suitable for an agent?
-- [ ] **Tool Definition**: What tools does the agent need?
-- [ ] **Success Criteria**: How will you measure agent performance?
-- [ ] **Error Recovery**: How should the agent handle failures?
-
-#### Agent Prompt Design
-- [ ] **Clear Role Definition**: What is the agent's primary function?
-- [ ] **Tool Selection Guidelines**: When to use which tools
-- [ ] **Budget Heuristics**: Token limits and stopping conditions
-- [ ] **Quality Standards**: When to ask for clarification
-
-#### Agent Implementation
-- [ ] **Tool Testing**: Verify all tools work independently
-- [ ] **Simple Prompt First**: Start basic, add complexity iteratively
-- [ ] **Thinking Guidance**: Prompt for planning and reflection
-- [ ] **Context Management**: Handle long conversations effectively
-
-#### Agent Evaluation
-- [ ] **Small Test Cases**: Start with 3-5 examples
-- [ ] **Manual Testing**: Review agent transcripts and decisions
-- [ ] **Success Rate**: Track performance over multiple runs
-- [ ] **Edge Case Testing**: How does it handle unusual inputs?
-
-## 💰 Token Budget Management
-
-### Session Budget Allocation
 ```bash
-# Track your usage with these estimates:
-
-**Small Feature** (10-25 prompts):
-- Planning: 2-3 prompts
-- Implementation: 5-15 prompts  
-- Testing: 2-5 prompts
-- Documentation: 1-2 prompts
-
-**Medium Feature** (25-50 prompts):
-- Architecture: 5-10 prompts
-- Core Implementation: 15-25 prompts
-- Integration: 5-10 prompts
-- Testing & Polish: 5-10 prompts
-
-**Large Feature** (50-100 prompts):
-- Planning & Design: 10-15 prompts
-- Backend Implementation: 20-30 prompts
-- Frontend Implementation: 15-25 prompts
-- Integration & Testing: 10-15 prompts
-- Documentation: 5-10 prompts
+# Structured development coordination:
+"Master Orchestration Agent: Plan structured development of [CORE_FEATURE]. Coordinate Pattern & Solution Agent for architecture, then Development Workflow Agent for implementation."
 ```
 
-### Token Optimization Strategies
-- [ ] **Use Compaction**: `claude-code compact` when approaching limits
-- [ ] **Batch Similar Tasks**: Group related prompts together
-- [ ] **Leverage Examples**: Show rather than explain when possible
-- [ ] **Reference Previous Work**: "Similar to the component we built earlier"
-- [ ] **External Files**: Store context in files rather than conversation
+### 🤖 Agent-Enhanced Development (AI Features)
+*For AI-powered features requiring specialized handling*
 
-### Budget Tracking Template
-```markdown
-## Session Token Usage
+**Primary Agent**: Development Workflow Agent (AI-specialized sub-agents)
+**Support Agents**: Testing & Verification Agent (AI quality focus), Success Metrics Agent
+**Approach**: AI-specific patterns with quality assurance and performance monitoring
 
-**Session Goal**: [Specific outcome]
-**Estimated Prompts**: [10-50]
-**Actual Usage**: [Track as you go]
-
-### Prompt Log:
-1. [Prompt description] - [Result quality 1-5]
-2. [Prompt description] - [Result quality 1-5]
-...
-
-### Session Outcome:
-- [ ] Goal Achieved
-- [ ] Under Budget  
-- [ ] Quality Acceptable
-- [ ] Next Session Planned
-```
-
-## 🧪 Verification & Testing Checklists
-
-### Manual Testing Checklist
-*For verifying functionality without reading all code*
-
-#### Functional Verification
-- [ ] **Happy Path**: Primary use case works as expected
-- [ ] **Edge Cases**: Boundary conditions handled properly
-- [ ] **Error Cases**: Appropriate error messages and handling
-- [ ] **Integration**: Works with existing system components
-
-#### User Experience Verification
-- [ ] **Usability**: Intuitive for target users
-- [ ] **Performance**: Acceptable response times
-- [ ] **Accessibility**: Basic accessibility standards met
-- [ ] **Responsive**: Works on different screen sizes
-
-#### Technical Verification
-- [ ] **Security**: No obvious security vulnerabilities
-- [ ] **Data Integrity**: Data stored and retrieved correctly
-- [ ] **API Contracts**: External integrations work as expected
-- [ ] **Error Logging**: Errors are properly logged for debugging
-
-### Automated Testing Setup
 ```bash
-# Generate test suites with Claude Code:
-
-claude-code generate-tests --type=unit --coverage=80
-claude-code generate-tests --type=integration --critical-paths
-claude-code generate-tests --type=e2e --user-flows
-
-# Test verification commands:
-npm test -- --coverage
-npm run test:integration
-npm run test:e2e
+# AI feature coordination:
+"Development Workflow Agent: Implement AI-powered [FEATURE_NAME] with specialized AI sub-agents. Coordinate with Testing Agent for AI quality assurance."
 ```
 
-## 📊 Success Metrics & Iteration
+## 🧪 Agent-Based Testing Strategies
 
-### Session Success Criteria
-- [ ] **Functionality Delivered**: Planned features work as specified
-- [ ] **Budget Adherent**: Stayed within token allocation
-- [ ] **Quality Acceptable**: Meets defined quality standards
-- [ ] **Verifiable**: Can confirm correctness without code review
-- [ ] **Documented**: Clear usage examples and known limitations
+### Multi-Agent Testing Coordination
+```bash
+# Comprehensive testing approach:
+"Testing & Verification Agent: Coordinate comprehensive testing of [FEATURE_NAME] using all relevant sub-agents. Ensure quality standards are met before deployment."
 
-### Iteration Planning
-```markdown
-## Post-Session Retrospective
+# Parallel testing:
+"Master Orchestration Agent: Run parallel testing with Code Quality, Performance, and Security sub-agents for [COMPLEX_FEATURE]. Optimize for speed and thoroughness."
 
-### What Worked Well:
-- [Specific techniques or approaches]
-
-### What Could Improve:
-- [Areas for optimization]
-
-### Next Session Plan:
-- Goal: [Specific outcome]
-- Budget: [Estimated prompts]
-- Approach: [Vibe coding/Structured/Agent]
-- Verification: [Testing strategy]
+# Testing handoffs:
+"Testing & Verification Agent: Complete testing of [COMPONENT] and provide clear pass/fail status to Development Workflow Agent for any necessary iterations."
 ```
 
-### Quality Gates
-**Before Moving to Next Feature:**
-- [ ] Current feature is functionally complete
-- [ ] Manual testing passed
-- [ ] Performance is acceptable
-- [ ] Error handling is adequate
-- [ ] Documentation exists for future reference
+### Quality Gates Between Agents
+- **Development → Testing**: Functional completeness check
+- **Testing → Deployment**: Quality and security validation
+- **Deployment → Success Metrics**: Performance and reliability confirmation
+- **Any Agent → Token Budget**: Resource usage optimization check
 
-## 🎯 Framework-Specific Quick Reference
+## 📊 Success Metrics Across Agent Architecture
 
-### Choose Your Approach:
+### Agent Performance Metrics
+```bash
+# Agent efficiency tracking:
+"Success Metrics Agent: Track efficiency metrics for each sub-agent including task completion time, quality scores, and token usage optimization."
 
-**For Rapid Prototyping** (Stacks 6, 7, 8):
-- Use vibe coding checklist
-- Focus on UI/UX and core functionality
-- Minimal backend complexity
-- Quick user validation
+# Cross-agent coordination metrics:
+"Master Orchestration Agent: Measure handoff efficiency between agents and identify optimization opportunities for future sessions."
 
-**For Production Applications** (Stacks 1, 2, 3):
-- Use structured development checklist
-- Plan architecture carefully
-- Implement comprehensive testing
-- Focus on scalability and maintainability
+# Overall system performance:
+"Success Metrics Agent: Evaluate overall development velocity and quality when using agent-based approach vs. traditional single-agent development."
+```
 
-**For AI-Enhanced Development** (Stacks 5, 9, 10):
-- Combine structured and agent approaches
-- Leverage AI for code generation and review
-- Focus on learning and best practices
-- Document AI-assisted patterns
+### Quality Assurance Metrics
+- **Agent Coordination**: Successful handoffs without information loss
+- **Token Efficiency**: Optimal token usage across all agents
+- **Feature Quality**: Consistent quality regardless of primary agent
+- **Development Velocity**: Faster delivery through specialized agents
 
-**For Automation & Integration** (Stacks 4, 8):
-- Use agent development checklist
-- Focus on workflow automation
-- Implement robust error handling
-- Plan for scaling and monitoring
+## 🎯 Stack-Specific Agent Customization
+
+### Rapid Prototyping Stacks (Lovable, v0, Zapier)
+**Focus**: Speed and iteration
+**Agent Emphasis**: Development Workflow Agent (70%), minimal Testing
+**Token Distribution**: Front-loaded development, lightweight verification
+
+### Production Stacks (Next.js, FastAPI, Astro)
+**Focus**: Scalability and maintainability
+**Agent Emphasis**: Balanced across all agents
+**Token Distribution**: Even distribution with emphasis on testing and patterns
+
+### AI-Enhanced Stacks (Windsurf, Cursor, Glitch)
+**Focus**: Learning and best practices
+**Agent Emphasis**: Pattern & Solution Agent + Development Workflow Agent
+**Token Distribution**: Heavy on documentation and explanation
+
+## 🔄 Agent Iteration and Improvement
+
+### Continuous Agent Optimization
+```bash
+# Post-session agent review:
+"Master Orchestration Agent: Review session performance for each sub-agent. Identify optimization opportunities and update agent coordination strategies."
+
+# Agent specialization evolution:
+"Pattern & Solution Agent: Update agent templates and coordination patterns based on successful development sessions and identified improvements."
+
+# Cross-stack learning:
+"Success Metrics Agent: Analyze agent performance across different stacks and apply learnings to improve coordination strategies."
+```
+
+### Agent Template Updates
+- **Weekly**: Review and update agent coordination patterns
+- **Monthly**: Analyze cross-stack performance and optimize templates
+- **Quarterly**: Major agent architecture improvements based on results
+
+## 📋 Agent Coordination Checklists
+
+### Before Each Session
+- [ ] **Define Primary Agent**: Which agent leads this session?
+- [ ] **Plan Agent Sequence**: What's the handoff order?
+- [ ] **Set Quality Gates**: How do we verify each handoff?
+- [ ] **Allocate Token Budget**: How are tokens distributed across agents?
+- [ ] **Prepare Context**: What information does each agent need?
+
+### During Development
+- [ ] **Monitor Handoffs**: Are agents communicating effectively?
+- [ ] **Track Token Usage**: Are we staying within budget per agent?
+- [ ] **Validate Quality**: Is each agent meeting standards?
+- [ ] **Coordinate Priorities**: Are agents working toward unified goals?
+- [ ] **Document Decisions**: Are architectural decisions being captured?
+
+### After Session
+- [ ] **Review Agent Performance**: How did each agent perform?
+- [ ] **Document Learnings**: What patterns worked well?
+- [ ] **Plan Next Session**: How do we optimize next coordination?
+- [ ] **Update Templates**: What improvements can be made?
+- [ ] **Measure Success**: Did the agent approach deliver better results?
+
+## 🚀 Implementation Roadmap
+
+### Phase 1: Agent Template Creation (Completed)
+- [x] Define 6 core agent types
+- [x] Create master orchestration patterns
+- [x] Build 3 example stack implementations
+
+### Phase 2: All Stack Implementation
+- [ ] Create agent templates for remaining 7 stacks
+- [ ] Customize agent coordination for each framework
+- [ ] Test and optimize token budgets
+
+### Phase 3: Advanced Agent Features
+- [ ] Cross-agent learning and optimization
+- [ ] Automatic agent selection based on task type
+- [ ] Performance analytics and improvement suggestions
 
 ---
 
-*This checklist should be customized for each specific starter stack while maintaining the core principles of efficient Claude Code usage and token budget management.*
+*This agent-based approach transforms Claude Code from a single assistant into a coordinated team of specialists, dramatically improving both development quality and efficiency.*
