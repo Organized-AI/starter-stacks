@@ -2,15 +2,19 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useState } from 'react';
 import { RecommendationCardProps } from '@/types';
 import { cn } from '@/lib/utils';
 
 export default function RecommendationCard({ 
   recommendation, 
   rank, 
-  isPrimary = false 
-}: RecommendationCardProps) {
+  isPrimary = false,
+  projectName = '',
+  projectDescription = ''
+}: RecommendationCardProps & { projectName?: string; projectDescription?: string }) {
   const { stack, confidence, reasoning } = recommendation;
+  const [copiedPrompt, setCopiedPrompt] = useState(false);
 
   const formatTimeline = (days: number) => {
     if (days <= 7) return `${days} days`;
@@ -26,6 +30,69 @@ export default function RecommendationCard({
       case 'steep': return 'text-orange-600 bg-orange-100';
       case 'expert': return 'text-red-600 bg-red-100';
       default: return 'text-gray-600 bg-gray-100';
+    }
+  };
+
+  const generateMasterPrompt = () => {
+    const projectSpec = `**PROJECT SPECIFICATION**
+- **Project Name**: ${projectName || '[PROJECT_NAME]'}
+- **Project Description**: ${projectDescription || '[PROJECT_DESCRIPTION]'}
+- **Tech Stack**: ${stack.name}
+- **Development Framework**: ${stack.description}
+
+**INSTRUCTIONS FOR CLAUDE CODE**
+1. Use the above project specification to replace placeholders throughout the agent prompts
+2. Begin with Phase 1: Planning & Architecture for detailed project setup
+3. Follow the phase-based development approach with proper token budget allocation
+4. Coordinate between specialized agents as outlined in the checklist
+
+---
+
+`;
+
+    const basePrompt = `**Role**: You are the Master Orchestration Agent for ${stack.name} development, specializing in ${stack.description.toLowerCase()}.
+
+**Framework Context**: 
+${stack.components.slice(0, 4).map((comp: any) => `- ${comp.name}`).join('\n')}
+
+**Agent Architecture**: You coordinate 6 specialized sub-agents:
+1. **Development Workflow Agent** - Feature implementation and architecture
+2. **Testing & Verification Agent** - Quality assurance and validation  
+3. **Token Budget Agent** - Resource optimization and planning
+4. **Pattern & Solution Agent** - Best practices and reusable components
+5. **Deployment Agent** - Production deployment and infrastructure
+6. **Success Metrics Agent** - Performance monitoring and optimization
+
+**Development Phases**:
+- **Phase 1: Planning & Architecture** (20-25% of token budget)
+- **Phase 2: Core Implementation** (45-55% of token budget)  
+- **Phase 3: Integration & Testing** (15-20% of token budget)
+- **Phase 4: Deployment & Optimization** (10-15% of token budget)
+
+**Coordination Principles**:
+- Follow phase-based development with clear boundaries
+- Optimize for session-based development with token efficiency
+- Maintain quality gates between phases
+- Focus on production-ready, scalable solutions
+
+**Why This Stack Was Recommended**:
+${reasoning.slice(0, 3).map((reason: string, i: number) => `${i + 1}. ${reason}`).join('\n')}
+
+**Getting Started**:
+"Master Orchestration Agent: Begin Phase 1 planning for ${projectName || '[PROJECT_NAME]'}. Coordinate with Architecture Planning and Requirements Analysis sub-agents. Token budget: 15K-30K for comprehensive planning phase."`;
+
+    return projectSpec + basePrompt;
+  };
+
+  const handleCopyPrompt = async () => {
+    const prompt = generateMasterPrompt();
+    
+    try {
+      await navigator.clipboard.writeText(prompt);
+      setCopiedPrompt(true);
+      setTimeout(() => setCopiedPrompt(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy prompt:', err);
     }
   };
 
@@ -169,22 +236,41 @@ export default function RecommendationCard({
       <div className="flex gap-3">
         <Link
           href={`/stack/${stack.id}`}
-          className={cn(
-            "flex-1 text-center py-2 px-4 rounded-lg font-medium transition-colors",
-            isPrimary
-              ? "bg-blue-600 text-white hover:bg-blue-700"
-              : "bg-gray-900 text-white hover:bg-gray-800"
-          )}
+          className="flex-1 text-center py-3 px-4 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium flex items-center justify-center gap-2"
         >
-          View Details
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          View Template
         </Link>
         
-        <Link
-          href={`/stack/${stack.id}/setup`}
-          className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+        <button
+          onClick={handleCopyPrompt}
+          className={cn(
+            "flex-1 py-3 px-4 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2",
+            copiedPrompt
+              ? "bg-green-600 text-white"
+              : isPrimary
+              ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 shadow-lg"
+              : "bg-gradient-to-r from-gray-700 to-gray-800 text-white hover:from-gray-800 hover:to-gray-900"
+          )}
         >
-          Setup Guide
-        </Link>
+          {copiedPrompt ? (
+            <>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              Copied!
+            </>
+          ) : (
+            <>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              Copy Master Prompt
+            </>
+          )}
+        </button>
       </div>
 
       {/* Additional Info */}

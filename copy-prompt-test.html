@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Prompt Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+        .copy-button {
+            background: linear-gradient(to right, #7c3aed, #3b82f6);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .copy-button:hover {
+            background: linear-gradient(to right, #6d28d9, #2563eb);
+        }
+        .copy-button.copied {
+            background: #10b981;
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .example-buttons {
+            margin-top: 10px;
+        }
+        .example-button {
+            display: inline-block;
+            margin: 2px 4px 2px 0;
+            padding: 4px 8px;
+            background: #e3f2fd;
+            color: #1976d2;
+            border: 1px solid #bbdefb;
+            border-radius: 16px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .example-button:hover {
+            background: #bbdefb;
+        }
+        .example-description {
+            display: block;
+            width: 100%;
+            margin: 4px 0;
+            padding: 8px;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+        .example-description:hover {
+            background: #f0f0f0;
+        }
+        .prompt-preview {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Claude Code Master Prompt Copy Test</h1>
+    
+    <div class="test-section">
+        <h2>Project Specification</h2>
+        <div class="form-group">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" placeholder="Enter your project name or click an example below" value="">
+            <div class="example-buttons">
+                <small style="color: #666; margin-right: 8px;">Examples:</small>
+                <span class="example-button" onclick="setProjectName('AI Content Generator')">AI Content Generator</span>
+                <span class="example-button" onclick="setProjectName('Smart Task Manager')">Smart Task Manager</span>
+                <span class="example-button" onclick="setProjectName('E-commerce Analytics Dashboard')">E-commerce Analytics Dashboard</span>
+                <span class="example-button" onclick="setProjectName('Customer Support Chatbot')">Customer Support Chatbot</span>
+                <span class="example-button" onclick="setProjectName('Personal Finance Tracker')">Personal Finance Tracker</span>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="projectDescription">Project Description:</label>
+            <textarea id="projectDescription" rows="3" placeholder="Describe your project or click an example below"></textarea>
+            <div class="example-buttons">
+                <small style="color: #666;">Examples:</small>
+                <button class="example-description" onclick="setProjectDescription('A web application that generates marketing content using AI, with user authentication and content management features')">A web application that generates marketing content using AI, with user authentication and content management features</button>
+                <button class="example-description" onclick="setProjectDescription('An intelligent task management system that prioritizes work using machine learning and integrates with team collaboration tools')">An intelligent task management system that prioritizes work using machine learning and integrates with team collaboration tools</button>
+                <button class="example-description" onclick="setProjectDescription('A comprehensive dashboard for online retailers to track sales, inventory, and customer behavior with real-time analytics')">A comprehensive dashboard for online retailers to track sales, inventory, and customer behavior with real-time analytics</button>
+                <button class="example-description" onclick="setProjectDescription('An AI-powered customer support system that handles inquiries, escalates complex issues, and learns from interactions')">An AI-powered customer support system that handles inquiries, escalates complex issues, and learns from interactions</button>
+                <button class="example-description" onclick="setProjectDescription('A personal finance application that categorizes expenses, tracks budgets, and provides investment recommendations using AI')">A personal finance application that categorizes expenses, tracks budgets, and provides investment recommendations using AI</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test: Next.js + Vercel AI SDK Stack</h2>
+        <p><strong>Stack Description:</strong> Phase-based agent development workflows for AI-native React applications</p>
+        
+        <button class="copy-button" id="copyButton" onclick="copyPrompt()">
+            📋 Copy Master Prompt for Claude Code
+        </button>
+        
+        <div class="prompt-preview" id="promptPreview"></div>
+    </div>
+
+    <script>
+        function generateMasterPrompt() {
+            const projectName = document.getElementById('projectName').value || '[PROJECT_NAME]';
+            const projectDescription = document.getElementById('projectDescription').value || '[PROJECT_DESCRIPTION]';
+            
+            const stackName = "Next.js + Vercel AI SDK";
+            const stackDescription = "Phase-based agent development workflows for AI-native React applications";
+            const components = ["Next.js 14", "TypeScript", "Vercel AI SDK", "Tailwind CSS"];
+            const reasoning = [
+                "Perfect fit for AI-native applications with streaming capabilities",
+                "Excellent developer experience with TypeScript and modern React patterns", 
+                "Built-in optimization for production deployment"
+            ];
+            
+            const projectSpec = `**PROJECT SPECIFICATION**
+- **Project Name**: ${projectName}
+- **Project Description**: ${projectDescription}
+- **Tech Stack**: ${stackName}
+- **Development Framework**: ${stackDescription}
+
+**INSTRUCTIONS FOR CLAUDE CODE**
+1. Use the above project specification to replace placeholders throughout the agent prompts
+2. Begin with Phase 1: Planning & Architecture for detailed project setup
+3. Follow the phase-based development approach with proper token budget allocation
+4. Coordinate between specialized agents as outlined in the checklist
+
+---
+
+`;
+
+            const basePrompt = `**Role**: You are the Master Orchestration Agent for ${stackName} development, specializing in ${stackDescription.toLowerCase()}.
+
+**Framework Context**: 
+${components.map(comp => `- ${comp}`).join('\n')}
+
+**Agent Architecture**: You coordinate 6 specialized sub-agents:
+1. **Development Workflow Agent** - Feature implementation and architecture
+2. **Testing & Verification Agent** - Quality assurance and validation  
+3. **Token Budget Agent** - Resource optimization and planning
+4. **Pattern & Solution Agent** - Best practices and reusable components
+5. **Deployment Agent** - Production deployment and infrastructure
+6. **Success Metrics Agent** - Performance monitoring and optimization
+
+**Development Phases**:
+- **Phase 1: Planning & Architecture** (20-25% of token budget)
+- **Phase 2: Core Implementation** (45-55% of token budget)  
+- **Phase 3: Integration & Testing** (15-20% of token budget)
+- **Phase 4: Deployment & Optimization** (10-15% of token budget)
+
+**Coordination Principles**:
+- Follow phase-based development with clear boundaries
+- Optimize for session-based development with token efficiency
+- Maintain quality gates between phases
+- Focus on production-ready, scalable solutions
+
+**Why This Stack Was Recommended**:
+${reasoning.map((reason, i) => `${i + 1}. ${reason}`).join('\n')}
+
+**Getting Started**:
+"Master Orchestration Agent: Begin Phase 1 planning for ${projectName}. Coordinate with Architecture Planning and Requirements Analysis sub-agents. Token budget: 15K-30K for comprehensive planning phase."`;
+
+            return projectSpec + basePrompt;
+        }
+        
+        function updatePreview() {
+            const prompt = generateMasterPrompt();
+            document.getElementById('promptPreview').textContent = prompt;
+        }
+        
+        async function copyPrompt() {
+            const prompt = generateMasterPrompt();
+            const button = document.getElementById('copyButton');
+            
+            try {
+                await navigator.clipboard.writeText(prompt);
+                button.textContent = '✅ Copied to Clipboard!';
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.textContent = '📋 Copy Master Prompt for Claude Code';
+                    button.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+                alert('Copy failed. Please manually copy from the preview below.');
+            }
+        }
+        
+        function setProjectName(name) {
+            document.getElementById('projectName').value = name;
+            updatePreview();
+        }
+        
+        function setProjectDescription(description) {
+            document.getElementById('projectDescription').value = description;
+            updatePreview();
+        }
+        
+        // Update preview when inputs change
+        document.getElementById('projectName').addEventListener('input', updatePreview);
+        document.getElementById('projectDescription').addEventListener('input', updatePreview);
+        
+        // Initial preview
+        updatePreview();
+    </script>
+</body>
+</html>
