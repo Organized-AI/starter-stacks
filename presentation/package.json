@@ -1,0 +1,32 @@
+{
+  "name": "starter-stacks-presentation",
+  "version": "1.0.0",
+  "description": "StarterStacks: The Speed Revolution - Official SliDev Presentation",
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.48.0",
+    "@slidev/theme-default": "latest"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.40.0"
+  },
+  "keywords": [
+    "slidev",
+    "presentation",
+    "starter-stacks",
+    "ai-tools",
+    "organized-ai",
+    "speed-revolution"
+  ],
+  "author": "Organized AI",
+  "license": "MIT",
+  "homepage": "https://organizedai.vip",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Organized-AI/starter-stacks.git"
+  }
+}

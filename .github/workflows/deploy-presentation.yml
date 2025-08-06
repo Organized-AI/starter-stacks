@@ -1,0 +1,96 @@
+name: Deploy StarterStacks Presentation
+
+on:
+  push:
+    branches: [ main, feature/slidev-presentation ]
+    paths: [ 'presentation/**' ]
+  pull_request:
+    branches: [ main ]
+    paths: [ 'presentation/**' ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: 'presentation/package-lock.json'
+        
+    - name: Install dependencies
+      run: |
+        cd presentation
+        npm ci
+        
+    - name: Install Playwright
+      run: |
+        cd presentation
+        npx playwright install-deps chromium
+        
+    - name: Build SliDev presentation
+      run: |
+        cd presentation
+        npm run build
+        
+    - name: Setup Pages
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feature/slidev-presentation'
+      uses: actions/configure-pages@v4
+      
+    - name: Upload artifact
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feature/slidev-presentation'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: 'presentation/dist'
+        
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feature/slidev-presentation'
+      id: deployment
+      uses: actions/deploy-pages@v4
+
+  # PDF export job
+  export-pdf:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feature/slidev-presentation'
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: 'presentation/package-lock.json'
+        
+    - name: Install dependencies
+      run: |
+        cd presentation
+        npm ci
+        
+    - name: Install Playwright
+      run: |
+        cd presentation
+        npx playwright install chromium
+        
+    - name: Export to PDF
+      run: |
+        cd presentation
+        npm run export
+        
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: starter-stacks-presentation-pdf
+        path: 'presentation/slides-export.pdf'
+        retention-days: 30

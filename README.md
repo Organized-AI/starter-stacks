@@ -2,6 +2,27 @@
 
 🚀 **10 Production-Ready Tech Stacks for Building AI Tools**
 
+**📊 [View Interactive Presentation](https://organized-ai.github.io/starter-stacks)** | **🎯 [Try Stack Evaluator](https://stack.organizedai.vip)**
+
+This repository contains starter templates for 10 different tech stacks optimized for building AI tools. Each stack is designed for different types of developers, speed requirements, and use cases.
+
+## 🎪 The Speed Revolution Presentation
+
+**View the complete StarterStacks presentation at: https://organized-ai.github.io/starter-stacks**
+
+Our interactive SliDev presentation covers:
+- The planning paralysis problem affecting 80% of developers
+- 10 curated AI tool stacks for different scenarios  
+- Session-based development optimized for Claude $100 Max Plan
+- Success stories and ROI analysis
+- Complete implementation roadmap
+
+*Perfect for team presentations, client pitches, or understanding the StarterStacks methodology.*
+
+---
+
+🚀 **10 Production-Ready Tech Stacks for Building AI Tools**
+
 This repository contains starter templates for 10 different tech stacks optimized for building AI tools. Each stack is designed for different types of developers, speed requirements, and use cases.
 
 ## Quick Start
