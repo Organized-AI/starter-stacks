@@ -34,21 +34,21 @@ This repository provides **three levels of decision support**:
 
 #### **⚡ Ready to Build Fast?**
 → **Session-Based Development** (30 minutes - 2 hours)
-- **[Option 7: v0.dev + StackBlitz](./07-v0-stackblitz-netlify/)** - AI generates components
-- **[Option 8: Zapier + Bubble](./08-zapier-bubble-openai/)** - No-code automation
-- **[Option 6: Lovable + Supabase](./06-lovable-supabase/)** - Natural language to app
+- **[Option 7: v0.dev + StackBlitz](./stacks/07-v0-stackblitz-netlify/)** - AI generates components
+- **[Option 8: Zapier + Bubble](./stacks/08-zapier-bubble-openai/)** - No-code automation
+- **[Option 6: Lovable + Supabase](./stacks/06-lovable-supabase/)** - Natural language to app
 
 #### **🤖 Want AI Pair Programming?**
 → **Claude Code Sub-Agent Development** (1-8 hours)
-- **[Option 10: Cursor + Copilot](./10-cursor-copilot-vercel/)** - AI-assisted coding
-- **[Option 5: Windsurf + Claude Code](./05-windsurf-claude/)** - Architectural guidance
+- **[Option 10: Cursor + Copilot](./stacks/10-cursor-copilot-vercel/)** - AI-assisted coding
+- **[Option 5: Windsurf + Claude Code](./stacks/05-windsurf-claude/)** - Architectural guidance
 - **Sub-Agent Workflows** - Specialized AI agents for each component
 
 #### **🏗️ Building Something Complex?**
 → **Full Development Stack** (1-3 days)
-- **[Option 1: Next.js + Vercel AI SDK](./01-nextjs-vercel/)** - AI-native React
-- **[Option 2: FastAPI + Streamlit](./02-fastapi-streamlit/)** - Python powerhouse
-- **[Option 3: Astro + Cloudflare](./03-astro-cloudflare/)** - Edge performance
+- **[Option 1: Next.js + Vercel AI SDK](./stacks/01-nextjs-vercel/)** - AI-native React
+- **[Option 2: FastAPI + Streamlit](./stacks/02-fastapi-streamlit/)** - Python powerhouse
+- **[Option 3: Astro + Cloudflare](./stacks/03-astro-cloudflare/)** - Edge performance
 
 ---
 
@@ -56,14 +56,14 @@ This repository provides **three levels of decision support**:
 
 | Stack | Best For | Speed | Session Budget | Sub-Agents | Design Quality |
 |-------|----------|-------|----------------|------------|----------------|
-| **[Option 7](./07-v0-stackblitz-netlify/)** | Rapid validation | 15-30 min | 0-1 sessions | ❌ | 8/10 |
-| **[Option 8](./08-zapier-bubble-openai/)** | Non-technical founders | 30 min-2hr | 0-2 sessions | ❌ | 7/10 |
-| **[Option 6](./06-lovable-supabase/)** | Pixel-perfect MVPs | 1-2 hours | 1-2 sessions | ❌ | 9/10 |
-| **[Option 10](./10-cursor-copilot-vercel/)** | AI-assisted coding | 1-8 hours | 2-4 sessions | ✅ | 9/10 |
-| **[Option 5](./05-windsurf-claude/)** | Complex apps | 1-3 days | 4-8 sessions | ✅ | 9/10 |
-| **[Option 1](./01-nextjs-vercel/)** | Chat interfaces | 1-3 days | 6-10 sessions | ✅ | 8/10 |
-| **[Option 2](./02-fastapi-streamlit/)** | Data-heavy tools | 1-2 weeks | 12-20 sessions | ✅ | 6/10 |
-| **[Option 3](./03-astro-cloudflare/)** | Global performance | 1-2 weeks | 15-25 sessions | ✅ | 9/10 |
+| **[Option 7](./stacks/07-v0-stackblitz-netlify/)** | Rapid validation | 15-30 min | 0-1 sessions | ❌ | 8/10 |
+| **[Option 8](./stacks/08-zapier-bubble-openai/)** | Non-technical founders | 30 min-2hr | 0-2 sessions | ❌ | 7/10 |
+| **[Option 6](./stacks/06-lovable-supabase/)** | Pixel-perfect MVPs | 1-2 hours | 1-2 sessions | ❌ | 9/10 |
+| **[Option 10](./stacks/10-cursor-copilot-vercel/)** | AI-assisted coding | 1-8 hours | 2-4 sessions | ✅ | 9/10 |
+| **[Option 5](./stacks/05-windsurf-claude/)** | Complex apps | 1-3 days | 4-8 sessions | ✅ | 9/10 |
+| **[Option 1](./stacks/01-nextjs-vercel/)** | Chat interfaces | 1-3 days | 6-10 sessions | ✅ | 8/10 |
+| **[Option 2](./stacks/02-fastapi-streamlit/)** | Data-heavy tools | 1-2 weeks | 12-20 sessions | ✅ | 6/10 |
+| **[Option 3](./stacks/03-astro-cloudflare/)** | Global performance | 1-2 weeks | 15-25 sessions | ✅ | 9/10 |
 
 ### **Session Budget Explanation**
 - **1 Session** = 5-hour focused development block using Claude Max plan limits

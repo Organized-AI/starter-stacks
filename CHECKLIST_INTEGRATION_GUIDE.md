@@ -58,11 +58,12 @@ starter-stacks/
 │   ├── 08-zapier-bubble-openai-checklist.md # ✅ Business automation phases
 │   ├── 09-glitch-claude-railway-checklist.md
 │   └── 10-cursor-copilot-vercel-checklist.md
-├── 01-nextjs-vercel/
-│   └── README.md                        # Updated with phase-based system link
-├── 02-fastapi-streamlit/
-│   └── README.md                        # Updated with phase-based system link
-... (all other stacks)
+├── stacks/                              # Reorganized stack templates
+│   ├── 01-nextjs-vercel/
+│   │   └── README.md                    # Updated with phase-based system link
+│   ├── 02-fastapi-streamlit/
+│   │   └── README.md                    # Updated with phase-based system link
+│   ... (all other stacks in stacks/ folder)
 ```
 
 ## 🎯 Phase-Based Agent System Structure

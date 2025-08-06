@@ -25,6 +25,7 @@ export interface EvaluationFormData {
   projectType: string;
   teamSize: string;
   designPriority: string;
+  deploymentApproach: string;
 }
 
 export interface QuestionStepProps {

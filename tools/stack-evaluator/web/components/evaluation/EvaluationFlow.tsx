@@ -80,6 +80,20 @@ const EVALUATION_QUESTIONS = [
       { value: 'custom', label: 'Custom', description: 'Unique brand identity and custom design' },
       { value: 'advanced', label: 'Advanced', description: 'Complex animations and interactions' }
     ]
+  },
+  {
+    id: 'deploymentApproach',
+    question: 'What\'s your preferred deployment approach?',
+    description: 'This helps us recommend hosting solutions that match your operational preferences.',
+    type: 'single-choice' as const,
+    required: true,
+    order: 6,
+    options: [
+      { value: 'managed', label: 'Managed/Cloud', description: 'Fully managed services with minimal ops overhead' },
+      { value: 'selfhosted', label: 'Self-hosted', description: 'Control over infrastructure and deployment' },
+      { value: 'hybrid', label: 'Hybrid', description: 'Mix of managed services and custom infrastructure' },
+      { value: 'nopreference', label: 'No preference', description: 'Open to any deployment approach' }
+    ]
   }
 ];
 
@@ -155,7 +169,8 @@ export default function EvaluationFlow() {
           { questionId: 'background', value: state.formData.background || 'intermediate' },
           { questionId: 'project-type', value: state.formData.projectType || 'chat-interface' },
           { questionId: 'team-size', value: state.formData.teamSize || 'small' },
-          { questionId: 'design-priority', value: state.formData.designPriority || 'important' }
+          { questionId: 'design-priority', value: state.formData.designPriority || 'important' },
+          { questionId: 'deployment-approach', value: state.formData.deploymentApproach || 'nopreference' }
         ],
         completedAt: new Date()
       };

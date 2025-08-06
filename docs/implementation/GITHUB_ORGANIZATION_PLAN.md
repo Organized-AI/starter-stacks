@@ -78,9 +78,10 @@ Phase 2 complete: functional web app at localhost:3000"
 ### Repository Layout
 ```
 starter-stacks/
-├── 01-nextjs-vercel/           # Existing stack examples
-├── 02-fastapi-streamlit/       # Existing stack examples  
-├── ...                         # Other existing stacks
+├── stacks/                     # Reorganized stack templates
+│   ├── 01-nextjs-vercel/      # Stack examples with master prompts
+│   ├── 02-fastapi-streamlit/  # Stack examples with master prompts  
+│   ├── ...                    # Other stacks (01-10)
 ├── ai-tool-stack-evaluator/    # NEW: Our implementation
 │   ├── src/                    # Source code
 │   ├── cli/                    # CLI tool

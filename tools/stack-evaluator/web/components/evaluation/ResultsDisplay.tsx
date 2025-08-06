@@ -18,24 +18,6 @@ export default function ResultsDisplay({ results, onRestart }: ResultsDisplayPro
   
   const [projectName, setProjectName] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
-  const [showProjectForm, setShowProjectForm] = useState(true);
-  
-  // Example data
-  const projectNameExamples = [
-    'AI Content Generator',
-    'Smart Task Manager',
-    'E-commerce Analytics Dashboard',
-    'Customer Support Chatbot',
-    'Personal Finance Tracker'
-  ];
-  
-  const projectDescriptionExamples = [
-    'A web application that generates marketing content using AI, with user authentication and content management features',
-    'An intelligent task management system that prioritizes work using machine learning and integrates with team collaboration tools',
-    'A comprehensive dashboard for online retailers to track sales, inventory, and customer behavior with real-time analytics',
-    'An AI-powered customer support system that handles inquiries, escalates complex issues, and learns from interactions',
-    'A personal finance application that categorizes expenses, tracks budgets, and provides investment recommendations using AI'
-  ];
 
   const handleShare = async () => {
     const shareData = {
@@ -95,121 +77,35 @@ export default function ResultsDisplay({ results, onRestart }: ResultsDisplayPro
         </div>
       </div>
 
-      {/* Project Specification Form */}
-      {showProjectForm && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 mb-8"
-        >
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-              <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Customize Your Claude Code Prompt
-            </h3>
-            <button
-              onClick={() => setShowProjectForm(false)}
-              className="text-gray-500 hover:text-gray-700 transition-colors"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
+      {/* Simple Project Specification */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="bg-blue-50 rounded-xl p-4 mb-6"
+      >
+        <h3 className="text-sm font-medium text-gray-900 mb-3">
+          Customize your prompts (optional)
+        </h3>
+        
+        <div className="space-y-3">
+          <input
+            type="text"
+            value={projectName}
+            onChange={(e) => setProjectName(e.target.value)}
+            placeholder="Project name (e.g., AI Content Generator)"
+            className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
           
-          <p className="text-sm text-gray-600 mb-4">
-            Add your project details to generate personalized Claude Code prompts with your specific requirements.
-          </p>
-          
-          <div className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Project Name
-              </label>
-              <input
-                type="text"
-                value={projectName}
-                onChange={(e) => setProjectName(e.target.value)}
-                placeholder="Enter your project name or click an example below"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-3"
-              />
-              
-              {/* Project Name Examples */}
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs text-gray-500 mr-2">Examples:</span>
-                {projectNameExamples.map((example, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => setProjectName(example)}
-                    className="inline-flex items-center px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors cursor-pointer"
-                  >
-                    {example}
-                  </button>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Project Description
-              </label>
-              <textarea
-                value={projectDescription}
-                onChange={(e) => setProjectDescription(e.target.value)}
-                placeholder="Describe your project or click an example below"
-                rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-3"
-              />
-              
-              {/* Project Description Examples */}
-              <div className="space-y-2">
-                <span className="text-xs text-gray-500">Examples:</span>
-                <div className="space-y-2">
-                  {projectDescriptionExamples.map((example, index) => (
-                    <button
-                      key={index}
-                      type="button"
-                      onClick={() => setProjectDescription(example)}
-                      className="block w-full text-left px-3 py-2 text-xs bg-gray-50 text-gray-700 rounded-md hover:bg-gray-100 transition-colors cursor-pointer border border-gray-200"
-                    >
-                      {example}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {(projectName || projectDescription) && (
-            <div className="mt-4 p-3 bg-white rounded-lg border border-blue-200">
-              <div className="flex items-center gap-2 text-sm text-blue-700">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Your project details will be included in the Claude Code prompts below
-              </div>
-            </div>
-          )}
-        </motion.div>
-      )}
-      
-      {!showProjectForm && (
-        <div className="text-center mb-6">
-          <button
-            onClick={() => setShowProjectForm(true)}
-            className="inline-flex items-center gap-2 px-4 py-2 text-sm text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-            </svg>
-            Add Project Details for Custom Prompts
-          </button>
+          <textarea
+            value={projectDescription}
+            onChange={(e) => setProjectDescription(e.target.value)}
+            placeholder="Brief description (e.g., A web app that generates marketing content using AI)"
+            rows={2}
+            className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+          />
         </div>
-      )}
+      </motion.div>
 
       {/* Primary Recommendation */}
       <div className="space-y-4">
