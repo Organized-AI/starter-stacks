@@ -54,23 +54,136 @@ This repository provides **three levels of decision support**:
 
 ## 📊 **Enhanced Stack Comparison with Session Planning**
 
-| Stack | Best For | Speed | Session Budget | Sub-Agents | Design Quality |
-|-------|----------|-------|----------------|------------|----------------|
-| **[Option 7](./stacks/07-v0-stackblitz-netlify/)** | Rapid validation | 15-30 min | 0-1 sessions | ❌ | 8/10 |
-| **[Option 8](./stacks/08-zapier-bubble-openai/)** | Non-technical founders | 30 min-2hr | 0-2 sessions | ❌ | 7/10 |
-| **[Option 6](./stacks/06-lovable-supabase/)** | Pixel-perfect MVPs | 1-2 hours | 1-2 sessions | ❌ | 9/10 |
-| **[Option 10](./stacks/10-cursor-copilot-vercel/)** | AI-assisted coding | 1-8 hours | 2-4 sessions | ✅ | 9/10 |
-| **[Option 5](./stacks/05-windsurf-claude/)** | Complex apps | 1-3 days | 4-8 sessions | ✅ | 9/10 |
-| **[Option 1](./stacks/01-nextjs-vercel/)** | Chat interfaces | 1-3 days | 6-10 sessions | ✅ | 8/10 |
-| **[Option 2](./stacks/02-fastapi-streamlit/)** | Data-heavy tools | 1-2 weeks | 12-20 sessions | ✅ | 6/10 |
-| **[Option 3](./stacks/03-astro-cloudflare/)** | Global performance | 1-2 weeks | 15-25 sessions | ✅ | 9/10 |
+### **⚡ Ultra-Fast Validation (15 minutes - 2 hours)**
+*Perfect for rapid prototyping and idea validation*
 
-### **Session Budget Explanation**
-- **1 Session** = 5-hour focused development block using Claude Max plan limits
-- **Claude Code**: 50-200 prompts per session
-- **Regular Claude**: 225 messages per session for planning/documentation
+| Stack | Best For | Speed | Session Budget | Sub-Agents | Design Quality | Complexity |
+|-------|----------|-------|----------------|------------|----------------|------------|
+| **[Option 7: v0 + StackBlitz](./stacks/07-v0-stackblitz-netlify/)** | UI/UX validation | 15-30 min | 0-1 sessions | ❌ | 9/10 | Low |
+| **[Option 8: Zapier + Bubble](./stacks/08-zapier-bubble-openai/)** | No-code workflows | 30 min-2hr | 0-2 sessions | ❌ | 7/10 | Low |
+| **[Option 9: Glitch + Railway](./stacks/09-glitch-claude-railway/)** | Community demos | 1-2 hours | 1-2 sessions | ❌ | 7/10 | Low |
+
+### **🚀 Quick MVPs (1-8 hours)**
+*Great for weekend projects and hackathons*
+
+| Stack | Best For | Speed | Session Budget | Sub-Agents | Design Quality | Complexity |
+|-------|----------|-------|----------------|------------|----------------|------------|
+| **[Option 6: Lovable + Supabase](./stacks/06-lovable-supabase/)** | Pixel-perfect MVPs | 1-2 hours | 1-2 sessions | ❌ | 9/10 | Low |
+| **[Option 10: Cursor + Copilot](./stacks/10-cursor-copilot-vercel/)** | AI-assisted coding | 1-8 hours | 2-4 sessions | ✅ | 9/10 | Medium |
+| **[Option 11: ElevenLabs + Vite](./stacks/11-elevenlabs-vite-vercel/)** | Voice AI tools | 2-4 hours | 2-3 sessions | ❌ | 8/10 | Medium |
+| **[Option 12: Claude Code + Vite](./stacks/12-claude-code-vite-github/)** | Rapid prototypes | 2-6 hours | 3-4 sessions | ✅ | 8/10 | Medium |
+
+### **🏗️ Production-Ready (1-3 days)**
+*Scalable applications for real users*
+
+| Stack | Best For | Speed | Session Budget | Sub-Agents | Design Quality | Complexity |
+|-------|----------|-------|----------------|------------|----------------|------------|
+| **[Option 1: Next.js + Vercel AI](./stacks/01-nextjs-vercel/)** | Chat interfaces | 1-3 days | 6-10 sessions | ✅ | 8/10 | High |
+| **[Option 2: FastAPI + Streamlit](./stacks/02-fastapi-streamlit/)** | Data analysis tools | 1-2 weeks | 12-20 sessions | ✅ | 6/10 | High |
+| **[Option 5: Windsurf + Claude](./stacks/05-windsurf-claude/)** | Complex applications | 1-3 days | 4-8 sessions | ✅ | 9/10 | High |
+| **[Option 13: Texel + React](./stacks/13-texel-ai-react-netlify/)** | 3D/Visual AI tools | 2-4 days | 8-12 sessions | ✅ | 9/10 | High |
+
+### **🌐 Enterprise Scale (1-3 weeks)**
+*Full-featured applications with advanced requirements*
+
+| Stack | Best For | Speed | Session Budget | Sub-Agents | Design Quality | Complexity |
+|-------|----------|-------|----------------|------------|----------------|------------|
+| **[Option 3: Astro + Cloudflare](./stacks/03-astro-cloudflare/)** | Global performance | 1-2 weeks | 15-25 sessions | ✅ | 9/10 | High |
+| **[Option 4: Replit + Gumloop](./stacks/04-replit-gumloop/)** | Collaborative tools | 1-2 weeks | 10-18 sessions | ❌ | 7/10 | High |
+| **[Option 14: Supabase + SvelteKit](./stacks/14-supabase-sveltekit-stripe/)** | SaaS platforms | 2-3 weeks | 20-30 sessions | ✅ | 9/10 | Very High |
+| **[Option 15: Claude + Express](./stacks/15-claude-express-render/)** | Custom backends | 1-3 weeks | 18-35 sessions | ✅ | 7/10 | Very High |
 
 ---
+
+## 📈 **Session Budget Breakdown**
+
+### **Session Types Explained**
+- **1 Session** = 5-hour focused development block using Claude Max plan limits
+- **Claude Code**: 50-200 prompts per session for implementation
+- **Regular Claude**: 225 messages per session for planning/documentation
+- **Sub-Agents**: Specialized AI workflows for complex components
+
+### **Complexity Ratings**
+
+#### **Low Complexity (0-4 sessions)**
+✅ **Perfect for beginners and rapid validation**
+- Minimal backend logic required
+- Pre-built UI components and templates
+- Limited custom integrations needed
+- Fast deployment and testing
+
+#### **Medium Complexity (2-8 sessions)**
+⚡ **Great for experienced developers**
+- Moderate backend requirements
+- Custom component development
+- API integrations and data handling
+- Testing and optimization needed
+
+#### **High Complexity (6-25 sessions)**
+🏗️ **For production applications**
+- Complex state management
+- Multiple integrations and services
+- Advanced features and optimization
+- Comprehensive testing and monitoring
+
+#### **Very High Complexity (18-35 sessions)**
+🌐 **Enterprise-grade applications**
+- Scalable architecture planning
+- Advanced security and performance
+- Multi-service coordination
+- Production deployment and monitoring
+
+### **Session Optimization Tips**
+
+#### **Maximize Your Claude Max Plan Value**
+1. **Batch Related Tasks**: Group similar development work within 5-hour windows
+2. **Use Sub-Agents**: Leverage specialized prompts for complex components
+3. **Plan Sessions**: Start with architecture, end with integration
+4. **Context Efficiency**: Maintain conversation continuity within sessions
+
+#### **Quick Stack Selection Guide**
+```bash
+# Need something in 30 minutes?
+→ Options 7, 8, 9 (Ultra-fast validation)
+
+# Weekend project?
+→ Options 6, 10, 11, 12 (Quick MVPs)
+
+# Launching a real product?
+→ Options 1, 2, 5, 13 (Production-ready)
+
+# Building the next big thing?
+→ Options 3, 4, 14, 15 (Enterprise scale)
+```
+
+---
+
+## 🎯 **Choosing the Right Stack**
+
+### **By Use Case**
+- **🤖 Chat/Conversational AI**: Options 1, 5, 15
+- **📊 Data Analysis/Visualization**: Options 2, 4, 13
+- **🎨 Design/Creative Tools**: Options 6, 7, 13
+- **🔊 Voice/Audio AI**: Options 11, 15
+- **💼 Business/SaaS Applications**: Options 3, 14, 15
+- **🚀 Rapid Prototyping**: Options 6, 7, 8, 9, 10, 12
+- **🌐 Global/Edge Applications**: Options 3, 9, 11
+
+### **By Technical Background**
+- **👤 Non-Technical**: Options 7, 8 (Visual builders)
+- **🔰 Beginner Developer**: Options 6, 9, 11, 12
+- **💪 Experienced Developer**: Options 1, 5, 10, 13
+- **🏗️ Full-Stack Expert**: Options 2, 3, 4, 14, 15
+
+### **By Timeline**
+- **⚡ Demo in 1 hour**: Options 7, 8
+- **📱 MVP this weekend**: Options 6, 9, 10, 11, 12
+- **🚀 Launch next week**: Options 1, 5, 13
+- **🌟 Production in a month**: Options 2, 3, 4, 14, 15
+
+---
+
+*💡 **Pro Tip**: Start with the fastest option for validation, then upgrade to a more robust stack for production. Many concepts transfer between stacks!*
 
 ## 🤖 **Claude Code Sub-Agent Architecture**
 
