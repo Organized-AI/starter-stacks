@@ -431,3 +431,7 @@ Use **session-based development planning** with your Claude Max plan
 - **40% Development Speed Increase** with specialized sub-agents
 
 **The future of development is here: AI-guided architecture, session-optimized workflows, and production-ready templates.** ⚡🤖
+
+---
+
+Maintained by Jordaaan Hill ([LinkedIn](https://www.linkedin.com/in/jordaaanhill)).
